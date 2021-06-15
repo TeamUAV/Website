@@ -82,7 +82,7 @@ function viewIcons() {
   down_icon.id = "down";
   let ul = document.createElement("ul");
   ul.id = "project-icons-list";
-  for (let i = 0; i < 3; i++) {
+  for (let i = 0; i < 4; i++) {
     let li = document.createElement("li");
     li.className = "icon-content";
     let div = document.createElement("div");

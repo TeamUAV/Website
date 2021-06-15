@@ -10,6 +10,16 @@
   z-index: 2;
 }
 
+/* #img-active{
+  position: relative;
+  display: block;
+}
+
+#img-inactive{
+  position: relative;
+  display: block;
+} */
+
 #view-icon-holder {
   margin-left: 20px;
   display: flex;
@@ -53,6 +63,7 @@
 }
 
 .icon-content {
+  position: relative;
   flex: 0 0 auto;
   display: flex;
   align-items: center;
@@ -65,7 +76,8 @@
   margin-bottom: 10px;
 }
 .icon-content #img-inactive, .icon-content #img-active {
-  /* display: block; */
+  position: absolute;
+  display: inline-block;
   width: 160px;
   height: 160px;
   transition: all 0.4s ease-out;
