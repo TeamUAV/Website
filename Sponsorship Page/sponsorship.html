@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>sponsorship</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <link rel="stylesheet" href="sponsorship.css"/>
+    </head> 
+    <body>
+        <div class="container">
+            <div class="block block-1">
+                <h1> 1 </h1>
+            </div>
+            <div class="block block-2">
+                <h1> 2 </h1>
+            </div>
+            <div class="block block-3">
+                <h1> 3 </h1>
+            </div>
+            <div class="block block-4">
+                <h1> 4 </h1>
+            </div>
+            <div class="block block-5">
+                <h1> 5 </h1>
+            </div>
+            <!--
+            <div class="block block-6">
+                <h1> 6 </h1>
+            </div>
+            <div class="block block-7">
+                <h1> 7 </h1>
+            </div>
+            <div class="block block-8">
+                <h1> 8 </h1>
+            </div>
+            <div class="block block-9">
+                <h1> 9 </h1>
+            </div>
+            <div class="block block-10">
+                <h1> 10 </h1>
+            </div>-->
+        </div>
+        <script src="sponsorship.js"></script>
+        <script>
+            var blocks=document.getElementsByClassName("block");
+            var container = document.getElementsByClassName("container");
+            var hs = new HorizontalScroll.default({
+                blocks:blocks,
+                container:container,
+                isAnimated:true,
+                springEffect: 0.8,
+            })
+        </script>
+    </body>
+</html>
