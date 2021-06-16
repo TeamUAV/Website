@@ -1,7 +1,6 @@
 import * as THREE from "./dependencies/build/three.module.js";
 
 import { OrbitControls } from "./dependencies/examples/jsm/controls/OrbitControls.js";
-import { FBXLoader } from "./dependencies/examples/jsm/loaders/FBXLoader.js";
 import { GLTFLoader } from "./dependencies/examples/jsm/loaders/GLTFLoader.js";
 
 let camera, scene, renderer;
@@ -43,13 +42,10 @@ function init(args) {
   const dir_3 = new THREE.DirectionalLight(0xffffff, 2);
   dir_3.position.set(-3.9, 1.4, 6.8);
 
-  // const dir_4 = new THREE.HemisphereLight(0xffffff, 2);
-  // dir_4.position.set(0 , -1.4, 0);
 
   scene.add(dir_1);
   scene.add(dir_2);
   scene.add(dir_3);
-  // scene.add(dir_4);
 
   const axishelper = new THREE.AxesHelper(500);
   scene.add(axishelper);
@@ -68,27 +64,6 @@ function init(args) {
   grid.material.transparent = true;
   scene.add(grid);
 
-  // model
-  // const loader = new FBXLoader();
-  // loader.load(args, function (object) {
-  //   obj = object;
-  //   object.rotateY( - Math.PI / 2 );
-  //   object.rotateX( - Math.PI / 2 );
-  //   object.position.set(0, 25, 0);
-  //   mixer = new THREE.AnimationMixer(object);
-
-  //   const action = mixer.clipAction(object.animations[0]);
-  //   action.play();
-
-  //   object.traverse(function (child) {
-  //     if (child.isMesh) {
-  //       child.castShadow = true;
-  //       child.receiveShadow = true;
-  //     }
-  //   });
-
-  //   scene.add(object);
-  // });
 
   modelloader(args);
 
@@ -103,10 +78,10 @@ function init(args) {
   }
     function toggleModel(active, chosen) {
       let models = ["UAV_1", "UAV_2", "UAV_3"];
-      scene.remove(scene.getObjectByName(models[active]));
-      setTimeout(function() {
+      if (active != chosen){
+        scene.remove(scene.getObjectByName(models[active]));
         modelloader(models[chosen]);
-      }, 500);
+      }
     }
 
     for (let i = 0; i < list.length; i++) {
