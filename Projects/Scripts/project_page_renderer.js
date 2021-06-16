@@ -207,7 +207,6 @@ function project_page() {
     });
   }
 
-  let counter = 2;
   let buttons = document.querySelectorAll(".view-toggler");
   let scrollContainer = document.querySelector("#project-icons-list");
   buttons[0].addEventListener("click", function(){
