@@ -4,113 +4,27 @@
         "version" : "2.0"
     },
     "extensionsUsed" : [
-        "KHR_lights_punctual",
         "KHR_materials_transmission"
     ],
-    "extensionsRequired" : [
-        "KHR_lights_punctual"
-    ],
-    "extensions" : {
-        "KHR_lights_punctual" : {
-            "lights" : [
-                {
-                    "color" : [
-                        1,
-                        1,
-                        1
-                    ],
-                    "intensity" : 80000,
-                    "type" : "point",
-                    "name" : "Light"
-                },
-                {
-                    "color" : [
-                        1,
-                        1,
-                        1
-                    ],
-                    "intensity" : 60000,
-                    "type" : "point",
-                    "name" : "Light.001"
-                },
-                {
-                    "color" : [
-                        1,
-                        1,
-                        1
-                    ],
-                    "intensity" : 50000,
-                    "type" : "point",
-                    "name" : "Light.002"
-                },
-                {
-                    "color" : [
-                        1,
-                        1,
-                        1
-                    ],
-                    "intensity" : 80000,
-                    "type" : "point",
-                    "name" : "Light.003"
-                },
-                {
-                    "color" : [
-                        1,
-                        1,
-                        1
-                    ],
-                    "intensity" : 80000,
-                    "type" : "point",
-                    "name" : "Light.004"
-                },
-                {
-                    "color" : [
-                        1,
-                        1,
-                        1
-                    ],
-                    "intensity" : 60000,
-                    "type" : "point",
-                    "name" : "Light.005"
-                }
-            ]
-        }
-    },
     "scene" : 0,
     "scenes" : [
         {
             "name" : "Scene",
             "nodes" : [
+                0,
                 1,
                 2,
                 3,
+                4,
                 5,
+                6,
                 7,
-                9,
-                11,
-                13
+                8
             ]
         }
     ],
     "nodes" : [
         {
-            "extensions" : {
-                "KHR_lights_punctual" : {
-                    "light" : 0
-                }
-            },
-            "name" : "Light_Orientation",
-            "rotation" : [
-                -0.7071067690849304,
-                0,
-                0,
-                0.7071067690849304
-            ]
-        },
-        {
-            "children" : [
-                0
-            ],
             "name" : "Light",
             "rotation" : [
                 0.16907575726509094,
@@ -124,9 +38,23 @@
                 50.51664733886719
             ],
             "translation" : [
-                -35.91448974609375,
-                95.6464614868164,
-                9.947553634643555
+                -62.903472900390625,
+                85.45187377929688,
+                2.1477999687194824
+            ]
+        },
+        {
+            "name" : "Camera",
+            "rotation" : [
+                0.483536034822464,
+                0.33687159419059753,
+                -0.20870360732078552,
+                0.7804827094078064
+            ],
+            "translation" : [
+                32.03914260864258,
+                53.925567626953125,
+                77.86053466796875
             ]
         },
         {
@@ -144,9 +72,9 @@
                 3.826465606689453
             ],
             "translation" : [
-                1.213013768196106,
-                45.68408203125,
-                67.87254333496094
+                -0.051605224609375,
+                44.15534210205078,
+                51.56269454956055
             ]
         },
         {
@@ -164,29 +92,12 @@
                 7.221871376037598
             ],
             "translation" : [
-                1.2138644456863403,
-                45.67840576171875,
-                76.18113708496094
+                -0.05075645446777344,
+                44.15534210205078,
+                60.009944915771484
             ]
         },
         {
-            "extensions" : {
-                "KHR_lights_punctual" : {
-                    "light" : 1
-                }
-            },
-            "name" : "Light.001_Orientation",
-            "rotation" : [
-                -0.7071067690849304,
-                0,
-                0,
-                0.7071067690849304
-            ]
-        },
-        {
-            "children" : [
-                4
-            ],
             "name" : "Light.001",
             "rotation" : [
                 0.16907575726509094,
@@ -200,29 +111,12 @@
                 50.51664733886719
             ],
             "translation" : [
-                18.84198570251465,
-                29.03116226196289,
-                66.42860412597656
+                15.759033203125,
+                12.408196449279785,
+                37.89451599121094
             ]
         },
         {
-            "extensions" : {
-                "KHR_lights_punctual" : {
-                    "light" : 2
-                }
-            },
-            "name" : "Light.002_Orientation",
-            "rotation" : [
-                -0.7071067690849304,
-                0,
-                0,
-                0.7071067690849304
-            ]
-        },
-        {
-            "children" : [
-                6
-            ],
             "name" : "Light.002",
             "rotation" : [
                 0.16907575726509094,
@@ -236,29 +130,12 @@
                 50.51664733886719
             ],
             "translation" : [
-                -8.216204643249512,
+                -21.779809951782227,
                 83.2621841430664,
                 -118.03271484375
             ]
         },
         {
-            "extensions" : {
-                "KHR_lights_punctual" : {
-                    "light" : 3
-                }
-            },
-            "name" : "Light.003_Orientation",
-            "rotation" : [
-                -0.7071067690849304,
-                0,
-                0,
-                0.7071067690849304
-            ]
-        },
-        {
-            "children" : [
-                8
-            ],
             "name" : "Light.003",
             "rotation" : [
                 0.16907575726509094,
@@ -272,29 +149,12 @@
                 50.51664733886719
             ],
             "translation" : [
-                119.218017578125,
-                124.5572280883789,
-                22.963918685913086
+                70.27888488769531,
+                94.24768829345703,
+                -4.541667938232422
             ]
         },
         {
-            "extensions" : {
-                "KHR_lights_punctual" : {
-                    "light" : 4
-                }
-            },
-            "name" : "Light.004_Orientation",
-            "rotation" : [
-                -0.7071067690849304,
-                0,
-                0,
-                0.7071067690849304
-            ]
-        },
-        {
-            "children" : [
-                10
-            ],
             "name" : "Light.004",
             "rotation" : [
                 0.16907575726509094,
@@ -308,29 +168,12 @@
                 50.51664733886719
             ],
             "translation" : [
-                28.07489585876465,
-                101.54312896728516,
-                -19.596126556396484
+                16.988840103149414,
+                93.87605285644531,
+                -24.200889587402344
             ]
         },
         {
-            "extensions" : {
-                "KHR_lights_punctual" : {
-                    "light" : 5
-                }
-            },
-            "name" : "Light.005_Orientation",
-            "rotation" : [
-                -0.7071067690849304,
-                0,
-                0,
-                0.7071067690849304
-            ]
-        },
-        {
-            "children" : [
-                12
-            ],
             "name" : "Light.005",
             "rotation" : [
                 0.16907575726509094,
@@ -344,9 +187,54 @@
                 50.51664733886719
             ],
             "translation" : [
-                -5.3182477951049805,
-                81.8445816040039,
+                13.588278770446777,
+                63.67613220214844,
                 73.17095947265625
+            ]
+        }
+    ],
+    "animations" : [
+        {
+            "channels" : [
+                {
+                    "sampler" : 0,
+                    "target" : {
+                        "node" : 2,
+                        "path" : "translation"
+                    }
+                },
+                {
+                    "sampler" : 1,
+                    "target" : {
+                        "node" : 3,
+                        "path" : "rotation"
+                    }
+                },
+                {
+                    "sampler" : 2,
+                    "target" : {
+                        "node" : 3,
+                        "path" : "translation"
+                    }
+                }
+            ],
+            "name" : "Animation",
+            "samplers" : [
+                {
+                    "input" : 103,
+                    "interpolation" : "STEP",
+                    "output" : 104
+                },
+                {
+                    "input" : 105,
+                    "interpolation" : "LINEAR",
+                    "output" : 106
+                },
+                {
+                    "input" : 103,
+                    "interpolation" : "STEP",
+                    "output" : 107
+                }
             ]
         }
     ],
@@ -1846,6 +1734,48 @@
             "componentType" : 5123,
             "count" : 6429,
             "type" : "SCALAR"
+        },
+        {
+            "bufferView" : 103,
+            "componentType" : 5126,
+            "count" : 1,
+            "max" : [
+                0.041666666666666664
+            ],
+            "min" : [
+                0.041666666666666664
+            ],
+            "type" : "SCALAR"
+        },
+        {
+            "bufferView" : 104,
+            "componentType" : 5126,
+            "count" : 1,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 105,
+            "componentType" : 5126,
+            "count" : 124,
+            "max" : [
+                5.166666666666667
+            ],
+            "min" : [
+                0.041666666666666664
+            ],
+            "type" : "SCALAR"
+        },
+        {
+            "bufferView" : 106,
+            "componentType" : 5126,
+            "count" : 124,
+            "type" : "VEC4"
+        },
+        {
+            "bufferView" : 107,
+            "componentType" : 5126,
+            "count" : 1,
+            "type" : "VEC3"
         }
     ],
     "bufferViews" : [
@@ -2363,12 +2293,39 @@
             "buffer" : 0,
             "byteLength" : 12858,
             "byteOffset" : 1275380
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 4,
+            "byteOffset" : 1288240
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 12,
+            "byteOffset" : 1288244
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 496,
+            "byteOffset" : 1288256
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 1984,
+            "byteOffset" : 1288752
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 12,
+            "byteOffset" : 1290736
         }
     ],
     "buffers" : [
         {
-            "byteLength" : 1288240,
+            "byteLength" : 1290748,
             "uri" : "UAV_1.bin"
         }
     ]
 }
+
+

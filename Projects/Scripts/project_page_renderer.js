@@ -125,69 +125,8 @@ function overlayBackgroundImageChanger(index, list, list_active, list_inactive) 
   }
 }
 
-function iconNodeViewToggler(counter){
-  console.log(counter);
-  
-  return counter;
-}
 
-function project_page() {
-  let project_container = document.createElement("div");
-  project_container.className = "projects-container";
-  project_container.appendChild(navbar());
-  project_container.appendChild(background());
-
-  let overlay = document.createElement("div");
-  overlay.className = "overlay";
-  overlay.appendChild(viewIcons());
-  divs = overlayInfo();
-  overlay.appendChild(divs[0]);
-  overlay.appendChild(divs[1]);
-
-  project_container.appendChild(overlay);
-
-  document.body.appendChild(project_container);
-
-  let data_container = document.createElement("div");
-  data_container.id = "overlay-info-content";
-
-  let trace = document.querySelector("#space-holder").getBoundingClientRect();
-  data_container.style.left = `${trace.left}px`;
-  data_container.style.top = `${trace.top}px`;
-  data_container.style.width = `${trace.width}px`;
-  data_container.style.height = `${trace.height}px`;
-  document.body.appendChild(data_container);
-
-  data_container.addEventListener("click", function () {
-    data_container.classList.toggle("blur");
-    [reverse, secondAnimationFlag] = background_animate(
-      reverse,
-      secondAnimationFlag
-    );
-    if (flag) {
-      data_container.style.backgroundColor = "#19193851";
-      let trace = document.querySelector(".overlay").getBoundingClientRect();
-      data_container.style.left = `${trace.left}px`;
-      data_container.style.top = `${trace.top}px`;
-      data_container.style.width = `${trace.width}px`;
-      data_container.style.height = `${trace.height}px`;
-      document.querySelector("#threejs-container").style.opacity = "0";
-    } else {
-      data_container.style.backgroundColor = "";
-      document.querySelector("#threejs-container").style.opacity = "";
-      let trace = document
-        .querySelector("#space-holder")
-        .getBoundingClientRect();
-      data_container.style.left = `${trace.left}px`;
-      data_container.style.top = `${trace.top}px`;
-      data_container.style.width = `${trace.width}px`;
-      data_container.style.height = `${trace.height}px`;
-    }
-    flag = !flag;
-  });
-
-  let flag = true;
-
+function iconToggleAndIconColorSwitch(){
   let list = document.querySelectorAll(".icon-content");
   let list_inactive = document.querySelectorAll(".icon-content #img-inactive");
   let list_active = document.querySelectorAll(".icon-content #img-active");
@@ -227,5 +166,70 @@ function project_page() {
     scrollContainer.scrollTop = offset;
   });
 }
+
+function informationPanel(){
+  let flag = true;
+  // container for actual text content
+  let data_container = document.createElement("div");
+  data_container.id = "overlay-info-content";
+
+  let trace = document.querySelector("#space-holder").getBoundingClientRect();
+  data_container.style.left = `${trace.left}px`;
+  data_container.style.top = `${trace.top}px`;
+  data_container.style.width = `${trace.width}px`;
+  data_container.style.height = `${trace.height}px`;
+  document.body.appendChild(data_container);
+
+  data_container.addEventListener("click", function () {
+    data_container.classList.toggle("blur");
+    [reverse, secondAnimationFlag] = background_animate(
+      reverse,
+      secondAnimationFlag
+    );
+    if (flag) {
+      data_container.style.backgroundColor = "#19193851";
+      let trace = document.querySelector(".overlay").getBoundingClientRect();
+      data_container.style.left = `${trace.left}px`;
+      data_container.style.top = `${trace.top}px`;
+      data_container.style.width = `${trace.width}px`;
+      data_container.style.height = `${trace.height}px`;
+      document.querySelector("#threejs-container").style.opacity = "0";
+    } else {
+      data_container.style.backgroundColor = "";
+      document.querySelector("#threejs-container").style.opacity = "";
+      let trace = document
+        .querySelector("#space-holder")
+        .getBoundingClientRect();
+      data_container.style.left = `${trace.left}px`;
+      data_container.style.top = `${trace.top}px`;
+      data_container.style.width = `${trace.width}px`;
+      data_container.style.height = `${trace.height}px`;
+    }
+    flag = !flag;
+  });
+}
+
+
+function project_page() {
+  let project_container = document.createElement("div");
+  project_container.className = "projects-container";
+  project_container.appendChild(navbar());
+  project_container.appendChild(background());
+
+  let overlay = document.createElement("div");
+  overlay.className = "overlay";
+  overlay.appendChild(viewIcons());
+  divs = overlayInfo();
+  overlay.appendChild(divs[0]);
+  overlay.appendChild(divs[1]);
+
+  project_container.appendChild(overlay);
+  document.body.appendChild(project_container);
+  
+  informationPanel();
+  iconToggleAndIconColorSwitch();
+}
+
+
 
 project_page();
