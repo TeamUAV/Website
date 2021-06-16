@@ -70,6 +70,8 @@ function init(args) {
   function modelloader(args) {
     let loader = new GLTFLoader();
     loader.load(`Projects/Scripts/models/${args}.gltf`, (gltf) => {
+      mixer= new THREE.AnimationMixer(gltf.scene);
+      gltf.animations.forEach((clip) => {mixer.clipAction(clip).play()});
       object = gltf.scene;
       object.name = args;
       object.position.set(0, 50, 0);
