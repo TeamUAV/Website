@@ -91,7 +91,7 @@ function viewIcons() {
     img_1.id = "img-inactive";
     img_1.src = `Projects/Assets/Icons/Unselected-${i + 1}.svg`;
     img_2.id = "img-active";
-    img_2.src = `Projects/Assets/Icons/Selected-${i + 1}.svg`
+    img_2.src = `Projects/Assets/Icons/Selected-${i + 1}.svg`;
     div.appendChild(img_1);
     div.appendChild(img_2);
     li.appendChild(div);
@@ -111,6 +111,26 @@ function overlayInfo() {
   return [div_1, div_2];
 }
 
+function overlayBackgroundImageChanger(index, list, list_active, list_inactive) {
+  for (let i = 0; i < list.length; i++) {
+    if (i != index) {
+      list[i].classList.remove("active");
+      list_active[i].style.opacity = "0";
+      list_inactive[i].style.opacity = "1";
+    } else {
+      list[index].classList.add("active");
+      list_active[i].style.opacity = "1";
+      list_inactive[i].style.opacity = "0";
+    }
+  }
+}
+
+function iconNodeViewToggler(counter){
+  console.log(counter);
+  
+  return counter;
+}
+
 function project_page() {
   let project_container = document.createElement("div");
   project_container.className = "projects-container";
@@ -127,72 +147,86 @@ function project_page() {
   project_container.appendChild(overlay);
 
   document.body.appendChild(project_container);
+
+  let data_container = document.createElement("div");
+  data_container.id = "overlay-info-content";
+
+  let trace = document.querySelector("#space-holder").getBoundingClientRect();
+  data_container.style.left = `${trace.left}px`;
+  data_container.style.top = `${trace.top}px`;
+  data_container.style.width = `${trace.width}px`;
+  data_container.style.height = `${trace.height}px`;
+  document.body.appendChild(data_container);
+
+  data_container.addEventListener("click", function () {
+    data_container.classList.toggle("blur");
+    [reverse, secondAnimationFlag] = background_animate(
+      reverse,
+      secondAnimationFlag
+    );
+    if (flag) {
+      data_container.style.backgroundColor = "#19193851";
+      let trace = document.querySelector(".overlay").getBoundingClientRect();
+      data_container.style.left = `${trace.left}px`;
+      data_container.style.top = `${trace.top}px`;
+      data_container.style.width = `${trace.width}px`;
+      data_container.style.height = `${trace.height}px`;
+      document.querySelector("#threejs-container").style.opacity = "0";
+    } else {
+      data_container.style.backgroundColor = "";
+      document.querySelector("#threejs-container").style.opacity = "";
+      let trace = document
+        .querySelector("#space-holder")
+        .getBoundingClientRect();
+      data_container.style.left = `${trace.left}px`;
+      data_container.style.top = `${trace.top}px`;
+      data_container.style.width = `${trace.width}px`;
+      data_container.style.height = `${trace.height}px`;
+    }
+    flag = !flag;
+  });
+
+  let flag = true;
+
+  let list = document.querySelectorAll(".icon-content");
+  let list_inactive = document.querySelectorAll(".icon-content #img-inactive");
+  let list_active = document.querySelectorAll(".icon-content #img-active");
+
+  overlayBackgroundImageChanger(0, list, list_active, list_inactive);
+
+  let index = 0;
+
+  for (let i = 0; i < list.length; i++) {
+    list[i].addEventListener("click", function () {
+      [reverse, secondAnimationFlag] = background_animate(
+        reverse,
+        secondAnimationFlag
+      );
+      index = i;
+      overlayBackgroundImageChanger(index, list, list_active, list_inactive);
+    });
+  }
+
+  let counter = 2;
+  let buttons = document.querySelectorAll(".view-toggler");
+  let scrollContainer = document.querySelector("#project-icons-list");
+  buttons[0].addEventListener("click", function(){
+    [reverse, secondAnimationFlag] = background_animate(
+      reverse,
+      secondAnimationFlag
+    );
+    scrollContainer.scrollTop = -1;
+  });
+  buttons[1].addEventListener("click", function(){
+    [reverse, secondAnimationFlag] = background_animate(
+      reverse,
+      secondAnimationFlag
+    );
+    let height = scrollContainer.getBoundingClientRect().height;
+    let offsetHeight = height - list[3].getBoundingClientRect().top;
+    let offset = list[3].getBoundingClientRect().top + offsetHeight;
+    scrollContainer.scrollTop = offset;
+  });
 }
 
 project_page();
-
-let data_container = document.createElement("div");
-data_container.id = "overlay-info-content";
-
-let trace = document.querySelector("#space-holder").getBoundingClientRect();
-data_container.style.left = `${trace.left}px`;
-data_container.style.top = `${trace.top}px`;
-data_container.style.width = `${trace.width}px`;
-data_container.style.height = `${trace.height}px`;
-document.body.appendChild(data_container);
-
-let flag = true;
-
-data_container.addEventListener("click", function () {
-  data_container.classList.toggle("blur");
-  [reverse, secondAnimationFlag] = background_animate(reverse, secondAnimationFlag);
-  if (flag) {
-    data_container.style.backgroundColor = "#19193851";
-    let trace = document.querySelector(".overlay").getBoundingClientRect();
-    data_container.style.left = `${trace.left}px`;
-    data_container.style.top = `${trace.top}px`;
-    data_container.style.width = `${trace.width}px`;
-    data_container.style.height = `${trace.height}px`;
-    document.querySelector("#threejs-container").style.opacity="0";
-  } else {
-    data_container.style.backgroundColor = "";
-    document.querySelector("#threejs-container").style.opacity="";
-    let trace = document.querySelector("#space-holder").getBoundingClientRect();
-    data_container.style.left = `${trace.left}px`;
-    data_container.style.top = `${trace.top}px`;
-    data_container.style.width = `${trace.width}px`;
-    data_container.style.height = `${trace.height}px`;
-  }
-  flag = !flag;
-});
-
-let list = document.querySelectorAll(".icon-content");
-let list_inactive = document.querySelectorAll(".icon-content #img-inactive");
-let list_active = document.querySelectorAll(".icon-content #img-active");
-
-backgroundImageChanger(0);
-
-let index = 0;
-
-for (let i = 0; i < list.length; i++){
-  list[i].addEventListener('click', function() {
-  [reverse, secondAnimationFlag] = background_animate(reverse, secondAnimationFlag);
-    index = i;
-    backgroundImageChanger(index);
-  })
-}
-
-function backgroundImageChanger(index){
-  for (let i = 0; i < list.length; i++){
-    if (i != index){
-      list[i].classList.remove('active');
-      list_active[i].style.opacity = "0";
-      list_inactive[i].style.opacity = "1";
-    }
-    else{
-      list[index].classList.add('active');
-      list_active[i].style.opacity = "1";
-      list_inactive[i].style.opacity = "0";
-  }
-  }
-}
