@@ -33,6 +33,7 @@
 
 #data-button{
     border: none;
+    background-color: white;
     margin-top: 1rem;
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
@@ -42,4 +43,16 @@
     outline: none;
     font-size: 1.3rem;
     color: black;
+}
+
+#stats {
+    margin-top: 2rem;
+    color: white;
+    padding: 2rem;
+    text-align: left;
+    font-size: 1.15rem;
+    font-family: 'Poppins', sans-serif;
+}
+#stats td{
+    padding-left: 2rem;
 }

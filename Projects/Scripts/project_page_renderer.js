@@ -166,22 +166,41 @@ function iconToggleAndIconColorSwitch(){
     scrollContainer.scrollTop = offset;
   });
 }
-function internal_content_main(data_container){
+function internal_content_main(data_container, index){
   let data_title = document.createElement("h1");
   data_title.id = "data-title";
   data_title.className = "border";
-  data_title.innerText = "Forest Ranger";
+  data_title.innerText = data[index].title;
   data_container.appendChild(data_title);
   
   let data_content = document.createElement("div");
   data_content.id = "data-content";
-  data_content.innerText = "The forest ranger is a fixed-wing UAV designed to patrol National Parks and Wildlife sanctuaries and to be inaudible and indistinguishable by anyone on the ground as surveillance equipment.";
+  data_content.innerText = data[index].shortWriteUp;
   data_container.appendChild(data_content);
 
   let button = document.createElement("button");
   button.id = "data-button";
   button.innerText = "View More Details";
   data_container.appendChild(button);
+
+  let table = document.createElement("table");
+  table.id = "stats";
+  let stat_labels = ["Width", "Height", "Length"];
+  for (let i = 0;i < 3;i ++){
+    let tr = document.createElement("tr");
+    let td_1 = document.createElement("td");
+    td_1.innerText = stat_labels[i];
+    let td_2 = document.createElement("td");
+    td_2.innerText = ":";
+    let td_3 = document.createElement("td");
+    td_3.innerText = data[index].stats[i];
+    tr.appendChild(td_1);
+    tr.appendChild(td_2);
+    tr.appendChild(td_3);
+
+    table.appendChild(tr);
+  }
+  data_container.appendChild(table);
 }
 
 function informationPanel(){
@@ -190,7 +209,7 @@ function informationPanel(){
   let data_container = document.createElement("div");
   data_container.id = "overlay-info-content";
 
-  internal_content_main(data_container);
+  internal_content_main(data_container, 0);
 
   let trace = document.querySelector("#space-holder").getBoundingClientRect();
   data_container.style.left = `${trace.left}px`;
