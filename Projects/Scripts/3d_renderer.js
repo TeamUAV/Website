@@ -23,7 +23,7 @@ function init(args) {
     1,
     3000
   );
-  camera.position.set(300, 150, 200);
+  camera.position.set(200, 150, 200);
 
   scene = new THREE.Scene();
   scene.background = new THREE.Color(0xff707070);
@@ -42,13 +42,16 @@ function init(args) {
   const dir_3 = new THREE.DirectionalLight(0xffffff, 2);
   dir_3.position.set(-3.9, 1.4, 6.8);
 
+  const dir_4 = new THREE.HemisphereLight(0xffffff, 2);
+  dir_4.position.set(0 , -1.4, 0);
 
   scene.add(dir_1);
   scene.add(dir_2);
   scene.add(dir_3);
+  scene.add(dir_4);
 
-  const axishelper = new THREE.AxesHelper(500);
-  scene.add(axishelper);
+  // const axishelper = new THREE.AxesHelper(500);
+  // scene.add(axishelper);
 
   const geometry = new THREE.PlaneGeometry(10000, 10000);
   const material = new THREE.MeshBasicMaterial({

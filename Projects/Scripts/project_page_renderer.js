@@ -166,12 +166,31 @@ function iconToggleAndIconColorSwitch(){
     scrollContainer.scrollTop = offset;
   });
 }
+function internal_content_main(data_container){
+  let data_title = document.createElement("h1");
+  data_title.id = "data-title";
+  data_title.className = "border";
+  data_title.innerText = "Forest Ranger";
+  data_container.appendChild(data_title);
+  
+  let data_content = document.createElement("div");
+  data_content.id = "data-content";
+  data_content.innerText = "The forest ranger is a fixed-wing UAV designed to patrol National Parks and Wildlife sanctuaries and to be inaudible and indistinguishable by anyone on the ground as surveillance equipment.";
+  data_container.appendChild(data_content);
+
+  let button = document.createElement("button");
+  button.id = "data-button";
+  button.innerText = "View More Details";
+  data_container.appendChild(button);
+}
 
 function informationPanel(){
   let flag = true;
   // container for actual text content
   let data_container = document.createElement("div");
   data_container.id = "overlay-info-content";
+
+  internal_content_main(data_container);
 
   let trace = document.querySelector("#space-holder").getBoundingClientRect();
   data_container.style.left = `${trace.left}px`;
@@ -180,7 +199,7 @@ function informationPanel(){
   data_container.style.height = `${trace.height}px`;
   document.body.appendChild(data_container);
 
-  data_container.addEventListener("click", function () {
+  document.querySelector("#data-button").addEventListener("click", function () {
     data_container.classList.toggle("blur");
     [reverse, secondAnimationFlag] = background_animate(
       reverse,
