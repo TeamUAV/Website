@@ -82,7 +82,7 @@ function init(args) {
     });
   }
     function toggleModel(active, chosen) {
-      let models = ["UAV_1", "UAV_2", "UAV_3"];
+      let models = ["UAV_1", "UAV_2", "UAV_3", "UAV_4"];
       if (active != chosen){
         scene.remove(scene.getObjectByName(models[active]));
         modelloader(models[chosen]);
