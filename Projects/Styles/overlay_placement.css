@@ -108,12 +108,22 @@
   padding-top: 2rem;
   -webkit-backdrop-filter: blur(25px);
   backdrop-filter: blur(25px);
+  /* filter: blur(8px);
+  -webkit-filter: blur(8px); */
   position: absolute;
+  display: flex;
   border-radius: 40px;
-  /* border: 1px solid white; */
   z-index: 3;
   transition: all 1.5s ease;
 }
+
+#overlay-info-content div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
 .blur{
   -webkit-backdrop-filter: blur(15px);
   backdrop-filter: blur(15px);

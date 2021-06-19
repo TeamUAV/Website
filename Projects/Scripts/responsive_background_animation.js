@@ -115,6 +115,7 @@ function background_animate(reverse, secondAnimationFlag){
 function init(reverse, secondAnimationFlag) {
   let query = window.matchMedia("(max-width:1024px)")
   if(query.matches) {
+    console.log("je")
     resposive_background_animate(reverse, secondAnimationFlag)
   }
   else {

@@ -54,5 +54,7 @@
     font-family: 'Poppins', sans-serif;
 }
 #stats td{
-    padding-left: 2rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+    font-size: 1.05rem;
 }

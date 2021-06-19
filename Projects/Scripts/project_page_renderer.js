@@ -111,7 +111,12 @@ function overlayInfo() {
   return [div_1, div_2];
 }
 
-function overlayBackgroundImageChanger(index, list, list_active, list_inactive) {
+function overlayBackgroundImageChanger(
+  index,
+  list,
+  list_active,
+  list_inactive
+) {
   for (let i = 0; i < list.length; i++) {
     if (i != index) {
       list[i].classList.remove("active");
@@ -125,8 +130,7 @@ function overlayBackgroundImageChanger(index, list, list_active, list_inactive) 
   }
 }
 
-
-function iconToggleAndIconColorSwitch(){
+function iconToggleAndIconColorSwitch() {
   let list = document.querySelectorAll(".icon-content");
   let list_inactive = document.querySelectorAll(".icon-content #img-inactive");
   let list_active = document.querySelectorAll(".icon-content #img-active");
@@ -148,14 +152,15 @@ function iconToggleAndIconColorSwitch(){
 
   let buttons = document.querySelectorAll(".view-toggler");
   let scrollContainer = document.querySelector("#project-icons-list");
-  buttons[0].addEventListener("click", function(){
+  let scrollController = zenscroll.createScroller(scrollContainer);
+  buttons[0].addEventListener("click", function () {
     [reverse, secondAnimationFlag] = background_animate(
       reverse,
       secondAnimationFlag
     );
-    scrollContainer.scrollTop = -1;
+    scrollController.toY(-1);
   });
-  buttons[1].addEventListener("click", function(){
+  buttons[1].addEventListener("click", function () {
     [reverse, secondAnimationFlag] = background_animate(
       reverse,
       secondAnimationFlag
@@ -163,53 +168,89 @@ function iconToggleAndIconColorSwitch(){
     let height = scrollContainer.getBoundingClientRect().height;
     let offsetHeight = height - list[3].getBoundingClientRect().top;
     let offset = list[3].getBoundingClientRect().top + offsetHeight;
-    scrollContainer.scrollTop = offset;
+    scrollController.toY(offset);
+    // scrollContainer.scrollTo({
+    //   top: offset,
+    //   behavior: "smooth"
+    // });
+    // cross platform scroller
   });
 }
-function internal_content_main(data_container, index){
+function shrunkState(data_container, index) {
+  let div = document.createElement("div");
+  div.id = "splash-content"; // overlay main content
   let data_title = document.createElement("h1");
   data_title.id = "data-title";
   data_title.className = "border";
-  data_title.innerText = data[index].title;
-  data_container.appendChild(data_title);
-  
+  data_title.innerText = plane_data[index].title;
+  div.appendChild(data_title);
+
   let data_content = document.createElement("div");
   data_content.id = "data-content";
-  data_content.innerText = data[index].shortWriteUp;
-  data_container.appendChild(data_content);
+  data_content.innerText = plane_data[index].shortWriteUp;
+  div.appendChild(data_content);
 
   let button = document.createElement("button");
   button.id = "data-button";
   button.innerText = "View More Details";
-  data_container.appendChild(button);
+  div.appendChild(button);
 
   let table = document.createElement("table");
   table.id = "stats";
-  let stat_labels = ["Width", "Height", "Length"];
-  for (let i = 0;i < 3;i ++){
+  let stat_labels = ["Wingspan", "Tail Height", "Length"];
+  for (let i = 0; i < 3; i++) {
     let tr = document.createElement("tr");
     let td_1 = document.createElement("td");
     td_1.innerText = stat_labels[i];
     let td_2 = document.createElement("td");
     td_2.innerText = ":";
     let td_3 = document.createElement("td");
-    td_3.innerText = data[index].stats[i];
+    td_3.innerText = plane_data[index].stats[i];
     tr.appendChild(td_1);
     tr.appendChild(td_2);
     tr.appendChild(td_3);
 
     table.appendChild(tr);
   }
-  data_container.appendChild(table);
+  div.appendChild(table);
+  data_container.appendChild(div);
 }
 
-function informationPanel(){
+function expandedState(data_container, index) {
+  let div = document.createElement("div");
+  div.id = "graph";
+  let graph = document.createElement("canvas");
+  graph.id = "graph-plot";
+  graph.style.maxWidth = "90%";
+  div.appendChild(graph);
+  data_container.appendChild(div);
+  new Chart("graph-plot", {
+    type: "line",
+    data: {
+      labels: plane_data[index].x_values[0],
+      datasets: [
+        {
+          fill: false,
+          lineTension: 0,
+          label: "Fz vs Alpha",
+          backgroundColor: 'rgb(255, 255, 255)',
+          borderColor: "rgba(255, 0, 0)",
+          data: plane_data[index].y_values[0],
+        },
+      ],
+    },
+  });
+  data_container.style.flexDirection = "row";
+  div.style.flex = "1";
+}
+
+function informationPanel() {
   let flag = true;
   // container for actual text content
   let data_container = document.createElement("div");
   data_container.id = "overlay-info-content";
 
-  internal_content_main(data_container, 0);
+  shrunkState(data_container, 0);
 
   let trace = document.querySelector("#space-holder").getBoundingClientRect();
   data_container.style.left = `${trace.left}px`;
@@ -225,6 +266,7 @@ function informationPanel(){
       secondAnimationFlag
     );
     if (flag) {
+      expandedState(data_container, 0);
       data_container.style.backgroundColor = "#19193851";
       let trace = document.querySelector(".overlay").getBoundingClientRect();
       data_container.style.left = `${trace.left}px`;
@@ -242,11 +284,11 @@ function informationPanel(){
       data_container.style.top = `${trace.top}px`;
       data_container.style.width = `${trace.width}px`;
       data_container.style.height = `${trace.height}px`;
+      document.querySelector("#graph").remove();
     }
     flag = !flag;
   });
 }
-
 
 function project_page() {
   let project_container = document.createElement("div");
@@ -263,11 +305,9 @@ function project_page() {
 
   project_container.appendChild(overlay);
   document.body.appendChild(project_container);
-  
+
   informationPanel();
   iconToggleAndIconColorSwitch();
 }
-
-
 
 project_page();
