@@ -424,5 +424,4 @@ function project_page() {
   informationPanel();
   iconToggleAndIconColorSwitch();
 }
-
 project_page();
