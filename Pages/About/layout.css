@@ -1,5 +1,5 @@
 .container.about-info {
-  width: 90%;
+  width: 90vw;
   height: 80vh;
   margin: 0 auto;
 }
@@ -18,10 +18,11 @@
 
 .container.about-info ul {
   height: 90%;
+  overflow: scroll;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
   list-style: none;
+  padding-left: 5rem;
 }
 
 .container.about-info li {
@@ -33,7 +34,6 @@
 }
 .container.about-info li:before {
   content: "";
-  /* top: 0.74rem; */
   width: 1rem;
   height: 1rem;
   border-radius: 50%;
