@@ -1,0 +1,462 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+html{
+    color: #ffffff;
+    scroll-behavior: smooth;
+}
+
+#home h1{
+    
+    font-family: sans-serif;
+    width:fit-content;
+    font-size: 7rem;
+    position: relative;
+    color: #ffffff;
+    letter-spacing: .3rem;
+}
+
+#home h3{
+    display: inline-block;
+    padding: 10px;
+    font-size: 1.5rem;
+    font-weight: normal;
+    letter-spacing: .3rem;
+
+}
+.container{
+    min-height: 100vh;
+    width:80%;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    margin-left: 20vh;
+  
+}
+.logo img{
+    width: 50px;
+    height:auto;
+    margin-left: -150px;
+}
+#header{
+    position: fixed;
+    z-index: 1000;
+    width:110vw;
+    height: auto;
+
+}
+#header .header{
+    min-height: 8vh;
+    background-color: transparent;
+}
+#header .nav-bar{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    width:100%;
+    height: 100%;
+}
+
+#header .nav-list ul a{
+    position: relative;
+    font-size:1rem;   
+    text-decoration: none;
+    color:white;   
+    padding: 20px;
+
+}
+#header .nav-list ul a:hover{
+    color:crimson;
+}
+    #header .nav-list ul li{
+        display:inline-block;
+    }
+   
+#home {
+    
+    position: absolute;
+    width: 100vw;
+    height: 5000px;
+    background: #000022;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    object-fit: fill;
+}
+#bg1{
+    position: absolute;
+    width: 100%;
+    height: 400px;
+    left: 0px;
+    top: 1000px;
+    background: linear-gradient(92.03deg, rgba(25, 25, 56, 0.63) 42.12%, rgba(245, 25, 25, 0.6237) 84.19%);
+    border-radius: 30px;
+}
+#bg2{
+    position: absolute;
+    width: 100%;
+    height: 400px;
+    left:0px;
+    top: 2000px;
+    background: linear-gradient(92.03deg, rgba(25, 25, 56, 0.63) 42.12%, rgba(245, 25, 25, 0.6237) 84.19%);
+    border-radius: 30px;
+    transform: rotate(-180deg);
+
+}
+#bg3{
+    position: absolute;
+    width: 100%;
+    height: 400px;
+    left: 0px;
+    top: 3000px; 
+    background: linear-gradient(92.03deg, rgba(25, 25, 56, 0.63) 42.12%, rgba(245, 25, 25, 0.6237) 84.19%);
+    border-radius: 30px;
+
+}
+#bg4{
+    position: absolute;
+    width: 100%;
+    height: 400px;
+    left: 0px;
+    top: 4000px;
+    background: linear-gradient(92.03deg, rgba(25, 25, 56, 0.63) 42.12%, rgba(245, 25, 25, 0.6237) 84.19%);
+    border-radius: 30px;
+    transform: rotate(-180deg);
+    
+}
+#line1{
+    position: absolute;
+    width: 10vw;
+    left: 0px;
+    top: 130px;
+    border: 1px solid #FFFFFF;
+
+}
+#line2{
+    
+    position: absolute;
+    width: 2vw;
+    left: 0px;
+    top: 150px;
+    border: 1px solid #FF1F1F;
+    
+}
+#line3{
+    position: absolute;
+    width: 2vw;
+    height: 0px;
+    left: 0px;
+    top: 300px;
+    border: 1px solid #FF1F1F;
+    
+}
+#line4{
+    position: absolute;
+    width: 10vw;
+    left: 0px;
+    top: 140px;
+    border: 1px solid #FFFFFF;
+
+}
+#line5{
+    position: absolute;
+    width: 10vw;
+    right:0px;
+    top: 130px;
+    border: 1px solid #FFFFFF;
+    
+
+}
+#line6{   
+   
+    position: absolute;
+    width: 2vw;
+    right:0;
+    top: 150px;
+    border: 1px solid #FF1F1F;
+ }
+#line7{
+    position: absolute;
+    width: 2vw;
+    right:0px;
+    top: 300px;
+    border: 1px solid #FF1F1F;
+   }
+#line8{
+    position: absolute;
+    width: 10vw;
+    right:0px;
+    top: 140px;
+    border: 1px solid #FFFFFF;
+    
+}
+#scroll{
+    position: absolute;
+    display: inline-block;
+    width: 30vw;
+    height: 40px;
+    left: 613px;
+    top: 750px;
+    cursor:pointer;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 40px;
+/* identical to box height, or 200% */
+    text-align: center;
+    letter-spacing: 0.34em;
+    color: rgba(255, 255, 255, 0.8);
+}
+#scroll a{
+    position: relative;
+    font-size:1rem;   
+    text-decoration: none;
+    color:white;   
+    padding: 20px;
+
+}
+/* Styling of the ABOUT page */
+
+#title1{
+    
+    position: absolute;
+    width: 191px;
+    height: 75px;
+    left: 40px;
+    top: 1000px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 39px;
+    line-height: 75px;  
+/* identical to box height, or 192% */
+    letter-spacing: 0.4em;
+    color: #F51919;
+    position: absolute;
+    
+
+}
+#subtitle1{
+    position: absolute;
+    width: 643px;
+    height: 150px;
+    left: 38px;
+    top: 1080px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 41px;
+    line-height: 75px;
+/* or 183% */
+    color: white;
+    
+
+}
+
+#description1{
+    position: absolute;
+    width: 665px;
+    height: 207px;
+    left: 36px;
+    top: 1200px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 29px;
+    line-height: 69px;
+    /* or 238% */
+    color: rgba(255, 255, 255, 0.83);
+
+}
+
+#image1{
+    
+position: absolute;
+width: 700px;
+height: 500px;
+left: 879px;
+top: 1200px;
+
+background: #C4C4C4;
+}
+
+
+/* Styling of the PROJECT page */
+#title2{
+    position: absolute;
+    width: 301px;
+    height: 75px;
+    left: 1098px;
+    top: 2000px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 39px;
+    line-height: 75px;
+    /* identical to box height, or 192% */
+    letter-spacing: 0.4em;
+    color: rgba(245, 25, 25, 0.9);
+
+}
+#subtitle2{
+    position: absolute;
+    width: 643px;
+    height: 150px;
+    left: 757px;
+    top: 2080px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 41px;
+    line-height: 75px;
+    /* or 183% */
+    text-align: right;
+    color: #FFFFFF;
+
+}
+
+#description2{
+    position: absolute;
+    width: 665px;
+    height: 207px;
+    left: 739px;
+    top: 2200px;    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 29px;
+    line-height: 69px;
+    /* or 238% */    
+    text-align: right;    
+    color: rgba(255, 255, 255, 0.83);
+}
+
+#image2{
+    
+    position: absolute;
+    width: 700px;
+    height: 500px;
+    left: -21px;
+    top: 2200px;    
+    background: #C4C4C4;
+}
+
+
+/* Styling of the SPONSORS page */
+#title3{
+    position: absolute;
+    width: 313px;
+    height: 75px;
+    left: 38px;
+    top: 3000px;    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 39px;
+    line-height: 75px;
+    /* identical to box height, or 192% */
+    letter-spacing: 0.4em;
+    color: rgba(245, 25, 25, 0.9);  
+
+}
+#subtitle3{
+    position: absolute;
+    width: 882px;
+    height: 150px;
+    left: 36px;
+    top: 3080px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 41px;
+    line-height: 75px;
+    /* or 183% */
+    color: #FFFFFF;
+
+}
+
+#description3{
+    position: absolute;
+    width: 665px;
+    height: 207px;
+    left: 34px;
+    top: 3200px;    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 29px;
+    line-height: 69px;
+    /* or 238% */   
+    color: rgba(255, 255, 255, 0.83);
+    
+}
+
+#image3{    
+    position: absolute;
+    width: 700px;
+    height: 500px;
+    left: 879px;
+    top: 3200px;    
+    background: #C4C4C4;
+}
+
+
+/* Styling of the GALLERY page */
+#title4{
+    position: absolute;
+    width: 251px;
+    height: 75px;
+    left: 1147px;
+    top: 4000px;    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 39px;
+    line-height: 75px;
+    /* identical to box height, or 192% */
+    letter-spacing: 0.4em;
+    color: rgba(245, 25, 25, 0.9);
+
+}
+#subtitle4{
+    position: absolute;
+    width: 882px;   
+    height: 225px;
+    left: 518px;
+    top: 4080px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 41px;
+    line-height: 75px;
+    /* or 183% */
+    text-align: right;
+    color: #FFFFFF;
+
+}
+
+#description4{
+    position: absolute;
+    width: 665px;
+    height: 207px;
+    left: 739px;
+    top: 4200px;    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 29px;
+    line-height: 69px;
+    /* or 238% */    
+    text-align: right;    
+    color: rgba(255, 255, 255, 0.83);
+    
+}
+#image4{    
+    position: absolute;
+    width: 700px;
+    height: 500px;
+    left: -21px;
+    top: 4200px;    
+    background: #C4C4C4;
+}
