@@ -172,8 +172,13 @@ cursor: pointer;
   text-transform: uppercase;
 }
 
+.bold{
+  font-weight: 500;
+}
+
 .know-more-details-fields #name-value{
   font-size: 1.5rem;
+  font-weight: 300;
   display: block;
 }
 

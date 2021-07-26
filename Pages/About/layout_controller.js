@@ -85,9 +85,9 @@ class KnowMoreCard{
         pg2.className = "know-more-details-fields";
 
         // fields
-        pg1.appendChild(new KnowMoreGeneralField('name', this.name, false));
-        pg1.appendChild(new KnowMoreGeneralField('about', this.about, true));
-        pg1.appendChild(new KnowMoreGeneralField('skills', this.skills, true));
+        pg1.appendChild(new KnowMoreGeneralField('name', this.name, true, false));
+        pg1.appendChild(new KnowMoreGeneralField('about', this.about, false, true));
+        pg1.appendChild(new KnowMoreGeneralField('skill set', this.skills, false, true));
         pg2.appendChild(new KnowMorePositionsField(this.positions));
         pg2.appendChild(new KnowMoreLinkField(this.contactLinks));
 
@@ -152,7 +152,7 @@ class Dot{
 }
 
 class KnowMoreGeneralField{
-    constructor(title, body, long){
+    constructor(title, body, bold, long){
         let elem =  document.createElement('div');
         elem.className = "field";
         let p = document.createElement('p');
@@ -166,6 +166,8 @@ class KnowMoreGeneralField{
         if(long){
             p.className = 'long';
         }
+        else if (bold)
+            p.className = 'bold';
         elem.appendChild(p);
 
         return elem;
