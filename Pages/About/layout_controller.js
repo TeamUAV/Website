@@ -60,7 +60,7 @@ class KnowMoreCard{
         details.className = "know-more-details";
 
         let img = document.createElement('img');
-        img.className = "know-more-card";
+        img.className = "know-more-image";
         img.src = this.image;
 
         // view more button
@@ -78,15 +78,76 @@ class KnowMoreCard{
 
         details.appendChild(btn);
 
+        let pg1 = document.createElement('div');
+        pg1.className = "know-more-details-fields";
+
+        let pg2 = document.createElement('div');
+        pg2.className = "know-more-details-fields";
+
         // fields
-        details.appendChild(new KnowMoreGeneralField('name', this.name, false));
-        details.appendChild(new KnowMoreGeneralField('about', this.about, false));
-        details.appendChild(new KnowMoreGeneralField('skills', this.skills, false));
-        details.appendChild(new KnowMorePositionsField(this.positions));
-        details.appendChild(new KnowMoreLinkField(this.links));
+        pg1.appendChild(new KnowMoreGeneralField('name', this.name, false));
+        pg1.appendChild(new KnowMoreGeneralField('about', this.about, true));
+        pg1.appendChild(new KnowMoreGeneralField('skills', this.skills, true));
+        pg2.appendChild(new KnowMorePositionsField(this.positions));
+        pg2.appendChild(new KnowMoreLinkField(this.contactLinks));
+
+        pg1.classList.add('active');
+
+        // navigation index
+        let navDiv = document.createElement('div');
+        let dot1 = new Dot();
+        let dot2 = new Dot();
+
+        dot2.toggle();
+
+        console.log(dot1.dot.innerHTML)
+        console.log(dot2.dot.innerHTML)
+
+        navDiv.appendChild(dot1.dot);
+        navDiv.appendChild(dot2.dot);
+        navDiv.id ="navigation-dots";
+
+        details.appendChild(navDiv);
+
+        details.appendChild(pg1);
+        details.appendChild(pg2);
 
         this.DOMCard.appendChild(details);
         this.DOMCard.appendChild(img);
+
+        btn.addEventListener('click', () => {
+            pg1.classList.toggle('active');
+            pg2.classList.toggle('active');
+            dot1.toggle();
+            dot2.toggle();
+            p.classList.toggle('pg2');
+            i.classList.toggle('pg2');
+        });
+
+        return this.DOMCard;
+    }
+}
+
+class Dot{
+    constructor(){
+        let dot = document.createElement('div');
+        dot.className = "dot";
+        let img1 = document.createElement('img');
+        img1.src = "Pages/About/Assets/active.png";
+        let img2 = document.createElement('img');
+        img2.src = "Pages/About/Assets/inactive.png";
+
+        dot.appendChild(img1);
+        dot.appendChild(img2);
+
+        this.dot = dot;
+        this.img1Ref = img1;
+        this.img2Ref = img2;
+        this.img1Ref.classList.toggle('active');
+    }
+    toggle(){
+            this.img1Ref.classList.toggle('active');
+            this.img2Ref.classList.toggle('active');
     }
 }
 
@@ -153,3 +214,7 @@ class KnowMorePositionsField{
         return elem;
     }
 }
+
+let card = new KnowMoreCard('Valentino Rossi', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, ducimus. Ex repudiandae ullam doloribus molestiae ad mollitia porro consectetur quisquam quam ipsa, laboriosam asperiores quidem voluptatum id iusto nesciunt eaque',
+ ['abc', 'def', 'ghi'], ['abc', 'efg'], [{body: 'abc', ref:'ref'}], 'https://m.gpone.com/sites/default/files/images/2021/article/foto/05/MotoGP/05-LeMans/rossi-box-1621097058.jpg');
+document.querySelector(".content").appendChild(card.render());

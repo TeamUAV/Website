@@ -203,6 +203,7 @@ a{
 .dot img{
   position: absolute;
   opacity: 0;
+  transition: all 0.5s;
 }
 
 .dot img.active{
