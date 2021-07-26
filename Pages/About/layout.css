@@ -1,8 +1,12 @@
 .container.about-info {
-  width: 90vw;
+  width: 95vw;
   height: 80vh;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
 }
+
+
 
 .container.about-info #title {
   color: rgba(245, 25, 25, 1);
@@ -11,36 +15,53 @@
   font-weight: 500;
   font-size: 46px;
   line-height: 69px;
-  margin: 4rem 2rem 0;
+  margin-top: 2rem;
+  margin-left: 7rem;
+  margin-bottom: 1rem;
   text-transform: uppercase;
   letter-spacing: 0.24em;
 }
 
+.container.about-info .content {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+}
+
 .container.about-info ul {
-  height: 90%;
+  height: 85%;
+  width: 30%;
   overflow: scroll;
   display: flex;
+  text-transform: uppercase;
   flex-direction: column;
   list-style: none;
+  margin-top: 1.5rem;
   padding-left: 5rem;
 }
 
 .container.about-info li {
   position: relative;
-  padding-left: 1rem;
+  padding-left: 2.5rem;
   height: 100%;
+  width: 50%;
+  font-size: 1.4rem;
   font-weight: 300;
+    -moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.9);
   margin-top: 2rem;
 }
 .container.about-info li:before {
   content: "";
-  width: 1rem;
-  height: 1rem;
+  width: 1.5rem;
+  height: 1.5rem;
   border-radius: 50%;
-  background: white;
+  background: rgba(255, 255, 255, 0.9);
   position: absolute;
-  left: -0.89rem;
-  transform: translateY(30%);
+  left: -1.04rem;
+  transform: translateY(23%);
 }
 
 .container.about-info li.active:before {
@@ -55,10 +76,135 @@
 .container.about-info li:not(:last-child):after {
   content: "";
   width: 2px;
-  height: 105%;
+  height: 100%;
+  transform: translateY(2%);
   background: #d8d8d8;
   position: absolute;
   border-radius: 10px;
-  left: -8px;
-  top: 1.75rem;
+  left: -0.335rem;
+  top: 2.05rem;
+}
+
+.know-more-card{
+  margin-right: 1rem;
+  margin-top: 2rem;
+  width: 60%;
+  border-radius: 40px 5px 5px 40px;
+  height: 85%;
+  display: flex;
+}
+
+.know-more-details{
+  position: relative;
+  width: 55%;
+  height: 100%;
+  background: linear-gradient(102.8deg, rgba(25, 26, 56, 0.5) 12.2%, rgba(245, 25, 25, 0.5) 97.42%);
+  border-radius: 40px 0 0 40px;
+}
+.know-more-details *{
+  background-color: transparent;
+}
+
+.view-more-btn{
+  -moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;
+cursor: pointer;
+  display: flex;
+  width: 100%;
+  margin-top: 1rem;
+  padding-right: 1rem;
+  align-items: center;
+  position: absolute;
+  justify-content: flex-end;
+  text-transform: uppercase;
+}
+.view-more-btn p{
+  font-size: 0.8rem;
+  text-align: justify;
+  transition: all 0.5s ease-in-out;
+}
+.view-more-btn p.pg2{
+  opacity: 0;
+}
+
+#view-more-arrow{
+  transform: rotate(180deg);
+  margin-left: 1rem;
+  transition: all 0.5s;
+}
+
+#view-more-arrow.pg2{
+  transform: rotate(0deg);
+}
+
+
+.know-more-image{
+  display: block;
+  width: 45%;
+  object-fit: cover;
+  height: 100%;
+  background-color: red;
+  outline: none;
+  border-radius: 0 5px 5px 0;
+}
+
+.know-more-details-fields{
+  transition: all 0.5s ease-in-out;
+  margin-left: 3rem;
+  margin-top: 5rem;
+  position: absolute;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+}
+
+.know-more-details-fields.active{
+  opacity: 1;
+}
+
+.know-more-details-fields .field{
+  margin-bottom: 4rem;
+}
+
+.know-more-details-fields #name{
+  color: rgba(244, 25, 25, 1);
+  margin-bottom: 0.2rem;
+  text-transform: uppercase;
+}
+
+.know-more-details-fields #name-value{
+  font-size: 1.5rem;
+  display: block;
+}
+
+.know-more-details-fields #name-value.long{
+  height: 5.5rem;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  overflow: scroll;
+}
+
+a{
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+#navigation-dots{
+  position: absolute;
+  display: flex;
+  bottom: 2.5rem;
+  right: 0;
+  align-items: center;
+  padding-right: 2rem;
+}
+#navigation-dots > .dot{
+  margin-left: 1rem;
+}
+.dot img{
+  position: absolute;
+  opacity: 0;
+}
+
+.dot img.active{
+  opacity: 1;
 }
