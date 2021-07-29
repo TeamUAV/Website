@@ -1,0 +1,264 @@
+@import url(//db.onlinewebfonts.com/c/1064f0ad1cb65fdab43bb592ddd8aa91?family=Gilroy-Bold);
+*{
+    margin: 0;
+    padding: 0;
+}
+*::-webkit-scrollbar{
+    display: none;
+}
+body{
+    background-color: #000022;
+}
+#about-title {
+    position: absolute;
+    width: 681px;
+    height: 288px;
+    left: 112px;
+    top: 211px;
+    font-family: Gilroy-Bold;
+    font-size: 144px;
+    line-height: 144px;
+    display: flex;
+    align-items: flex-end;
+    color: #F1F1F1;
+}
+#line1{
+    position: absolute;
+    height: 0px;
+    width: 769px;
+    left: 117px;
+    top: 501px;
+    border: 4px solid #FFFFFF;
+}
+
+#about-text {
+    position: absolute;
+    width: 90%;
+    height: 200px;
+    left: 104px;
+    top: 569px;
+    font-family: Gilroy-Light;
+    font-size: 28px;
+    line-height: 34px;
+    text-align: justify;
+    color: #FFFFFF;
+}
+
+#left {
+    position: absolute;
+    width: 60rem;
+    height: 12.5rem;
+    left: 0rem;
+    top: 56rem;
+}
+
+#right{
+     
+    position: absolute;
+    width: 49rem;
+    height: 12rem;
+    right: 0rem;
+    top: 70.3rem;
+}
+#dept{
+    position: absolute;
+    width: 45rem;
+    height: 35rem;
+    left: 37.5rem;
+    top: 56rem;
+}
+.cs-elec{
+    position: absolute;
+    width: 30rem;
+    height: 21rem;
+    top: 61rem;
+}
+
+/* #cs{
+    position: absolute;
+    width: 439px;
+    height: 300px;
+    left: 270px;
+    top: 960px;
+}
+
+#elec{
+    position: absolute;
+    width: 439px;
+    height: 300px;
+    left: 850px;
+    top: 960px;
+} */
+
+.manage-mech{
+    position: absolute;
+    width: 30rem;
+    height: 21rem;
+    top: 56rem;
+}
+/* #mech{
+    position: absolute;
+    width: 390px;
+    height: 295px;
+    left: 1145px;
+    top: 903px;
+}
+
+#manage {
+    position: absolute;
+    width: 390px;
+    height: 290px;
+    left: 20px;
+    top: 903px;
+} */
+.box{
+    display:flex;
+    position: relative;
+    width: 1071px;
+    height: 480px;
+    background: linear-gradient(163.4deg, rgba(25, 25, 56, 0.7) -4.39%, rgba(25, 25, 56, 0) 114.94%);
+    border: 0.5px solid #FFFFFF;
+    border-radius: 77px;
+    left: 22rem;
+}
+/* #board{
+    
+    top: 1512px;
+} */
+
+/* #alumni{
+    left: 220px;
+    top: 1562px;
+}
+
+#core{
+    left: 220px;
+    top: 1622px;
+} */
+.image{
+    position: absolute;
+    left:49px;
+    top: 40px;
+}
+
+.box_title{
+    position : absolute;
+    left: 500px;
+    top: 80px;
+    text-align: center;
+    font-family: Gilroy-SemiBold;
+    font-size: 64px;
+    line-height: 34px;
+    color: #FFFFFF;
+}
+
+.box-content{
+    position: absolute;
+    left: 500px;
+    top: 150px;
+    right: 10px;
+    font-family: Gilroy-Light;
+    font-size: 20px;
+    line-height: 34px;
+    color: #FFFFFF;
+}
+
+.line{
+    position: absolute;
+    top: 130px;
+    left: 500px;
+    border: 1px solid #FFFFFF;
+}
+/* #line2{
+    position: absolute;
+    width: 540px;
+    top: 130px;
+    left: 500px;
+    border: 1px solid #FFFFFF;
+}
+
+#line3{
+    position: absolute;
+    width: 250px;
+    height:0px;
+    top: 130px;
+    left: 500px;
+    border: 1px solid #FFFFFF;
+}
+
+#line4{
+    position: absolute;
+    width: 500px;
+    top: 130px;
+    left: 500px;
+    border: 1px solid #FFFFFF;
+} */
+
+.button{
+    position: absolute;
+    width: 209px;
+    height: 54px;
+    left: 540px;
+    top: 350px;
+    background: #191938;
+    border-radius: 17px;
+    border: none;
+    cursor: pointer;
+
+    font-family:  Gilroy-Light;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 27px;
+    line-height: 32px;
+    color: #FFFFFF;
+}
+
+.bullet{
+    position: relative;
+    width: 96px;
+    height: 96px;
+    left: 13rem;
+    background: rgba(102, 102, 119, 0.2);
+    border: 3px solid #FFFFFF;
+    border-radius: 50px;
+    box-sizing: border-box;
+    opacity: 0.5;
+
+}
+/* #circle_1{
+    top: 259px;
+}
+
+#circle_2{
+    top: 700px;
+}
+
+#circle_3{
+    top: 1135px;
+} */
+
+.number{
+    position: absolute;
+    top: 28px;
+    left:36px;
+    font-family: Gilroy-Light;
+    font-size: 36px;
+    line-height: 34px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.vertical_line{
+    position: absolute;
+    height: 435px;
+    left: 16rem;
+    border: 1px solid #FFFFFF;
+}
+
+#vertical_line1{
+    top: 1800px;
+}
+
+#vertical_line2{
+    top: 2336px;
+}
