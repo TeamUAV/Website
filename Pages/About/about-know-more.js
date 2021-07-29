@@ -90,6 +90,7 @@ class KnowMoreCard{
         pg1.appendChild(new KnowMoreGeneralField('skill set', this.skills, false, true));
         pg2.appendChild(new KnowMorePositionsField(this.positions));
         pg2.appendChild(new KnowMoreLinkField(this.contactLinks));
+        pg2.appendChild(new KnowMoreGeneralField('call sign', 'maverick', true, false));
 
         pg1.classList.add('active');
 
@@ -220,3 +221,8 @@ class KnowMorePositionsField{
 let card = new KnowMoreCard('Valentino Rossi', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, ducimus. Ex repudiandae ullam doloribus molestiae ad mollitia porro consectetur quisquam quam ipsa, laboriosam asperiores quidem voluptatum id iusto nesciunt eaque',
  ['abc', 'def', 'ghi'], ['abc', 'efg'], [{body: 'abc', ref:'ref'}], 'https://m.gpone.com/sites/default/files/images/2021/article/foto/05/MotoGP/05-LeMans/rossi-box-1621097058.jpg');
 document.querySelector(".content").appendChild(card.render());
+
+
+let currentHTML = {
+    domContent: ''
+};

@@ -17,9 +17,9 @@
     width: auto;
     position: sticky;
     z-index: 100;
-    top: 1rem;
+    top: 0rem;
     -moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;
-    margin: 15px 50px;
+    padding: 1.2rem 4rem;
 }
 .navbar > ul {
     display: flex;

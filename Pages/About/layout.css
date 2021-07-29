@@ -2,6 +2,7 @@
   width: 95vw;
   height: 80vh;
   margin: 0 auto;
+  position: absolute;
   display: flex;
   flex-direction: column;
 }
@@ -44,7 +45,7 @@
 .container.about-info li {
   position: relative;
   padding-left: 2.5rem;
-  height: 100%;
+  padding-bottom: 2.1rem;
   width: 50%;
   font-size: 1.4rem;
   font-weight: 300;
@@ -60,7 +61,7 @@
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.9);
   position: absolute;
-  left: -1.04rem;
+  left: -1rem;
   transform: translateY(23%);
 }
 
