@@ -14,7 +14,7 @@
 .navbar{
     display: flex;
     justify-content: space-between;
-    width: auto;
+    width: 100%;
     position: sticky;
     z-index: 100;
     top: 0rem;
@@ -23,7 +23,7 @@
 }
 .navbar > ul {
     display: flex;
-    /* justify-content: space-evenly; */
+    justify-content: space-evenly;
     align-items: center;
 }
 
@@ -58,11 +58,7 @@
 
 .links li{
     color: rgba(180, 180, 180, 0.7);
-    display: inline-block;
     cursor: pointer;
-    min-width: 60px;
-    max-width: 80px;
-    margin-left: 40px;
     font-size: 18px;
     font-weight: 400;
     transition: all 0.4s ease;
