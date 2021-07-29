@@ -16,7 +16,7 @@ class Title {
     imageDiv.className = "image";
     let img = document.createElement("img");
     img.id = "display-triangles";
-    img.src = "/Pages/Home/Home_triangles/All_together.svg";
+    img.src = "/Pages/Home/All_together.svg";
 
     let scrollText = document.createElement("p");
     scrollText.innerText = "Scroll Down";
@@ -25,11 +25,33 @@ class Title {
 
     titleContainer.appendChild(titleTextDiv);
     titleContainer.appendChild(imageDiv);
+    
+    titleContainer.appendChild(this.bars(true));
+    titleContainer.appendChild(this.bars(false));
 
     this.domElement = titleContainer;
   }
   render() {
     return this.domElement;
+  }
+
+  bars(upper){
+    let bar = document.createElement("div");
+    let white = document.createElement('div');
+    let red = document.createElement('div');
+    for (let i = 0 ;i < 2; i++){
+      white.appendChild(document.createElement('div'));
+      red.appendChild(document.createElement('div'));
+    }
+    white.id = "white";
+    red.id = "red";
+
+    bar.appendChild(white);
+    bar.appendChild(red);
+
+    bar.className = "bars";
+    bar.id = upper? "upper" : "lower";
+    return bar;
   }
 }
 

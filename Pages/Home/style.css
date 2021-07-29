@@ -13,6 +13,47 @@
     position: relative;
 }
 
+.bars{
+    width: 100%;
+    height: 10%;
+    position: absolute;
+    background: transparent;
+    justify-content: space-between;
+    display: flex;
+}
+#white, #red{
+    width: 100%;
+    height: 10%;
+    background-color: transparent;
+}
+#upper{
+    top: 5%;
+    flex-direction: column;
+}
+#lower{
+    bottom: 15%;
+    flex-direction: column-reverse;
+}
+
+#white> div{
+    width: 10%;
+    height: 1%;
+    background-color: white;
+}
+#red> div{
+    width: 4%;
+    height: 1%;
+    background-color: red;
+}
+#white> div:first-child, #red> div:first-child{
+    position: absolute;
+    left: 0;
+}
+#white> div:last-child, #red> div:last-child{
+    position: absolute;
+    right: 0;
+}
+
 .image{
     z-index: 0;
     display: flex;
@@ -30,6 +71,11 @@
     letter-spacing: 0.5rem;
     text-transform: uppercase;
 
+}
+#display-triangles{
+    display: block;
+    width: 100vw;
+    height: 90vh;
 }
 .container.home .title-text{
     z-index: 10;
