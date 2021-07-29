@@ -82,7 +82,7 @@ class HomeDataContainer {
 
     let subTitleH1 = document.createElement('h1');
     subTitleH1.id = "subtitle";
-    subTitleH1.innerText = title;
+    subTitleH1.innerText = subtitle;
     textContent.appendChild(subTitleH1);
 
     let p = document.createElement("p");
