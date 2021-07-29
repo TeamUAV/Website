@@ -74,6 +74,7 @@
 }
 #display-triangles{
     display: block;
+    object-fit: contain;
     width: 100vw;
     height: 90vh;
 }

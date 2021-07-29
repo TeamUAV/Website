@@ -16,7 +16,7 @@ class Title {
     imageDiv.className = "image";
     let img = document.createElement("img");
     img.id = "display-triangles";
-    img.src = "/Pages/Home/All_together.svg";
+    img.src = "/Pages/Home/All_together.png";
 
     let scrollText = document.createElement("p");
     scrollText.innerText = "Scroll Down";
