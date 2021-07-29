@@ -23,12 +23,13 @@ class about {
     }
 }  
 class images{
-    constructor(src,id,classs,iconn,left){
+    constructor(src,id,classs,iconn,left,right){
         this.src = src;
         this.id = id;
         this.classs = classs;
         this.iconn = iconn;
         this.left = left;
+        this.right = right;
     }
 
     run(){
@@ -36,7 +37,8 @@ class images{
         img.id = this.id;
         img.className = this.classs;
         img.src = this.src;
-        img.style.left = this.left + 'px';
+        img.style.left = this.left + 'rem';
+        img.style.right = this.right + 'rem';
 
         if(this.iconn == true){
             img.onclick = () =>{
@@ -125,10 +127,10 @@ function departments_section ()
     let left = new images(data[4].src1,"left",undefined,false,undefined)
     let right = new images(data[4].src2,"right",undefined,false,undefined)
     let dept = new images(data[4].src3,"dept",undefined,false,undefined)
-    let cs = new images(data[4].src4,"cs",'cs-elec',true,270)
-    let elec = new images(data[4].src5,"elec",'cs-elec',true,850)
-    let manage = new images(data[4].src6,"manage",'manage-mech',true,20)
-    let mech = new images(data[4].src7,"mech",'manage-mech',true,1145)
+    let cs = new images(data[4].src4,"cs",'cs-elec',true,23,undefined)
+    let elec = new images(data[4].src5,"elec",'cs-elec',true,undefined,23)
+    let manage = new images(data[4].src6,"manage",'manage-mech',true,2,undefined)
+    let mech = new images(data[4].src7,"mech",'manage-mech',true,undefined,2)
     image.appendChild(left.run());
     image.appendChild(right.run());
     image.appendChild(dept.run());
