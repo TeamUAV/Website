@@ -46,7 +46,7 @@ body{
 
 #left {
     position: absolute;
-    width: 62.5rem;
+    width: 60rem;
     height: 12.5rem;
     left: 0rem;
     top: 56rem;
@@ -55,7 +55,7 @@ body{
 #right{
      
     position: absolute;
-    width: 51rem;
+    width: 49rem;
     height: 12rem;
     right: 0;
     top: 70.3rem;
@@ -64,7 +64,7 @@ body{
     position: absolute;
     width: 45rem;
     height: 35rem;
-    left: 40rem;
+    left: 37.5rem;
     top: 56rem;
 }
 .cs-elec{
