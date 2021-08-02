@@ -26,7 +26,7 @@ class Navbar {
 
     let links = document.createElement("ul");
     links.className = "links";
-    let linkItems = ["Home", "About", "Projects", "Sponsors", "Gallery"];
+    let linkItems = ["Home", "About", "Fleet", "Sponsors", "Gallery"];
     for (let i = 0; i < linkItems.length; i++) {
       let li = document.createElement("li");
       li.innerText = linkItems[i];
@@ -41,11 +41,10 @@ class Navbar {
     navbar.appendChild(description);
     navbar.appendChild(links);
     document.body.appendChild(navbar);
-    let container = document.createElement("div");
-    container.className = "container home";
-    document.body.appendChild(container);
+    // let container = document.createElement("div");
+    // container.className = "container home";
+    // document.body.appendChild(container);
     this.handleClick();
-    new Home();
   }
 
   handleClick() {
@@ -64,9 +63,9 @@ class Navbar {
             this.toggleHelper(node.id);
           });
           break;
-        case "nav-link projects":
+        case "nav-link fleet":
           node.addEventListener("click", () => {
-            console.log("nav-link projects");
+            console.log("nav-link fleet");
             this.toggleHelper(node.id);
           });
           break;
