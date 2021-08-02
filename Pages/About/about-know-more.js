@@ -98,11 +98,8 @@ class KnowMoreCard{
         let navDiv = document.createElement('div');
         let dot1 = new Dot();
         let dot2 = new Dot();
-
+        // to make it inactive
         dot2.toggle();
-
-        console.log(dot1.dot.innerHTML)
-        console.log(dot2.dot.innerHTML)
 
         navDiv.appendChild(dot1.dot);
         navDiv.appendChild(dot2.dot);

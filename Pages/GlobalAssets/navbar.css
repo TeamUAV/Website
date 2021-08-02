@@ -6,6 +6,8 @@
     font-family: 'Poppins', sans-serif;
     color: #fff;
     background-color: #000021;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 *::-webkit-scrollbar{
     display: none;

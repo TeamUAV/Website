@@ -58,7 +58,6 @@ class Navbar {
           break;
         case "nav-link about":
           node.addEventListener("click", (e) => {
-            const url = new URL(window.location.href);
             console.log("nav-link about");
             this.toggleHelper(node.id);
           });
