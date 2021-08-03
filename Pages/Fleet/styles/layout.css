@@ -1,0 +1,110 @@
+.container.fleet{
+    margin: auto;
+    margin-top: 1rem;
+    width: 90vw;
+    height: 80vh;
+    align-items: center;
+    position: relative;
+    justify-content: space-between;
+
+    display: flex;
+}
+
+.fleet-icons-container{
+    width: 15%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.fleet-info{
+    left: 17%;
+    width: 25%;
+    height: 100%;
+    position: absolute;
+    background-color: #191938;
+    border-radius: 3rem;
+    transition: all 2s ease-in-out;
+}
+
+.fleet-info *{
+    background-color: transparent;
+}
+#main-state{
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    margin-top: 2rem;
+    display: flex;
+    height: 90%;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#main-state > h1{
+    border-bottom: 1px solid red;
+    width: 100%;
+    font-weight: 400;
+    font-size: 3.5rem;
+}
+#main-state > #body{
+    font-weight: 400;
+    font-size: 1.3rem;
+}
+#main-state > #view-more-btn{
+    width: 100%;
+    height: 10%;
+    border-radius: 1rem;
+    background-color: white;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main-state > #mini-stats td{
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+.fleet-info.expanded{
+    left: 4%;
+    width: 80%;
+}
+
+
+.fleet-model{
+    width: 55%;
+    height: 95%;
+    background-color: blue;
+    border-radius: 2rem;
+}
+.toggle{
+    height: 4rem;
+    width: 4rem;
+    background-color: blue;
+    border-radius: 50%;
+}
+#up{
+    margin-bottom: 1rem;
+}
+#down{
+    margin-top: 1rem;
+}
+.fleet-icons{
+	overflow-y: auto;
+    width: 100%;
+    height: 80%;
+    display: inline-block;
+}
+.fleet-icons-icon{
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    height: 11rem;
+    width: 11rem;
+    border-radius: 1rem;
+    border: 1px solid white; 
+}

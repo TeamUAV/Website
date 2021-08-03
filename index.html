@@ -7,28 +7,78 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
   <link rel="stylesheet" href="Pages/About/layout.css">
-  <link rel="stylesheet" href="Pages/Fleet/layout.css">
+  <link rel="stylesheet" href="Pages/Fleet/styles/layout.css">
+  <link rel="stylesheet" href="Pages/Fleet/styles/icons.css">
   <link rel="stylesheet" href="Pages/Home/style.css">
-  <link rel="stylesheet" href="Pages/Fleet/triangles.css">
   <title>About</title>
 </head>
   <body>
-    <!-- <script src="Pages/Home/home.js"></script> -->
+    <script src="Pages/Home/home.js"></script>
     <script src="Pages/GlobalAssets/navbar.js"></script>
     <div class="container fleet">
       <div class="fleet-icons-container">
         <div class="toggle" id="up"></div>
           <div class="fleet-icons">
-            <div class="fleet-icons-icon"></div>
-            <div class="fleet-icons-icon"></div>
-            <div class="fleet-icons-icon"></div>
-            <div class="fleet-icons-icon"></div>
-            <div class="fleet-icons-icon"></div>
+            <div class="fleet-icons-icon active">
+              <img src="Pages/Fleet/icons/icon-1.svg">
+              <img src="Pages/Fleet/icons/icon-1-active.svg" class="active">
+            </div>
+            <div class="fleet-icons-icon">
+              <img src="Pages/Fleet/icons/icon-2.svg"  class="active">
+              <img src="Pages/Fleet/icons/icon-2-active.svg">
+            </div>
+            <div class="fleet-icons-icon">
+              <img src="Pages/Fleet/icons/icon-3.svg"  class="active">
+              <img src="Pages/Fleet/icons/icon-3-active.svg">
+            </div>
+            <div class="fleet-icons-icon">
+              <img src="Pages/Fleet/icons/icon-4.svg"  class="active">
+              <img src="Pages/Fleet/icons/icon-4-active.svg">
+            </div>
+            <div class="fleet-icons-icon">
+              <img src="Pages/Fleet/icons/icon-5.svg"  class="active">
+              <img src="Pages/Fleet/icons/icon-5-active.svg">
+            </div>
+            <div class="fleet-icons-icon">
+              <img src="Pages/Fleet/icons/icon-6.svg"  class="active">
+              <img src="Pages/Fleet/icons/icon-6-active.svg">
+            </div>
+            <div class="fleet-icons-icon">
+              <img src="Pages/Fleet/icons/icon-7.svg"  class="active">
+              <img src="Pages/Fleet/icons/icon-7-active.svg">
+            </div>
+            <div class="fleet-icons-icon">
+              <img src="Pages/Fleet/icons/icon-8.svg"  class="active">
+              <img src="Pages/Fleet/icons/icon-8-active.svg">
+            </div>
           </div>
         <div class="toggle" id="down"></div>
       </div>
       <div class="fleet-info">
-        
+        <div id="main-state">
+          <h1>Drone</h1>
+          <p id="body">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam incidunt possimus asperiores repudiandae libero similique quo quos adipisci aspernatur repellat excepturi, ab mollitia saepe nam ad blanditiis dolorem enim quibusdam?
+          </p>
+          <div id="view-more-btn">View More Details</div>
+          <table id="mini-stats">
+            <tr>
+              <td>Width</td>
+              <td>:</td>
+              <td>27.5cm</td>
+            </tr>
+            <tr>
+              <td>Width</td>
+              <td>:</td>
+              <td>27.5cm</td>
+            </tr>
+            <tr>
+              <td>Width</td>
+              <td>:</td>
+              <td>27.5cm</td>
+            </tr>
+          </table>
+        </div>
       </div>
       <div class="fleet-model">
         
