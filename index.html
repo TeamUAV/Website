@@ -63,14 +63,14 @@
           <img src="Pages/Fleet/down_btn.svg" />
         </div>
       </div>
-      <div class="fleet-info expanded">
+      <div class="fleet-info">
         <div id="main-state">
           <h1>Drone</h1>
           <p id="body">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
-            incidunt possimus asperiores repudiandae libero similique quo quos
-            adipisci aspernatur repellat excepturi, ab mollitia saepe nam ad
-            blanditiis dolorem enim quibusdam?
+              The Skua FPV is a low-speed aircraft made to fly for a long-range
+              and long duration of time. It comes with an undercarriage which no
+              plane has. The undercarriage itself can carry about 2.5-3 kilos of
+              payload and can be dropped off during the flight if needed.
           </p>
           <div id="view-more-btn">View More Details</div>
           <table id="mini-stats">
@@ -92,7 +92,7 @@
           </table>
         </div>
 
-        <div id="expanded-state">
+        <div id="expanded-state" class="plane">
           <div id="text-details">
             <h1>Project Details</h1>
             <p id="body">
@@ -118,7 +118,15 @@
           <div id="graph-details">
             <h1>Graphical Analysis</h1>
             <canvas id="plot-graph"></canvas>
-            <div id="graph-toggle"></div>
+            <div id="graph-toggle-control-panel">
+              <div id="prev">
+                <i class="material-icons">arrow_back_ios</i>
+              </div>
+              <div id="graph-legend">Some data</div>
+              <div id="next">
+                <i class="material-icons">arrow_forward_ios</i>
+              </div>
+            </div>
           </div>
         </div>
       </div>
