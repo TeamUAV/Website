@@ -31,17 +31,26 @@
 .fleet-info *{
     background-color: transparent;
 }
-#main-state{
+.fleet-info > #expanded-state{
+    opacity: 0;
+    transition: all 2s ease-in-out;
+    position: absolute;
+}
+
+.fleet-info > #main-state{
     padding-left: 1.5rem;
     padding-right: 1.5rem;
     margin-top: 2rem;
     display: flex;
+    transition: all 2s ease-in-out;
+    position: relative;
+    opacity: 1;
     height: 90%;
     align-items: center;
     flex-direction: column;
     justify-content: space-between;
 }
-#main-state > h1{
+#main-state > h1, #expanded-state h1{
     border-bottom: 1px solid red;
     width: 100%;
     font-weight: 400;
@@ -73,7 +82,63 @@
     left: 4%;
     width: 80%;
 }
+.fleet-info.expanded > #main-state{
+    opacity: 0;
+    position: absolute;
+}
+.fleet-info.expanded > #expanded-state{
+    opacity: 1;
+    position: relative;
+    width: 100%;
+    margin-top: 1rem;
+    height: 100%;
+    display: flex;
+}
+#expanded-state > #text-details{
+    width: 50%;
+    height: 100%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border-radius: 3rem 0 0 3rem;
+}
+#text-details > h1{
+    text-align: center;
+    font-weight: 300;
+}
+#text-details > #body{
+    margin-top: 2rem;
+    height: 80%;
+    font-size: 1.3rem;
+    font-weight: 400;
+    overflow-y: scroll;
+}
 
+#expanded-state > #graph-details{
+    width: 50%;
+    height: 100%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border-radius: 0 3rem 3rem 0;
+}
+
+#graph-details > h1{
+    font-weight: 300;
+}
+
+#graph-details > #plot-graph{
+    margin-top: 2rem;
+    width: 100%;
+    height: 40%;
+    background-color: blue;
+}
+
+#graph-details > #graph-toggle{
+    margin-top: 1rem;
+    display: flex;
+    width: 100%;
+    height: 10%;
+    background-color: red;
+}
 
 .fleet-model{
     width: 55%;
@@ -82,10 +147,9 @@
     border-radius: 2rem;
 }
 .toggle{
-    height: 4rem;
-    width: 4rem;
-    background-color: blue;
-    border-radius: 50%;
+    height: 3rem;
+    width: 3rem;
+    object-fit: cover;
 }
 #up{
     margin-bottom: 1rem;
@@ -102,7 +166,6 @@
 .fleet-icons-icon{
     margin: auto;
     margin-top: 1rem;
-    margin-bottom: 1rem;
     height: 11rem;
     width: 11rem;
     border-radius: 1rem;

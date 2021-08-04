@@ -1,64 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-  <link rel="stylesheet" href="Pages/About/layout.css">
-  <link rel="stylesheet" href="Pages/Fleet/styles/layout.css">
-  <link rel="stylesheet" href="Pages/Fleet/styles/icons.css">
-  <link rel="stylesheet" href="Pages/Home/style.css">
-  <title>About</title>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="Pages/About/layout.css" />
+    <link rel="stylesheet" href="Pages/Fleet/styles/layout.css" />
+    <link rel="stylesheet" href="Pages/Fleet/styles/icons.css" />
+    <link rel="stylesheet" href="Pages/Home/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <title>About</title>
+  </head>
   <body>
     <script src="Pages/Home/home.js"></script>
     <script src="Pages/GlobalAssets/navbar.js"></script>
     <div class="container fleet">
       <div class="fleet-icons-container">
-        <div class="toggle" id="up"></div>
-          <div class="fleet-icons">
-            <div class="fleet-icons-icon active">
-              <img src="Pages/Fleet/icons/icon-1.svg">
-              <img src="Pages/Fleet/icons/icon-1-active.svg" class="active">
-            </div>
-            <div class="fleet-icons-icon">
-              <img src="Pages/Fleet/icons/icon-2.svg"  class="active">
-              <img src="Pages/Fleet/icons/icon-2-active.svg">
-            </div>
-            <div class="fleet-icons-icon">
-              <img src="Pages/Fleet/icons/icon-3.svg"  class="active">
-              <img src="Pages/Fleet/icons/icon-3-active.svg">
-            </div>
-            <div class="fleet-icons-icon">
-              <img src="Pages/Fleet/icons/icon-4.svg"  class="active">
-              <img src="Pages/Fleet/icons/icon-4-active.svg">
-            </div>
-            <div class="fleet-icons-icon">
-              <img src="Pages/Fleet/icons/icon-5.svg"  class="active">
-              <img src="Pages/Fleet/icons/icon-5-active.svg">
-            </div>
-            <div class="fleet-icons-icon">
-              <img src="Pages/Fleet/icons/icon-6.svg"  class="active">
-              <img src="Pages/Fleet/icons/icon-6-active.svg">
-            </div>
-            <div class="fleet-icons-icon">
-              <img src="Pages/Fleet/icons/icon-7.svg"  class="active">
-              <img src="Pages/Fleet/icons/icon-7-active.svg">
-            </div>
-            <div class="fleet-icons-icon">
-              <img src="Pages/Fleet/icons/icon-8.svg"  class="active">
-              <img src="Pages/Fleet/icons/icon-8-active.svg">
-            </div>
+        <div class="toggle" id="up">
+          <img src="Pages/Fleet/up_btn.svg" />
+        </div>
+
+        <div class="fleet-icons">
+          <div class="fleet-icons-icon active">
+            <img src="Pages/Fleet/icons/icon-1.svg" />
+            <img src="Pages/Fleet/icons/icon-1-active.svg" class="active" />
           </div>
-        <div class="toggle" id="down"></div>
+          <div class="fleet-icons-icon">
+            <img src="Pages/Fleet/icons/icon-2.svg" class="active" />
+            <img src="Pages/Fleet/icons/icon-2-active.svg" />
+          </div>
+          <div class="fleet-icons-icon">
+            <img src="Pages/Fleet/icons/icon-3.svg" class="active" />
+            <img src="Pages/Fleet/icons/icon-3-active.svg" />
+          </div>
+          <div class="fleet-icons-icon">
+            <img src="Pages/Fleet/icons/icon-4.svg" class="active" />
+            <img src="Pages/Fleet/icons/icon-4-active.svg" />
+          </div>
+          <div class="fleet-icons-icon">
+            <img src="Pages/Fleet/icons/icon-5.svg" class="active" />
+            <img src="Pages/Fleet/icons/icon-5-active.svg" />
+          </div>
+          <div class="fleet-icons-icon">
+            <img src="Pages/Fleet/icons/icon-6.svg" class="active" />
+            <img src="Pages/Fleet/icons/icon-6-active.svg" />
+          </div>
+          <div class="fleet-icons-icon">
+            <img src="Pages/Fleet/icons/icon-7.svg" class="active" />
+            <img src="Pages/Fleet/icons/icon-7-active.svg" />
+          </div>
+          <div class="fleet-icons-icon">
+            <img src="Pages/Fleet/icons/icon-8.svg" class="active" />
+            <img src="Pages/Fleet/icons/icon-8-active.svg" />
+          </div>
+        </div>
+
+        <div class="toggle" id="down">
+          <img src="Pages/Fleet/down_btn.svg" />
+        </div>
       </div>
-      <div class="fleet-info">
+      <div class="fleet-info expanded">
         <div id="main-state">
           <h1>Drone</h1>
           <p id="body">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam incidunt possimus asperiores repudiandae libero similique quo quos adipisci aspernatur repellat excepturi, ab mollitia saepe nam ad blanditiis dolorem enim quibusdam?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+            incidunt possimus asperiores repudiandae libero similique quo quos
+            adipisci aspernatur repellat excepturi, ab mollitia saepe nam ad
+            blanditiis dolorem enim quibusdam?
           </p>
           <div id="view-more-btn">View More Details</div>
           <table id="mini-stats">
@@ -79,10 +91,131 @@
             </tr>
           </table>
         </div>
+
+        <div id="expanded-state">
+          <div id="text-details">
+            <h1>Project Details</h1>
+            <p id="body">
+              The Skua FPV is a low-speed aircraft made to fly for a long-range
+              and long duration of time. It comes with an undercarriage which no
+              plane has. The undercarriage itself can carry about 2.5-3 kilos of
+              payload and can be dropped off during the flight if needed. A
+              gimbal camera mounted in the lower part of the aircraft can be
+              used for an aerial view and has excellent surveillance and facial
+              recognition potential.
+              <br />
+              <br />
+              The model has a special fuselage compartment divided into two
+              parts. The top part consists of all the avionics needed for the
+              aircraft, and the bottom part, which has easy and quick access
+              through a removable and openable cover, is solely for the payload
+              and the camera. It is a very stable and highly maneuverable
+              aircraft. With a wingspan of 2100mm, this flying model is designed
+              specifically for long flying and a high load capability. Skua is
+              an exceptional product for delivery and professional FPV purposes.
+            </p>
+          </div>
+          <div id="graph-details">
+            <h1>Graphical Analysis</h1>
+            <canvas id="plot-graph"></canvas>
+            <div id="graph-toggle"></div>
+          </div>
+        </div>
       </div>
-      <div class="fleet-model">
-        
-      </div>
+      <div class="fleet-model"></div>
     </div>
+
+    <script>
+      // let dom = document.querySelector('.fleet-info');
+      // setInterval(() => {
+      //   dom.classList.toggle('expanded');
+      // }, 3000)
+
+      let graph = new Chart(document.querySelector("#plot-graph"), {
+        type: "scatter",
+        data: {
+          datasets: [
+            {
+              pointBorderColor: "red",
+              borderColor: 'rgba(255, 0, 0, 0.3)',
+              pointBackgroundColor: 'red',
+              fill: true,
+              data: [
+                {
+                  x: 0,
+                  y: 5,
+                },
+                {
+                  x: 5,
+                  y: 10,
+                },
+                {
+                  x: 8,
+                  y: 5,
+                },
+                {
+                  x: 15,
+                  y: 0,
+                },
+              ],
+            },
+          ],
+        },
+        options: {
+          legend: {
+            display: false,
+          },
+          elements: {
+            line: {
+              tension: 0.1,
+            },
+          },
+          responsive: true,
+          scales: {
+            xAxes: [
+              {
+                display: true,
+                gridLines: {
+                  display: true,
+                  color: "#000021",
+                },
+                scaleLabel: {
+                  display: true,
+                  labelString: "Month",
+                },
+              },
+            ],
+            yAxes: [
+              {
+                display: true,
+                gridLines: {
+                  display: true,
+                  color: "#000021",
+                },
+                scaleLabel: {
+                  display: true,
+                  labelString: "Value",
+                },
+              },
+            ],
+          },
+        },
+      });
+
+      let dom = document.querySelector("#plot-graph");
+      dom.addEventListener("click", () => {
+        graph.data.datasets[0].data = [
+          {
+            x: 1,
+            y: 2,
+          },
+          {
+            x: 3,
+            y: 4,
+          },
+        ];
+        graph.update();
+      });
+    </script>
   </body>
 </html>
