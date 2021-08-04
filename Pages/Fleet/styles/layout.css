@@ -5,6 +5,7 @@
     height: 80vh;
     align-items: center;
     position: relative;
+    overflow: hidden;
     justify-content: space-between;
 
     display: flex;
@@ -35,6 +36,7 @@
     opacity: 0;
     transition: all 2s ease-in-out;
     position: absolute;
+    height: 0;
 }
 
 .fleet-info > #main-state{
