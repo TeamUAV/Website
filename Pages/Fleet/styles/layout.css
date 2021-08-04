@@ -43,6 +43,7 @@
     padding-left: 1.5rem;
     padding-right: 1.5rem;
     margin-top: 2rem;
+    margin-bottom: 10rem; /* to let the transition happen smoothly */
     display: flex;
     transition: all 2s ease-in-out;
     position: relative;
@@ -81,6 +82,9 @@
 }
 
 .fleet-info.expanded{
+    backdrop-filter: blur(20px);
+    border: 0.1rem solid white;
+    background-color: #19193858;
     left: 10%;
     width: 80%;
 }
@@ -159,6 +163,9 @@
     background-color: blue;
     border-radius: 2rem;
 }
+.fleet-model canvas{
+    border-radius: 2rem;
+}
 .toggle{
     height: 3rem;
     width: 3rem;
@@ -183,4 +190,7 @@
     width: 11rem;
     border-radius: 1rem;
     border: 1px solid white; 
+}
+.fleet-info.expanded *{
+    background: transparent;
 }
