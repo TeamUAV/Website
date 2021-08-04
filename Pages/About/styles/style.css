@@ -11,10 +11,10 @@ body{
 }
 #about-title {
     position: absolute;
-    width: 43rem;
-    height: 18rem;
-    left: 8rem;
-    top: 13rem;
+    width: 43vw;
+    height: 18vh;
+    left: 6vw;
+    top: 25vh;
     font-family: Gilroy-Bold;
     font-size: 9rem;
     line-height: 9rem;
@@ -22,21 +22,21 @@ body{
     align-items: flex-end;
     color: #F1F1F1;
 }
-#line1{
+#about-title-underline{
     position: absolute;
     height: 0rem;
-    width: 46rem;
-    left: 7rem;
-    top: 31rem;
+    width: 40vw;
+    left: 6.5vw;
+    top: 43vh;
     border: 4px solid #FFFFFF;
 }
 
 #about-text {
     position: absolute;
     width: 90%;
-    height: 12rem;
-    left: 6.5rem;
-    top: 36rem;
+    height: 12vh;
+    left: 6.5vw;
+    top: 50vh;
     font-family: Gilroy-Light;
     font-size: 1.8rem;
     line-height: 2rem;
@@ -44,72 +44,73 @@ body{
     color: #FFFFFF;
 }
 
-#left {
-    position: absolute;
-    width: 60rem;
-    height: 12.5rem;
-    left: 0rem;
-    top: 56rem;
+#dept_section{
+    position: relative;
+    width: 100%;
+    height: 40vh;
+    top: 80vh;
 }
 
-#right{ 
+#dept_images{
+    /* position: absolute; */
+    margin: auto;
+    width: 95%;
+    height: 100%;
+    
+}
+#background_image_left {
     position: absolute;
-    width: 49rem;
-    height: 12rem;
+    width: 50%;
+    height: 18.5vh;
+    left: 0;
+    top: 3vh;
+}
+
+#background_image_right{
+     
+    position: absolute;
+    width: 50%;
+    height: 17vh;
     right: 0;
-    top: 70.3rem;
+    bottom: 1vh;
 }
 #dept{
     position: absolute;
-    width: 45rem;
-    height: 35rem;
-    left: 37.5rem;
-    top: 56rem;
+    width: 37.5vw;
+    height: 51.8vh;
+    left: 31.250vw; 
+    top: 1vh;
 }
-.cs-elec{
+#cs{
     position: absolute;
-    width: 30rem;
-    height: 26rem;
-    top: 56rem;
-}
-
-/* #cs{
-    position: absolute;
-    width: 439px;
-    height: 300px;
-    left: 270px;
-    top: 960px;
+    width: 30vw;
+    height: 41vh;
+    top: -1.2vh;
+    left: 17.5vw;
 }
 
 #elec{
     position: absolute;
-    width: 439px;
-    height: 300px;
-    left: 850px;
-    top: 960px;
-} */
-
-.manage-mech{
-    position: absolute;
-    width: 30rem;
-    height: 26rem;
-    top: 56rem;
+    width: 30vw;
+    height: 41vh;
+    top: -1.2vh;
+    right: 17.5vw;
 }
-/* #mech{
+#mech{
     position: absolute;
-    width: 390px;
-    height: 295px;
-    left: 1145px;
-    top: 903px;
+    width: 30vw;
+    height: 41vh;
+    top: 1vh;
+    right: 0vh;
 }
 
 #manage {
     position: absolute;
-    width: 390px;
-    height: 290px;
-    left: 20px;
-    top: 903px;
-} */
+    width: 30vw;
+    height: 41vh;
+    top: 1vh;
+    left: 0vh;
+}
 .box{
     display:flex;
     position: relative;
@@ -120,30 +121,16 @@ body{
     border-radius: 4.5rem;
     left: 24rem;
 }
-/* #board{
-    
-    top: 1512px;
-} */
-
-/* #alumni{
-    left: 220px;
-    top: 1562px;
-}
-
-#core{
-    left: 220px;
-    top: 1622px;
-} */
 .image{
     position: absolute;
-    left:3.2rem;
-    top: 2.4rem;
+    left:3.2vw;
+    top: 3.5vh;
 }
 
 .box_title{
     position : absolute;
-    left: 31rem;
-    top: 4.5rem;
+    left: 26vw;
+    top: 6vh;
     text-align: center;
     font-family: Gilroy-SemiBold;
     font-size: 4.1rem;
@@ -153,8 +140,8 @@ body{
 
 .box-content{
     position: absolute;
-    left: 31rem;
-    top: 9.5rem;
+    left: 26vw;
+    top: 13vh;
     right: 0.6rem;
     font-family: Gilroy-Light;
     font-size: 1.2rem;
@@ -162,43 +149,19 @@ body{
     color: #FFFFFF;
 }
 
-.line{
+.card_title_underline{
     position: absolute;
     top: 7.5rem;
     left: 31rem;
     border: 1px solid #FFFFFF;
 }
-/* #line2{
-    position: absolute;
-    width: 540px;
-    top: 130px;
-    left: 500px;
-    border: 1px solid #FFFFFF;
-}
-
-#line3{
-    position: absolute;
-    width: 250px;
-    height:0px;
-    top: 130px;
-    left: 500px;
-    border: 1px solid #FFFFFF;
-}
-
-#line4{
-    position: absolute;
-    width: 500px;
-    top: 130px;
-    left: 500px;
-    border: 1px solid #FFFFFF;
-} */
 
 .button{
     position: absolute;
-    width: 14rem;
-    height: 4rem;
-    left: 36rem;
-    top: 22rem;
+    width: 12vw;
+    height: 6vh;
+    left: 30vw;
+    top: 33vh;
     background: #191938;
     border-radius: 1.5rem;
     border: none;
@@ -218,7 +181,7 @@ body{
     justify-content: center;
     width: 6rem;
     height: 6rem;
-    left: 13rem;
+    left: -8vw;
     background: rgba(102, 102, 119, 0.2);
     border: 3px solid #FFFFFF;
     border-radius: 3rem;
@@ -229,28 +192,17 @@ body{
     align-items: center;
     color: #FFFFFF;
 }
-/* #circle_1{
-    top: 259px;
-}
-
-#circle_2{
-    top: 700px;
-}
-
-#circle_3{
-    top: 1135px;
-} */
 .vertical_line{
     position: absolute;
-    height: 27.5rem;
-    left: 16rem;
+    height: 40vh;
+    left: 14.6vw;
     border: 1px solid #FFFFFF;
 }
 
 #vertical_line1{
-    top: 112.5rem;
+    top: 160vh;
 }
 
 #vertical_line2{
-    top: 145.8rem;
+    top: 209vh;
 }
