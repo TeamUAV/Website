@@ -39,8 +39,9 @@ let obj, mixer;
 renderer.setClearColor(0x00ffff, 1);
 
 const controls = new OrbitControls(camera, renderer.domElement);
-controls.minDistance = 10;
-controls.maxDistance = 10000;
+controls.minDistance = 50;
+controls.maxDistance = 1000;
+controls.maxPolarAngle = Math.PI * 0.5;
 
 let loader = new GLTFLoader();
 
@@ -58,12 +59,27 @@ let modelLoader = (path) => {
     });
 }
 
-modelLoader('Pages/Fleet/scripts/TEAM_UAV/Hexacopter/Hexacopter(uav6).gltf');
+modelLoader('Pages/Fleet/scripts/TEAM_UAV/Pheonix/Phoenix_final.gltf');
 
+
+let textureLoader = new THREE.TextureLoader();
+const groundTexture = textureLoader.load('Pages/Fleet/assets/grass.jpeg');
+groundTexture.wrapS = groundTexture.wrapT = THREE.RepeatWrapping;
+groundTexture.repeat.set( 50, 50 );
+groundTexture.anisotropy = 16;
+groundTexture.encoding = THREE.sRGBEncoding;
+
+const groundMaterial = new THREE.MeshLambertMaterial( { map: groundTexture } );
+
+let mesh = new THREE.Mesh( new THREE.PlaneGeometry( 20000, 20000 ), groundMaterial );
+mesh.position.y = - 150;
+mesh.rotation.x = - Math.PI / 2;
+mesh.receiveShadow = true;
+scene.add( mesh );
 
 // scene.background = new THREE.Color(0x696969);
 
-let light = new THREE.DirectionalLight( 0xffffff, 1,0 );
+let light = new THREE.DirectionalLight(0xffffff, 0.5,0);
 scene.add( light );
 light.position.set(0,10,0);
 light.castShadow=true;
@@ -75,9 +91,42 @@ light.shadow.camera.top	= 1;
 light.shadow.camera.bottom = -0;
 light.shadow.mapSize.width = 500;
 light.shadow.mapSize.height = 509;
-let light_2 = new THREE.HemisphereLight(0xffffff, 0x000000, 5);
+let light_2 = new THREE.HemisphereLight(0xffffff, 0x000000, 1);
 scene.add(light_2);
-camera.position.set(0, 160, 300);
+
+// scene.add( new THREE.AmbientLight( 0xffffff ) );
+
+let lightGenerator = (x, y, z, intensity) => {
+    const light = new THREE.DirectionalLight( 0xdfebff, intensity);
+    light.position.set(x, y, z);
+    light.position.multiplyScalar(2);
+
+    light.castShadow = true;
+
+    light.shadow.mapSize.width = 1024;
+    light.shadow.mapSize.height = 1024;
+
+    const d = 300;
+
+    light.shadow.camera.left = - d;
+    light.shadow.camera.right = d;
+    light.shadow.camera.top = d;
+    light.shadow.camera.bottom = -d;
+
+    light.shadow.camera.far = 3000;
+
+    scene.add(light);
+}
+
+lightGenerator(150, 0, 100, 0.5);
+lightGenerator(-100, 0, -100, 0.5);
+
+
+
+renderer.shadowMap.enabled = true;
+renderer.setPixelRatio( window.devicePixelRatio );
+
+camera.position.set(0, 180, 400);
 function animate(){
     requestAnimationFrame(animate);
     obj.rotation.y += 0.003;

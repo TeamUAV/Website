@@ -3634,7 +3634,7 @@
     "buffers" : [
         {
             "byteLength" : 4764492,
-            "uri" : "skua(with models).bin"
+            "uri" : "skua_final.bin"
         }
     ]
 }
