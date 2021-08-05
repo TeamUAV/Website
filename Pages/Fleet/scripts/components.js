@@ -1,3 +1,16 @@
+
+function graph_coordinates_generator(x_coordinates, y_coordinates) {
+    let arr = [];
+    for (let i =0 ;i < x_coordinates.length; i++){
+        arr.push({
+            x: x_coordinates[i],
+            y: y_coordinates[i],
+        })
+    }
+    console.log(arr);
+    return arr;
+}
+
 class Icon{
     constructor(inactive_url, active_url){
         this.inactive_url = inactive_url;
@@ -208,23 +221,17 @@ iconFrame.render();
 iconFrame.iconDOMs[0].toggleActive();
 document.querySelector('.container.fleet').appendChild(iconFrame.domElement);
 
+let elem = document.createElement('div');
+elem.className = "fleet-model";
+document.querySelector('.container.fleet').appendChild(elem);
+
 let infoFrame = new InfoPanel();
 
-infoFrame.render(
-    "Drone",
-    "The Skua FPV is a low-speed aircraft made to fly for a long-range"
-     +"and long duration of time. It comes with an undercarriage which no"
-    + "plane has. The undercarriage itself can carry about 2.5-3 kilos of"
-     + "payload and can be dropped off during the flight if needed.",
-     [["Width", "20"], ["Width", "20"], ["Width", "20"]],
-     "The Skua FPV is a low-speed aircraft made to fly for a long-range"
-     +"and long duration of time. It comes with an undercarriage which no"
-    + "plane has. The undercarriage itself can carry about 2.5-3 kilos of"
-     + "payload and can be dropped off during the flight if needed."
-    );
+infoFrame.render(fleet_data[0].name, fleet_data[0].short_description, fleet_data[0].miniStats, fleet_data[0].long_description);
+
 document.querySelector('.container.fleet').appendChild(infoFrame.domElement);
 
-    let btn = document.querySelector('#main-state #view-more-btn');
+let btn = document.querySelector('#main-state #view-more-btn');
 btn.addEventListener('click', () => {
 document.querySelector('.fleet-info').classList.toggle('expanded');
 })
@@ -243,24 +250,7 @@ data: {
         borderColor: 'rgba(255, 0, 0, 0.5)',
         pointBackgroundColor: 'red',
         fill: true,
-        data: [
-        {
-            x: 0,
-            y: 5,
-        },
-        {
-            x: 5,
-            y: 10,
-        },
-        {
-            x: 8,
-            y: 5,
-        },
-        {
-            x: 15,
-            y: 0,
-        },
-        ],
+        data: graph_coordinates_generator(fleet_data[0].graph_stats[0].x, fleet_data[0].graph_stats[0].y),
     },
     ],
 },
@@ -282,10 +272,6 @@ options: {
             display: true,
             color: "#000021",
         },
-        scaleLabel: {
-            display: true,
-            labelString: "Month",
-        },
         },
     ],
     yAxes: [
@@ -295,10 +281,6 @@ options: {
             display: true,
             color: "#000021",
         },
-        scaleLabel: {
-            display: true,
-            labelString: "Value",
-        },
         },
     ],
     },
@@ -307,15 +289,6 @@ options: {
 
 let dom = document.querySelector("#plot-graph");
 dom.addEventListener("click", () => {
-graph.data.datasets[0].data = [
-    {
-    x: 1,
-    y: 2,
-    },
-    {
-    x: 3,
-    y: 4,
-    },
-];
+graph.data.datasets[0].data = graph_coordinates_generator(fleet_data[0].graph_stats[1].x, fleet_data[0].graph_stats[1].y);
 graph.update();
 });

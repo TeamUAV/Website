@@ -59,7 +59,7 @@ let modelLoader = (path) => {
     });
 }
 
-modelLoader('Pages/Fleet/TEAM_UAV/Team_UAV_1/Plane(uav1) (1).gltf');
+modelLoader('Pages/Fleet/models/vaayu/vaayu.gltf');
 
 
 let textureLoader = new THREE.TextureLoader();
@@ -135,13 +135,13 @@ function animate(){
     controls.update();
 }
 
-let modelToggler = () => {
-    console.log('process');
-    let selected = scene.getObjectByName(obj.name);
-    scene.remove(selected);
-    modelLoader('Pages/Fleet/TEAM_UAV/Pheonix/Phoenix_final.gltf');
-}
+// let modelToggler = () => {
+//     console.log('process');
+//     let selected = scene.getObjectByName(obj.name);
+//     scene.remove(selected);
+//     modelLoader('Pages/Fleet/models/vaayu/vaayu.gltf');
+// }
 
-setTimeout(() => modelToggler(), 3000);
+// setTimeout(() => modelToggler(), 3000);
 
 animate();
