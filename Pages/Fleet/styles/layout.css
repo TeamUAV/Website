@@ -3,9 +3,10 @@
     margin-top: 1rem;
     width: 90vw;
     height: 80vh;
+    display: flex;
     align-items: center;
     position: relative;
-    overflow: hidden;
+    /* overflow: hidden; */
     justify-content: space-between;
 
     display: flex;
@@ -15,6 +16,7 @@
     width: 15%;
     height: 100%;
     display: flex;
+    margin-top: 1.5rem;
     flex-direction: column;
     align-items: center;
     position: relative;
@@ -44,15 +46,18 @@
     padding-right: 1.5rem;
     margin-top: 2rem;
     margin-bottom: 10rem; /* to let the transition happen smoothly */
-    display: flex;
+    /* display: flex; */
     transition: all 2s ease-in-out;
     position: relative;
     opacity: 1;
-    height: 90%;
-    align-items: center;
-    flex-direction: column;
-    justify-content: space-between;
+    overflow: scroll;
+    height: 93%;
 }
+#main-state *{
+    margin: auto;
+}
+
+
 #main-state > h1, #expanded-state h1{
     border-bottom: 1px solid red;
     width: 100%;
@@ -61,19 +66,24 @@
 }
 #main-state > #body{
     font-weight: 400;
+    margin-top: 1rem;
     font-size: 1.3rem;
 }
 #main-state > #view-more-btn{
     width: 100%;
-    height: 10%;
+    height: 4rem;
+    margin-top: 1.5rem;
     border-radius: 1rem;
+    cursor: pointer;
     background-color: white;
     color: black;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
+#main-state > #mini-stats{
+    margin-top: 1rem;
+}
 #main-state > #mini-stats td{
     padding-right: 1rem;
     padding-bottom: 1rem;
@@ -84,9 +94,16 @@
 .fleet-info.expanded{
     backdrop-filter: blur(20px);
     border: 0.1rem solid white;
-    background-color: #19193858;
-    left: 10%;
-    width: 80%;
+    background-color: #1d1d4569;
+    left: 5%;
+    width: 90%;
+}
+.fleet-info.expanded #remove-expanded{
+    position: absolute;
+    cursor: pointer;
+    top: 2.5%;
+    font-size: 250%;
+    right: 2.5%;
 }
 .fleet-info.expanded > #main-state{
     opacity: 0;
@@ -115,7 +132,7 @@
 }
 #text-details > #body{
     margin-top: 2rem;
-    height: 80%;
+    height: 75%;
     font-size: 1.3rem;
     font-weight: 400;
     overflow-y: scroll;
@@ -160,7 +177,6 @@
 .fleet-model{
     width: 55%;
     height: 95%;
-    background-color: blue;
     border-radius: 2rem;
 }
 .fleet-model canvas{
