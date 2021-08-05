@@ -48,7 +48,7 @@ let loader = new GLTFLoader();
 let modelLoader = (path) => {
     loader.load(path, (gltf) => {
         obj = gltf.scene;
-        obj.name = "airplane";
+        obj.name = "object";
         obj.position.y = -20;
         obj.rotation.y = 99.3;
         scene.add(obj);
@@ -59,7 +59,7 @@ let modelLoader = (path) => {
     });
 }
 
-modelLoader('Pages/Fleet/scripts/TEAM_UAV/Pheonix/Phoenix_final.gltf');
+modelLoader('Pages/Fleet/TEAM_UAV/Team_UAV_1/Plane(uav1) (1).gltf');
 
 
 let textureLoader = new THREE.TextureLoader();
@@ -134,5 +134,14 @@ function animate(){
 
     controls.update();
 }
+
+let modelToggler = () => {
+    console.log('process');
+    let selected = scene.getObjectByName(obj.name);
+    scene.remove(selected);
+    modelLoader('Pages/Fleet/TEAM_UAV/Pheonix/Phoenix_final.gltf');
+}
+
+setTimeout(() => modelToggler(), 3000);
 
 animate();

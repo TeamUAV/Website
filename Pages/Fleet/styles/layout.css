@@ -1,14 +1,13 @@
 .container.fleet{
     margin: auto;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
     width: 90vw;
     height: 80vh;
     display: flex;
     align-items: center;
     position: relative;
-    /* overflow: hidden; */
+    overflow: hidden;
     justify-content: space-between;
-
     display: flex;
 }
 
@@ -21,6 +20,34 @@
     align-items: center;
     position: relative;
 }
+
+.toggle{
+    height: 3rem;
+    width: 3rem;
+    object-fit: cover;
+    cursor: pointer;
+}
+#up{
+    margin-bottom: 0.1rem;
+}
+#down{
+    margin-top: 0.5rem;
+}
+.fleet-icons{
+	overflow-y: auto;
+    width: 100%;
+    height: 80%;
+    display: inline-block;
+}
+.fleet-icons-icon{
+    margin: auto;
+    margin-top: 1rem;
+    height: 10rem;
+    width: 10rem;
+    border-radius: 1rem;
+    border: 1px solid white; 
+}
+
 .fleet-info{
     left: 17%;
     width: 25%;
@@ -60,6 +87,7 @@
 
 #main-state > h1, #expanded-state h1{
     border-bottom: 1px solid red;
+    /* position: absolute; */
     width: 100%;
     font-weight: 400;
     font-size: 3.5rem;
@@ -82,7 +110,7 @@
     align-items: center;
 }
 #main-state > #mini-stats{
-    margin-top: 1rem;
+    margin-top: 1.5rem;
 }
 #main-state > #mini-stats td{
     padding-right: 1rem;
@@ -99,6 +127,11 @@
     left: 5%;
     width: 90%;
 }
+
+.fleet-info.expanded *{
+    background: transparent;
+}
+
 .fleet-info.expanded #remove-expanded{
     position: absolute;
     cursor: pointer;
@@ -183,31 +216,4 @@
 .fleet-model canvas{
     border-radius: 2rem;
 }
-.toggle{
-    height: 3rem;
-    width: 3rem;
-    object-fit: cover;
-}
-#up{
-    margin-bottom: 1rem;
-}
-#down{
-    margin-top: 1rem;
-}
-.fleet-icons{
-	overflow-y: auto;
-    width: 100%;
-    height: 80%;
-    display: inline-block;
-}
-.fleet-icons-icon{
-    margin: auto;
-    margin-top: 1rem;
-    height: 11rem;
-    width: 11rem;
-    border-radius: 1rem;
-    border: 1px solid white; 
-}
-.fleet-info.expanded *{
-    background: transparent;
-}
+

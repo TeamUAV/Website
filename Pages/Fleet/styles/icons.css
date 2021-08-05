@@ -3,6 +3,7 @@
     position: relative;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
     transition: all 1s ease-in-out;
 }
 
@@ -12,8 +13,8 @@
 
 .fleet-icons-icon > img {
     position: absolute;
-    height: 10rem;    
-    width: 10rem;
+    height: 9rem;    
+    width: 9rem;
     opacity: 0;
     transition: all 1s ease-in-out;
 }

@@ -20,7 +20,8 @@
     <script src="Pages/Home/home.js"></script>
     <script src="Pages/GlobalAssets/navbar.js"></script>
     <div class="container fleet">
-      <div class="fleet-icons-container">
+      
+       <!-- <div class="fleet-icons-container">
         <div class="toggle" id="up">
           <img src="Pages/Fleet/assets/up_btn.svg" />
         </div>
@@ -131,107 +132,9 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="fleet-model"></div>
+      </div> -->
+      <!-- <div class="fleet-model"></div>  -->
     </div>
-
-    <script>
-      
-      let btn = document.querySelector('#main-state > #view-more-btn');
-      btn.addEventListener('click', () => {
-        document.querySelector('.fleet-info').classList.toggle('expanded');
-      })
-
-      let btn_2 = document.querySelector('.fleet-info #remove-expanded');
-      btn_2.addEventListener('click', () => {
-        document.querySelector('.fleet-info').classList.toggle('expanded');
-      })
-
-      let graph = new Chart(document.querySelector("#plot-graph"), {
-        type: "scatter",
-        data: {
-          datasets: [
-            {
-              pointBorderColor: "red",
-              borderColor: 'rgba(255, 0, 0, 0.5)',
-              pointBackgroundColor: 'red',
-              fill: true,
-              data: [
-                {
-                  x: 0,
-                  y: 5,
-                },
-                {
-                  x: 5,
-                  y: 10,
-                },
-                {
-                  x: 8,
-                  y: 5,
-                },
-                {
-                  x: 15,
-                  y: 0,
-                },
-              ],
-            },
-          ],
-        },
-        options: {
-          legend: {
-            display: false,
-          },
-          elements: {
-            line: {
-              tension: 0.1,
-            },
-          },
-          responsive: true,
-          scales: {
-            xAxes: [
-              {
-                display: true,
-                gridLines: {
-                  display: true,
-                  color: "#000021",
-                },
-                scaleLabel: {
-                  display: true,
-                  labelString: "Month",
-                },
-              },
-            ],
-            yAxes: [
-              {
-                display: true,
-                gridLines: {
-                  display: true,
-                  color: "#000021",
-                },
-                scaleLabel: {
-                  display: true,
-                  labelString: "Value",
-                },
-              },
-            ],
-          },
-        },
-      });
-
-      let dom = document.querySelector("#plot-graph");
-      dom.addEventListener("click", () => {
-        graph.data.datasets[0].data = [
-          {
-            x: 1,
-            y: 2,
-          },
-          {
-            x: 3,
-            y: 4,
-          },
-        ];
-        graph.update();
-      });
-    </script>
+    <script src="Pages/Fleet/scripts/components.js"></script>
   </body>
 </html>
