@@ -93,6 +93,7 @@
 
 .fleet-info.expanded{
     backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border: 0.1rem solid white;
     background-color: #1d1d4569;
     left: 5%;
