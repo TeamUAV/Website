@@ -2,7 +2,7 @@ let fleet_data = [
   {
     name: "Vaayu",
     short_description:
-      "Vaayu is used as an emergency response system, the sole purpose of making this aircraft is to provide an emergency evacuation warning to people just before floods.",
+      "Vaayu is used as an emergency response system, the sole purpose of making this aircraft is to provide an emergency evacuation warning to people just before floods. Also, it can be used to guide people to the exact location of resources like food, clothing and shelter after floods and can be used to check upon poaching, forest fires and landslides.",
     long_description:
       "The aircraft is a 700mm wing span micro-class RC aircraft equipped with 10W full-bodied stereo realised through dual high-performance drivers to produce enhanced bass, soft, clearand dynamic sound, it also consists an FPV camera for 1080P HD surveillance. Vaayu is used as an emergency response system, the sole purpose of making this aircraft is to provide an emergency evacuation warning to people just before floods. Also, the same system can be used to guide people to the exact location of resources like food, clothing and shelter after floods, it can be used to check upon poaching, forest fires and landslides. By taking real-life situation of floods in Kerala we have taken stimulations how our aircraft will work before and aftermath of floods in a remote village and also explained how our aircraft has the best possible design and technology.",
     miniStats: [

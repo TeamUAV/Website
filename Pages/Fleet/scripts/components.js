@@ -76,6 +76,9 @@ class IconFrame{
 
 class InfoPanel{
     constructor(){
+
+        this.graphActiveIndex = 0;
+
         this.domElement = document.createElement('div');
         this.domElement.className = "fleet-info";
         let main_state = document.createElement('div');
@@ -198,7 +201,7 @@ class InfoPanel{
         this.domElement.appendChild(expanded_state);
     }
 
-    render(name, shortDescription, miniStats, longDescription) {
+    render(name, shortDescription, miniStats, longDescription, graph_stats) {
         this.domDroneName.innerText = name;
         this.domPreviewText.innerText = shortDescription;
         for(let i = 0; i < 3;i ++){
@@ -206,6 +209,70 @@ class InfoPanel{
             this.miniStats[i][1].innerText = miniStats[i][1];
         }
         this.domCompleteText.innerText = longDescription;
+
+        let graph = new Chart(this.plot , {
+            type: "scatter",
+            data: {
+                datasets: [
+                {
+                    pointBorderColor: "red",
+                    borderColor: 'rgba(255, 0, 0, 0.5)',
+                    pointBackgroundColor: 'red',
+                    fill: true,
+                    data: graph_coordinates_generator(graph_stats[0].x, graph_stats[0].y),
+                },
+                ],
+            },
+            options: {
+                legend: {
+                display: false,
+                },
+                elements: {
+                line: {
+                    tension: 0.1,
+                },
+                },
+                responsive: true,
+                scales: {
+                xAxes: [
+                    {
+                    display: true,
+                    gridLines: {
+                        display: true,
+                        color: "#000021",
+                    },
+                    },
+                ],
+                yAxes: [
+                    {
+                    display: true,
+                    gridLines: {
+                        display: true,
+                        color: "#000021",
+                    },
+                    },
+                ],
+                },
+            },
+            });
+        this.domLegend.innerText = graph_stats[0].key;
+
+        this.domPrev.addEventListener('click', () => {
+            if (this.graphActiveIndex > 0){
+                this.graphActiveIndex--;
+                this.domLegend.innerText = graph_stats[this.graphActiveIndex].key;
+                graph.data.datasets[0].data = graph_coordinates_generator(graph_stats[this.graphActiveIndex].x, graph_stats[this.graphActiveIndex].y);
+                graph.update();
+            }
+        });
+        this.domNext.addEventListener('click', () => {
+            if (this.graphActiveIndex < 3){
+                this.graphActiveIndex++;
+                this.domLegend.innerText = graph_stats[this.graphActiveIndex].key;
+                graph.data.datasets[0].data = graph_coordinates_generator(graph_stats[this.graphActiveIndex].x, graph_stats[this.graphActiveIndex].y);
+                graph.update();
+            }
+        });
     }
 }
 
@@ -227,7 +294,7 @@ document.querySelector('.container.fleet').appendChild(elem);
 
 let infoFrame = new InfoPanel();
 
-infoFrame.render(fleet_data[0].name, fleet_data[0].short_description, fleet_data[0].miniStats, fleet_data[0].long_description);
+infoFrame.render(fleet_data[0].name, fleet_data[0].short_description, fleet_data[0].miniStats, fleet_data[0].long_description, fleet_data[0].graph_stats);
 
 document.querySelector('.container.fleet').appendChild(infoFrame.domElement);
 
@@ -241,54 +308,9 @@ btn_2.addEventListener('click', () => {
 document.querySelector('.fleet-info').classList.toggle('expanded');
 })
 
-let graph = new Chart(document.querySelector("#plot-graph"), {
-type: "scatter",
-data: {
-    datasets: [
-    {
-        pointBorderColor: "red",
-        borderColor: 'rgba(255, 0, 0, 0.5)',
-        pointBackgroundColor: 'red',
-        fill: true,
-        data: graph_coordinates_generator(fleet_data[0].graph_stats[0].x, fleet_data[0].graph_stats[0].y),
-    },
-    ],
-},
-options: {
-    legend: {
-    display: false,
-    },
-    elements: {
-    line: {
-        tension: 0.1,
-    },
-    },
-    responsive: true,
-    scales: {
-    xAxes: [
-        {
-        display: true,
-        gridLines: {
-            display: true,
-            color: "#000021",
-        },
-        },
-    ],
-    yAxes: [
-        {
-        display: true,
-        gridLines: {
-            display: true,
-            color: "#000021",
-        },
-        },
-    ],
-    },
-},
-});
 
-let dom = document.querySelector("#plot-graph");
-dom.addEventListener("click", () => {
-graph.data.datasets[0].data = graph_coordinates_generator(fleet_data[0].graph_stats[1].x, fleet_data[0].graph_stats[1].y);
-graph.update();
-});
+// let dom = document.querySelector("#plot-graph");
+// dom.addEventListener("click", () => {
+// graph.data.datasets[0].data = graph_coordinates_generator(fleet_data[0].graph_stats[1].x, fleet_data[0].graph_stats[1].y);
+// graph.update();
+// });

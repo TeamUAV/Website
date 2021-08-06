@@ -20,7 +20,7 @@ let camera = new THREE.PerspectiveCamera(
     10000
 );
 
-
+camera.position.set(0, 100, 300);
 
 let renderer = new THREE.WebGLRenderer({antialias: true, autoSize: true});
 renderer.setSize(render_window.getBoundingClientRect().width, render_window.getBoundingClientRect().height);
@@ -72,7 +72,7 @@ groundTexture.encoding = THREE.sRGBEncoding;
 const groundMaterial = new THREE.MeshLambertMaterial( { map: groundTexture } );
 
 let mesh = new THREE.Mesh( new THREE.PlaneGeometry( 20000, 20000 ), groundMaterial );
-mesh.position.y = - 150;
+mesh.position.y = - 100;
 mesh.rotation.x = - Math.PI / 2;
 mesh.receiveShadow = true;
 scene.add( mesh );
@@ -118,15 +118,16 @@ let lightGenerator = (x, y, z, intensity) => {
     scene.add(light);
 }
 
-lightGenerator(150, 0, 100, 0.5);
-lightGenerator(-100, 0, -100, 0.5);
+lightGenerator(150, 0, 100, 1);
+lightGenerator(-100, 0, -100, 1);
+lightGenerator(100, 0, -100, 1);
+lightGenerator(-150, 0, 100, 1);
 
 
 
 renderer.shadowMap.enabled = true;
 renderer.setPixelRatio( window.devicePixelRatio );
 
-camera.position.set(0, 180, 400);
 function animate(){
     requestAnimationFrame(animate);
     obj.rotation.y += 0.003;
