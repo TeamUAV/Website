@@ -55,7 +55,7 @@ class FleetPage{
         this.iconsFrame.iconDOMs.map((element, index) => {
             element.domElement.addEventListener('click', () => {
                 console.log('works');
-                if(!this.infoPanel.blockIconClick){
+                if(!this.infoPanel.blockIconClick && this.activeIndex != index){
                     this.iconsFrame.iconDOMs[this.activeIndex].toggleActive();
                     element.toggleActive();
                     this.activeIndex = index;
@@ -66,7 +66,7 @@ class FleetPage{
                         fleet_data[this.activeIndex].long_description,
                         fleet_data[this.activeIndex].graph_stats
                     );
-                    modelToggler(fleet_data[this.activeIndex].model_url, 20, 0, 200, 550);
+                    modelToggler(fleet_data[this.activeIndex].model_url, fleet_data[this.activeIndex].model_coordinates.height, fleet_data[this.activeIndex].model_coordinates.x, fleet_data[this.activeIndex].model_coordinates.y, fleet_data[this.activeIndex].model_coordinates.z);
                 }
             });
         });

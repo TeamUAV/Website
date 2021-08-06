@@ -119,9 +119,10 @@
     margin-top: 1.5rem;
 }
 #main-state > #mini-stats td{
+    text-align: end;
     padding-right: 1rem;
     padding-bottom: 1rem;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 300;
 }
 
