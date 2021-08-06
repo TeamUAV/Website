@@ -13,7 +13,9 @@
     <link rel="stylesheet" href="Pages/Fleet/styles/icons.css" />
     <link rel="stylesheet" href="Pages/Home/style.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
-    <script src="Pages/Fleet/scripts/model-renderer.js" type="module"></script>
+    <script src="Pages/Fleet/scripts/data.js"></script>
+    <script src="Pages/Fleet/dependencies/smoothscroll.js"></script>
+    <!-- <script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script> -->
     <title>About</title>
   </head>
   <body>
@@ -135,7 +137,8 @@
       </div> -->
       <!-- <div class="fleet-model"></div>  -->
     </div>
-    <script src="Pages/Fleet/scripts/data.js"></script>
-    <script src="Pages/Fleet/scripts/components.js"></script>
+    <script src="Pages/Fleet/scripts/components.js" type="module"></script>
+    <script src="Pages/Fleet/scripts/model-renderer.js" type="module"></script>
+    <script src="Pages/Fleet/scripts/main.js" type="module"></script>
   </body>
 </html>

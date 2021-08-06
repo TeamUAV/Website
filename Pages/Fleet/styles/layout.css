@@ -10,6 +10,9 @@
     justify-content: space-between;
     display: flex;
 }
+.container.fleet *{
+    scroll-behavior: smooth;
+}
 
 .fleet-icons-container{
     width: 15%;
@@ -91,11 +94,11 @@
     /* position: absolute; */
     width: 100%;
     font-weight: 400;
-    font-size: 3.5rem;
+    font-size: 3rem;
 }
 #main-state > #body{
     font-weight: 400;
-    height: 45%;
+    max-height: 45%;
     overflow-y: scroll;
     margin-top: 1rem;
     font-size: 1.3rem;

@@ -6,7 +6,7 @@ import { GLTFLoader } from "../dependencies/examples/jsm/loaders/GLTFLoader.js";
 
 let render_window = document.querySelector('.fleet-model');
 
-
+let clock = new THREE.Clock();
 let scene = new THREE.Scene();
 scene.background = new THREE.Color( 0xcce0ff );
 scene.add( new THREE.AmbientLight( 0x666666 ) );
@@ -20,7 +20,7 @@ let camera = new THREE.PerspectiveCamera(
     10000
 );
 
-camera.position.set(0, 100, 300);
+camera.position.set(0, 150, 500);
 
 let renderer = new THREE.WebGLRenderer({antialias: true, autoSize: true});
 renderer.setSize(render_window.getBoundingClientRect().width, render_window.getBoundingClientRect().height);
@@ -45,12 +45,14 @@ controls.maxPolarAngle = Math.PI * 0.5;
 
 let loader = new GLTFLoader();
 
-let modelLoader = (path) => {
+let modelLoader = (path, custom_position= -20, camera_x = 0, camera_y = 150, camera_z = 400) => {
+    camera.position.set(camera_x, camera_y, camera_z);
     loader.load(path, (gltf) => {
         obj = gltf.scene;
         obj.name = "object";
-        obj.position.y = -20;
+        obj.position.y = custom_position;
         obj.rotation.y = 99.3;
+        console.log(obj.animations);
         scene.add(obj);
         mixer = new THREE.AnimationMixer(gltf.scene);
         gltf.animations.forEach((clip) => {
@@ -59,7 +61,6 @@ let modelLoader = (path) => {
     });
 }
 
-modelLoader('Pages/Fleet/models/vaayu/vaayu.gltf');
 
 
 let textureLoader = new THREE.TextureLoader();
@@ -132,17 +133,24 @@ function animate(){
     requestAnimationFrame(animate);
     obj.rotation.y += 0.003;
     renderer.render(scene, camera);
-
+    mixer.update(clock.getDelta());
     controls.update();
 }
 
-// let modelToggler = () => {
-//     console.log('process');
-//     let selected = scene.getObjectByName(obj.name);
-//     scene.remove(selected);
-//     modelLoader('Pages/Fleet/models/vaayu/vaayu.gltf');
-// }
+let modelToggler = (url, camera_position, x, y, z) => {
+    console.log('process');
+    let selected = scene.getObjectByName(obj.name);
+    scene.remove(selected);
+    modelLoader(url, camera_position, x, y, z);
+}
 
 // setTimeout(() => modelToggler(), 3000);
 
-animate();
+
+let modelInitialize = (url) => {
+    console.log("hello")
+    modelLoader(url, -30, 0,180,350);
+    animate();
+}
+
+export {modelInitialize, modelToggler};
