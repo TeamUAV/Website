@@ -157,7 +157,7 @@ let modelToggler = (url, camera_position, x, y, z) => {
 
 let modelInitialize = (url) => {
   console.log("hello");
-  modelLoader(url, -30, 0, 150, 300);
+  modelLoader(url, -30, 0, 100, 300);
   animate();
 };
 

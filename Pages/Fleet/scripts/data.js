@@ -6,9 +6,9 @@ let fleet_data = [
     model_url: "Pages/Fleet/models/vaayu/vaayu.gltf",
     model_coordinates: {
       x: 0,
-      y: 150,
+      y: 100,
       z: 300,
-      height: -30
+      height: -30,
     },
     short_description:
       "Vaayu is used as an emergency response system, the sole purpose of making this aircraft is to provide an emergency evacuation warning to people just before floods. Also, it can be used to guide people to the exact location of resources like food, clothing and shelter after floods and can be used to check upon poaching, forest fires and landslides.",
@@ -81,7 +81,7 @@ let fleet_data = [
       x: 0,
       y: 200,
       z: 550,
-      height: 20
+      height: 20,
     },
     short_description:
       "The forest ranger is a fixed-wing UAV designed to patrol National Parks and Wildlife sanctuaries and to be inaudible and indistinguishable by anyone on the ground as surveillance equipment.",
@@ -162,7 +162,7 @@ let fleet_data = [
       x: 0,
       y: 300,
       z: 700,
-      height: 0
+      height: 0,
     },
     active_icon_url: "Pages/Fleet/icons/icon-5-active.svg",
     inactive_icon_url: "Pages/Fleet/icons/icon-5.svg",
@@ -221,6 +221,176 @@ let fleet_data = [
           0.29348, 0.281018, 0.268525, 0.256003, 0.243453, 0.230876, 0.218272,
           0.205644, 0.192991, 0.180315, 0.167616, 0.154896, 0.142156, 0.129396,
           0.116618, 0.103823, 0.091011, 0.078183, 0.065341,
+        ],
+      },
+    ],
+  },
+  {
+    name: "Phoenix",
+    model_url: "Pages/Fleet/models/phoenix/Phoenix.gltf",
+    active_icon_url: "Pages/Fleet/icons/icon-9-active.svg",
+    inactive_icon_url: "Pages/Fleet/icons/icon-9.svg",
+    model_coordinates: {
+      x: 100,
+      y: 100,
+      z: 200,
+      height: 0,
+    },
+    short_description:
+      "The Phoenix is a trainer aircraft usually used by beginners to learn and practice RC flight control. A simple hobby aircraft with a robust plastic fuselage provides flexibility and durability to keep the plane from crashing damages.",
+    long_description:
+      "The Phoenix is a trainer aircraft usually used by beginners to learn and practice RC flight control. A simple hobby aircraft with a robust plastic fuselage provides flexibility and durability to keep the plane from crashing damages. Due to its 2400mm wingspan, the Phoenix flies stably in the air and can save power by gliding and expanding the flight time. The Phoenix can be equipped with an FPV camera mounted in the cockpit to get aerial footage. It has a powerful over-grade motor system and four channels that allow easy controlling to do aerobatic flying.",
+    miniStats: [
+      ["Wingspan", "2400 mm"],
+      ["Overall Length:", "1132 mm"],
+      ["Tail Height:", "180 mm"],
+    ],
+    graph_stats: [
+      {
+        key: "alpha vs Fz",
+        x: [
+          -8, -7.5, -7, -6.5, -6, -5.5, -5, -4.5, -4, -3.5, -3, -2.5, -2, -1.5,
+          -1, -0.5, 0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6, 6.5, 7,
+          7.5,
+        ],
+        y: [
+          -4.33708, -3.4262, -2.51431, -1.60156, -0.68812, 0.225849, 1.140192,
+          2.054746, 2.969349, 3.883839, 4.798055, 5.711835, 6.625018, 7.537442,
+          8.448945, 9.359368, 10.26855, 11.17633, 12.08255, 12.98704, 13.88966,
+          14.79025, 15.68864, 16.58468, 17.47822, 18.3691, 19.25717, 20.14229,
+          21.02429, 21.90303, 22.77836, 23.65014,
+        ],
+      },
+      {
+        key: "alpha vs cl/cd^3/2",
+        x: [
+          -8, -7.5, -7, -6.5, -6, -5.5, -5, -4.5, -4, -3.5, -3, -2.5, -2, -1.5,
+          -1, -0.5, 0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6, 6.5, 7,
+          7.5,
+        ],
+        y: [
+          -3.6603, -2.60057, -1.62585, -0.82607, -0.23249, 0.043875, 0.499722,
+          1.20876, 2.097985, 3.116461, 4.218905, 5.378347, 6.558197, 7.711152,
+          8.818848, 9.890847, 10.89635, 11.81093, 12.63239, 13.36075, 13.99994,
+          14.5739, 15.05678, 15.39759, 15.67601, 15.87829, 15.91392, 15.84905,
+          15.69922, 15.46857, 15.17648, 14.84585,
+        ],
+      },
+      {
+        key: "alpha vs Cl/Cd",
+        x: [
+          -8, -7.5, -7, -6.5, -6, -5.5, -5, -4.5, -4, -3.5, -3, -2.5, -2, -1.5,
+          -1, -0.5, 0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6, 6.5, 7,
+          7.5,
+        ],
+        y: [
+          -8.16035, -6.5231, -4.76062, -3.03066, -1.30126, 0.428644, 2.172856,
+          3.915184, 5.652793, 7.342136, 8.94249, 10.44846, 11.82993, 13.04063,
+          14.08646, 15.01072, 15.78766, 16.40309, 16.8732, 17.21341, 17.44101,
+          17.5946, 17.64944, 17.55458, 17.40918, 17.2009, 16.83729, 16.39609,
+          15.89677, 15.34579, 14.7639, 14.17358,
+        ],
+      },
+      {
+        key: "alpha vs Cm",
+        x: [
+          -8, -7.5, -7, -6.5, -6, -5.5, -5, -4.5, -4, -3.5, -3, -2.5, -2, -1.5,
+          -1, -0.5, 0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6, 6.5, 7,
+          7.5,
+        ],
+        y: [
+          0.045731, 0.039518, 0.033269, 0.026975, 0.020638, 0.014255, 0.007831,
+          0.001366, -0.00514, -0.01168, -0.01825, -0.02485, -0.03148, -0.03814,
+          -0.04481, -0.05152, -0.05824, -0.06497, -0.07172, -0.07849, -0.08526,
+          -0.09203, -0.09881, -0.10561, -0.11242, -0.11922, -0.12601, -0.13279,
+          -0.13957, -0.14632, -0.15306, -0.15978,
+        ],
+      },
+    ],
+  },
+  {
+    name: "Skua",
+    model_url: "Pages/Fleet/models/Skua/Skua.gltf",
+    active_icon_url: "Pages/Fleet/icons/icon-10-active.svg",
+    inactive_icon_url: "Pages/Fleet/icons/icon-10.svg",
+    model_coordinates: {
+      x: -10,
+      y: 300,
+      z: 800,
+      height: 0,
+    },
+    short_description:
+      "The Skua FPV is a low-speed aircraft made to fly for a long-range and long duration of time. It comes with an undercarriage which no plane has. The undercarriage itself can carry about 2.5-3 kilos of payload and can be dropped off during the flight if needed. A gimbal camera mounted in the lower part of the aircraft can be used for an aerial view and has excellent surveillance and facial recognition potential.",
+    long_description:
+      "The Skua FPV is a low-speed aircraft made to fly for a long-range and long duration of time. It comes with an undercarriage which no plane has. The undercarriage itself can carry about 2.5-3 kilos of payload and can be dropped off during the flight if needed. A gimbal camera mounted in the lower part of the aircraft can be used for an aerial view and has excellent surveillance and facial recognition potential. The model has a special fuselage compartment divided into two parts. The top part consists of all the avionics needed for the aircraft, and the bottom part, which has easy and quick access through a removable and openable cover, is solely for the payload and the camera. It is a very stable and highly maneuverable aircraft. With a wingspan of 2100mm, this flying model is designed specifically for long flying and a high load capability. Skua is an exceptional product for delivery and professional FPV purposes.",
+    miniStats: [
+      ["Wingspan", "2100 mm"],
+      ["Overall Length:", "1150 mm"],
+      ["Tail Height:", "157 mm"],
+    ],
+    graph_stats: [
+      {
+        key: "alpha vs Fz",
+        x: [
+          -8, -7.5, -7, -6.5, -6, -5.5, -5, -4.5, -4, -3.5, -3, -2.5, -2, -1.5,
+          -1, -0.5, 0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6, 6.5, 7,
+          7.5, 8, 8.5, 9, 9.5,
+        ],
+        y: [
+          -11.7106, -10.3472, -8.98181, -7.61477, -6.24621, -4.87636, -3.50542,
+          -2.1336, -0.76112, 0.611814, 1.98499, 3.358196, 4.73122, 6.103848,
+          7.47587, 8.847073, 10.21725, 11.58618, 12.95365, 14.31947, 15.6834,
+          17.04526, 18.40483, 19.76189, 21.11625, 22.4677, 23.81603, 25.16104,
+          26.50253, 27.8403, 29.17415, 30.50388, 31.82929, 33.15019, 34.46639,
+          35.77769,
+        ],
+      },
+      {
+        key: "alpha vs cl/cd^3/2",
+        x: [
+          -8, -7.5, -7, -6.5, -6, -5.5, -5, -4.5, -4, -3.5, -3, -2.5, -2, -1.5,
+          -1, -0.5, 0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6, 6.5, 7,
+          7.5, 8, 8.5, 9, 9.5,
+        ],
+        y: [
+          -9.058285, -8.009647, -6.877507, -5.688104, -4.475888, -3.26029,
+          -2.090665, -1.039658, -0.2299367, 0.1698331, 1.003721, 2.199833,
+          3.600797, 5.084092, 6.562872, 7.995579, 9.349572, 10.62485, 11.81785,
+          12.9125, 13.83426, 14.67298, 15.42649, 16.08599, 16.63779, 17.06372,
+          17.38731, 17.64238, 17.82934, 17.95452, 18.03346, 18.076, 18.08205,
+          18.03184, 17.90111, 17.60817,
+        ],
+      },
+      {
+        key: "alpha vs Cl/Cd",
+        x: [
+          -8, -7.5, -7, -6.5, -6, -5.5, -5, -4.5, -4, -3.5, -3, -2.5, -2, -1.5,
+          -1, -0.5, 0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6, 6.5, 7,
+          7.5, 8, 8.5, 9, 9.5,
+        ],
+        y: [
+          -15.0092, -14.119, -13.0121, -11.688, -10.1548, -8.37159, -6.33161,
+          -4.03583, -1.49445, 1.231154, 4.039554, 6.806694, 9.386675, 11.6684,
+          13.61014, 15.24227, 16.58534, 17.69914, 18.61838, 19.34847, 19.80777,
+          20.15191, 20.38923, 20.51791, 20.5299, 20.4124, 20.20214, 19.94309,
+          19.63772, 19.29463, 18.93127, 18.55772, 18.1733, 17.75811, 17.28947,
+          16.69197,
+        ],
+      },
+      {
+        key: "alpha vs Cm",
+        x: [
+          -8, -7.5, -7, -6.5, -6, -5.5, -5, -4.5, -4, -3.5, -3, -2.5, -2, -1.5,
+          -1, -0.5, 0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6, 6.5, 7,
+          7.5, 8, 8.5, 9, 9.5,
+        ],
+        y: [
+          0.025625, 0.023521, 0.021193, 0.018631, 0.015822, 0.012778, 0.009498,
+          0.005985, 0.002255, -0.00168, -0.00581, -0.01015, -0.01466, -0.01937,
+          -0.02426, -0.02937, -0.03469, -0.04024, -0.04602, -0.05201, -0.0582,
+          -0.06462, -0.07125, -0.07809, -0.08512, -0.09233, -0.09972, -0.1073,
+          -0.11506, -0.123, -0.13112, -0.13942, -0.14788, -0.15649, -0.16521,
+          -0.17392,
         ],
       },
     ],
