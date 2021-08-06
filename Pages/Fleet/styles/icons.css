@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: all 1s ease-in-out;
+    transition: all 0.7s ease-in-out;
 }
 
 .fleet-icons-icon.active{
@@ -16,7 +16,7 @@
     height: 9rem;    
     width: 9rem;
     opacity: 0;
-    transition: all 1s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
 .fleet-icons-icon > img.active {
     opacity: 1;

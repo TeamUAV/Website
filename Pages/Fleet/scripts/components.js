@@ -83,6 +83,8 @@ class InfoPanel {
   constructor() {
     this.graphActiveIndex = 0;
 
+    this.blockIconClick = false;
+
     this.domElement = document.createElement("div");
     this.domElement.className = "fleet-info";
     let main_state = document.createElement("div");
@@ -101,6 +103,8 @@ class InfoPanel {
     btn.id = "view-more-btn";
     btn.innerText = "View More Details";
     main_state.appendChild(btn);
+
+    this.domBtn = btn;
 
     let stats = document.createElement("table");
     stats.id = "mini-stats";
@@ -127,12 +131,14 @@ class InfoPanel {
     expanded_state.id = "expanded-state";
     expanded_state.className = "plane";
 
-    let cancel = document.createElement("i");
-    cancel.className = "material-icons";
-    cancel.id = "remove-expanded";
-    cancel.innerText = "highlight_off";
+    let close = document.createElement("i");
+    close.className = "material-icons";
+    close.id = "remove-expanded";
+    close.innerText = "highlight_off";
 
-    expanded_state.appendChild(cancel);
+    this.domClose = close;
+
+    expanded_state.appendChild(close);
 
     let text_details = document.createElement("div");
     text_details.id = "text-details";
@@ -201,18 +207,50 @@ class InfoPanel {
 
     this.domElement.appendChild(main_state);
     this.domElement.appendChild(expanded_state);
+
+
+    this.domPrev.addEventListener("click", () => {
+      if (this.graphActiveIndex > 0) {
+        this.graphActiveIndex--;
+        console.log(this.graphActiveIndex);
+        this.domLegend.innerText = this.graph_stats[this.graphActiveIndex].key;
+        this.graph.data.datasets[0].data = null;
+        this.graph.data.datasets[0].data = graph_coordinates_generator(
+          this.graph_stats[this.graphActiveIndex].x,
+          this.graph_stats[this.graphActiveIndex].y
+        );
+        this.graph.update();
+      }
+    });
+    this.domNext.addEventListener("click", () => {
+      if (this.graphActiveIndex < this.graph_stats.length - 1) {
+        this.graph.data.datasets[0].data = null;
+        this.graphActiveIndex++;
+        console.log(this.graphActiveIndex);
+        this.domLegend.innerText = this.graph_stats[this.graphActiveIndex].key;
+        this.graph.data.datasets[0].data = graph_coordinates_generator(
+          this.graph_stats[this.graphActiveIndex].x,
+          this.graph_stats[this.graphActiveIndex].y
+        );
+        this.graph.update();
+      }
+    });
   }
 
   render(name, shortDescription, miniStats, longDescription, graph_stats) {
+    console.log(graph_stats);
+    this.graph_stats = graph_stats;
     this.domDroneName.innerText = name;
     this.domPreviewText.innerText = shortDescription;
+    this.graphActiveIndex = 0;
+
     for (let i = 0; i < 3; i++) {
       this.miniStats[i][0].innerText = miniStats[i][0];
       this.miniStats[i][1].innerText = miniStats[i][1];
     }
     this.domCompleteText.innerText = longDescription;
 
-    let graph = new Chart(this.plot, {
+    this.graph = new Chart(this.plot, {
       type: "scatter",
       data: {
         datasets: [
@@ -261,75 +299,8 @@ class InfoPanel {
       },
     });
     this.domLegend.innerText = graph_stats[this.graphActiveIndex].key;
-
-    this.domPrev.addEventListener("click", () => {
-      if (this.graphActiveIndex > 0) {
-        this.graphActiveIndex--;
-        this.domLegend.innerText = graph_stats[this.graphActiveIndex].key;
-        graph.data.datasets[0].data = graph_coordinates_generator(
-          graph_stats[this.graphActiveIndex].x,
-          graph_stats[this.graphActiveIndex].y
-        );
-        graph.update();
-      }
-    });
-    this.domNext.addEventListener("click", () => {
-      if (this.graphActiveIndex < 3) {
-        this.graphActiveIndex++;
-        this.domLegend.innerText = graph_stats[this.graphActiveIndex].key;
-        graph.data.datasets[0].data = graph_coordinates_generator(
-          graph_stats[this.graphActiveIndex].x,
-          graph_stats[this.graphActiveIndex].y
-        );
-        graph.update();
-      }
-    });
+    
   }
 }
 
-
-// let dom = document.querySelector("#plot-graph");
-// dom.addEventListener("click", () => {
-// graph.data.datasets[0].data = graph_coordinates_generator(fleet_data[0].graph_stats[1].x, fleet_data[0].graph_stats[1].y);
-// graph.update();
-// });
-
-let actives = [];
-let inActives = [];
-for (let i = 1; i <= 8; i++) {
-  actives.push(`Pages/Fleet/icons/icon-${i}-active.svg`);
-  inActives.push(`Pages/Fleet/icons/icon-${i}.svg`);
-}
-
-let iconFrame = new IconFrame(inActives, actives);
-iconFrame.render();
-iconFrame.iconDOMs[0].toggleActive();
-document.querySelector(".container.fleet").appendChild(iconFrame.domElement);
-
-let infoFrame = new InfoPanel();
-
-infoFrame.render(
-  fleet_data[1].name,
-  fleet_data[1].short_description,
-  fleet_data[1].miniStats,
-  fleet_data[1].long_description,
-  fleet_data[1].graph_stats
-);
-
-document.querySelector(".container.fleet").appendChild(infoFrame.domElement);
-
-let btn = document.querySelector("#main-state #view-more-btn");
-btn.addEventListener("click", () => {
-  document.querySelector(".fleet-info").classList.toggle("expanded");
-});
-
-let btn_2 = document.querySelector(".fleet-info #remove-expanded");
-btn_2.addEventListener("click", () => {
-  document.querySelector(".fleet-info").classList.toggle("expanded");
-});
-
-let elem = document.createElement("div");
-elem.className = "fleet-model";
-document.querySelector(".container.fleet").appendChild(elem);
-
-export {iconFrame, infoFrame};
+export {IconFrame, InfoPanel};
