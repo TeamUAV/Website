@@ -1,0 +1,169 @@
+@import url(//db.onlinewebfonts.com/c/1064f0ad1cb65fdab43bb592ddd8aa91?family=Gilroy-Bold);
+@import url(//db.onlinewebfonts.com/c/0744a43ed7aac352ec78c1404c890d72?family=Gilroy+Light);
+
+.container.about #heading{
+    margin: 0rem 5%;
+    margin-top: 5%;
+    border-bottom: 0.3rem solid white;
+    display: flex;
+    padding-left: 1rem;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    width: 45%;
+}
+.container.about #heading p{
+    font-size: 700%;
+    margin-bottom: 0;
+    padding: 0;
+    line-height: 1;
+    text-transform: uppercase;
+    font-family: 'Gilroy-Bold', sans-serif;
+}
+
+.container.about #about-body{
+    margin: 5% 5.2%;
+    font-family: 'Gilroy-Light', sans-serif;
+    font-weight: 300;
+    line-height: 2.5rem;
+    font-size: 1.8rem;
+}
+#departments-banner{
+    margin-top: 4%;
+    margin-bottom: 10%;
+    width: 100vw;
+    position: relative;
+    height: 30vh;
+    background-color: aliceblue;
+    display: flex;
+}
+
+#departments-banner > #left, #departments-banner > #right{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;   
+}
+
+#departments-banner > #left > div{
+    width: 100%;
+    height: 50%;
+}
+#departments-banner > #right > div{
+    width: 100%;
+    height: 45%;
+}
+#departments-banner > #left > div:first-child{
+    background: rgba(22, 22, 91, 0.6);
+}
+#departments-banner > #right > div:last-child{
+    background: rgba(22, 22, 91, 0.6);
+}
+
+#images-container-dummy{
+    z-index: 10;
+    width: 80%;
+    height: 100%;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transform: translateY(-50%);
+    background-color: transparent;
+}
+#images-container-main{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 10;
+    background-color: transparent;
+}
+#images-container-main img{
+    width: 40%;
+    height: 120%;
+    background: transparent;
+    position: absolute;
+}
+#images-container-main #manage{
+    top: -5%;
+    left: -5%;
+}
+#images-container-main #CS{
+    left: 12.5%;
+    top: -15%;
+}
+#images-container-main #depts{
+    top: 60%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 50%;
+    height: 130%;
+    transform: translateY(-50%);
+}
+#images-container-main #elec{
+    right: 12.5%;
+    top: -15%;
+}
+#images-container-main #mech{
+    top: -5%;
+    right: -5%;
+}
+.container.about .know-more-link-card{
+    margin: auto;
+    position: relative;
+    width: 70vw;
+    overflow-y: visible;
+    height: 50vh;
+    margin-bottom: 4%;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.know-more-link-card .number-circle{
+    border-radius: 50%;
+    position: relative;
+    background: rgba(102, 102, 119, 0.2);
+    font-family: 'Gilroy-Light', sans-serif;
+    font-size: 2rem;
+    display: flex;
+    margin-right: 1rem;
+    align-items: center;
+    justify-content: center;
+    width: 5rem;
+    height: 5rem;
+    border: 0.2rem solid white;
+}
+
+.number-circle:not(.number-circle.first):before{
+    content: "";
+    width: 0.2rem;
+    height: 25vh;
+    background: rgba(255, 255, 255);
+    position: absolute;
+    left: 2.2rem;
+    bottom: 4.7rem;
+}
+
+.number-circle:not(.number-circle.last)::after{
+    content: "";
+    width: 0.2rem;
+    height: 25vh;
+    background: rgba(255, 255, 255);
+    position: absolute;
+    left: 2.2rem;
+    top: 4.7rem;
+}
+
+.know-more-link-card #panel-content{
+    width: 90%;
+    backdrop-filter: blur(25px);
+    background: rgba(102, 102, 119, 0.2);
+    height: 100%;
+    border-radius: 5rem;
+    border: 0.2rem solid white;
+}

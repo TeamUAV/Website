@@ -1,4 +1,4 @@
-.container.about-info {
+.container.about.know-more {
   width: 95vw;
   height: 89vh;
   margin: 0 auto;
@@ -11,7 +11,7 @@
 
 
 
-.container.about-info #title {
+.container.about.know-more #title {
   color: rgba(245, 25, 25, 1);
   font-family: Poppins;
   font-style: normal;
@@ -24,14 +24,14 @@
   letter-spacing: 0.24em;
 }
 
-.container.about-info .content {
+.container.about.know-more .content {
   display: flex;
   flex-direction: row;
   height: 92%;
   width: 100%;
 }
 
-.container.about-info ul {
+.container.about.know-more ul {
   height: 85%;
   width: 30%;
   overflow: scroll;
@@ -43,7 +43,7 @@
   padding-left: 5rem;
 }
 
-.container.about-info li {
+.container.about.know-more li {
   position: relative;
   padding-left: 2.5rem;
   padding-bottom: 2.1rem;
@@ -58,7 +58,7 @@
   color: rgba(255, 255, 255, 0.9);
   margin-top: 2rem;
 }
-.container.about-info li:before {
+.container.about.know-more li:before {
   content: "";
   width: 1.5rem;
   height: 1.5rem;
@@ -70,16 +70,16 @@
   transform: translateY(23%);
 }
 
-.container.about-info li.active:before {
+.container.about.know-more li.active:before {
     background: red;
 }
 
-.container.about-info li.active{
+.container.about.know-more li.active{
     color: red;
     font-weight: 500;
 }
 
-.container.about-info li:not(:last-child):after {
+.container.about.know-more li:not(:last-child):after {
   content: "";
   width: 2px;
   height: 100%;
@@ -259,7 +259,7 @@ a#name-value.active{
   }
 }
 @media only screen and (max-height: 720px) {
-  .container.about-info {
+  .container.about.know-more {
     height: 80vh;
     overflow-y: hidden;
   }
@@ -283,17 +283,17 @@ a#name-value.active{
   }
 }
 @media only screen and (max-width: 1690px) {
-  .container.about-info li {
+  .container.about.know-more li {
     width: 90%;
   } 
 }
 @media only screen and (max-width: 1169px) {
-  .container.about-info li {
+  .container.about.know-more li {
     width: 95%;
   } 
 }
 @media only screen and (max-width: 1000px){
-  .container.about-info li {
+  .container.about.know-more li {
     font-size: 1rem;
   } 
 }

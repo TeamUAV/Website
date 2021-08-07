@@ -2,7 +2,7 @@ import { MemberList, KnowMoreCard } from "./components.js";
 
 class AboutKnowMorePage{
     constructor(title, listTitles, listItemContents){
-        this.domElement = document.querySelector('.container.about-info');
+        this.domElement = document.querySelector('.container.about.know-more');
 
         let pageTitle = document.createElement('p');
         pageTitle.innerText = title;

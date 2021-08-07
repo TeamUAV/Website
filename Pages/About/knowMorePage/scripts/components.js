@@ -23,7 +23,7 @@ class MemberList {
   }
 
   render() {
-    let dom = document.querySelector(".container.about-info .content");
+    let dom = document.querySelector(".container.about.know-more .content");
     let ul = document.createElement("ul");
     dom.appendChild(ul);
     this.nodeList.map((node, index) => node.render(index == 0));
@@ -219,20 +219,5 @@ class KnowMorePositionsField{
         return elem;
     }
 }
-
-
-// let card = new KnowMoreCard('Valentino Rossi', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, ducimus. Ex repudiandae ullam doloribus molestiae ad mollitia porro consectetur quisquam quam ipsa, laboriosam asperiores quidem voluptatum id iusto nesciunt eaque',
-//  ['abc', 'def', 'ghi'], ['abc', 'efg'], [{body: 'abc', ref:'ref'}], 'https://m.gpone.com/sites/default/files/images/2021/article/foto/05/MotoGP/05-LeMans/rossi-box-1621097058.jpg', 'maverick');
-
-//  card.render();
-
-// document.querySelector(".content").appendChild(card.DOMCard);
-
-
-// setTimeout(()=> {
-//     card.updateCard('Valentino Rossiiiii', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, ducimus. Ex repudiandae ullam doloribus molestiae ad mollitia porro consectetur quisquam quam ipsa, laboriosam asperiores quidem voluptatum id iusto nesciunt eaque',
-// ['abc', 'def', 'ghi'], ['abc', 'efg'], [{body: 'abc', ref:'ref'}], 'https://m.gpone.com/sites/default/files/images/2021/article/foto/05/MotoGP/05-LeMans/rossi-box-1621097058.jpg', 'maverick');
-
-// }, 1000);
 
 export {MemberList, KnowMoreCard};
