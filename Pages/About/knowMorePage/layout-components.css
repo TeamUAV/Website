@@ -1,6 +1,6 @@
 .container.about-info {
   width: 95vw;
-  height: 90vh;
+  height: 89vh;
   margin: 0 auto;
   position: relative;
   overflow-y: scroll;
@@ -47,8 +47,11 @@
   position: relative;
   padding-left: 2.5rem;
   padding-bottom: 2.1rem;
-  width: 50%;
+  display: flex;
+  min-width: 0%;
+  max-width: 80%;
   font-size: 1.4rem;
+  transition: color 0.7s;
   font-weight: 300;
     -moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;
   cursor: pointer;
@@ -60,6 +63,7 @@
   width: 1.5rem;
   height: 1.5rem;
   border-radius: 50%;
+  transition: background 0.7s;
   background: rgba(255, 255, 255, 0.9);
   position: absolute;
   left: -1rem;
@@ -90,6 +94,7 @@
 .know-more-card{
   margin-right: 1rem;
   margin-top: 2rem;
+  position: relative;
   width: 60%;
   border-radius: 40px 5px 5px 40px;
   height: 85%;
@@ -107,36 +112,35 @@
   background-color: transparent;
 }
 
-.know-more-details .view-more-btn{
-  -moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;
+.view-more-btn{
+  z-index: 2;
   cursor: pointer;
   display: flex;
-  /* width: 100%; */
-  margin-top: 1rem;
-  padding-right: 1rem;
+  background: transparent;
   align-items: center;
   position: absolute;
-  right: 0.5rem;
-  top: 0.5rem;
-  /* justify-content: flex-end; */
+  left: 40%;
+  top: 5%;
   text-transform: uppercase;
 }
-.know-more-details .view-more-btn p{
+ .view-more-btn p{
   font-size: 0.8rem;
   text-align: justify;
+  background-color: transparent;
   transition: all 0.5s ease-in-out;
 }
-.know-more-details .view-more-btn p.pg2{
+ .view-more-btn p.pg2{
   opacity: 0;
 }
 
-.know-more-details #view-more-arrow{
+ #view-more-arrow{
   transform: rotate(180deg);
   margin-left: 1rem;
+  background-color: transparent;
   transition: all 0.5s;
 }
 
-.know-more-details #view-more-arrow.pg2{
+ #view-more-arrow.pg2{
   transform: rotate(0deg);
 }
 
@@ -144,31 +148,43 @@
 .know-more-image{
   display: block;
   width: 45%;
+
   object-fit: cover;
   height: 100%;
-  background-color: red;
   outline: none;
   border-radius: 0 5px 5px 0;
 }
 
 .know-more-details-fields{
-  transition: all 0.5s ease-in-out;
-  margin-left: 3rem;
-  margin-top: 5rem;
+  margin-left: 0;
+  margin-top: 0;
   position: absolute;
   opacity: 0;
+  width: 0;
+  height: 0;
   display: flex;
   flex-direction: column;
   align-items: space-between;
 }
 
 .know-more-details-fields.active{
+  margin-left: 3rem;
+  margin-top: 5rem;
   opacity: 1;
+  width: unset;
+  height: unset;
 }
 
 .know-more-details-fields .field{
+  
+  width: 0%;
+  height: 0%;
+}
+.know-more-details-fields.active .field{
   padding-right: 1.2rem;
   margin-bottom: 4rem;
+  width: unset;
+  height: unset;
 }
 
 .know-more-details-fields #name{
@@ -188,10 +204,10 @@
 }
 
 .know-more-details-fields #name-value.long{
-  height: 5.5rem;
+  height: 7.5rem;
   border-radius: 10px;
   font-size: 1.2rem;
-  overflow: scroll;
+  overflow-y: scroll;
 }
 
 a{
@@ -208,20 +224,76 @@ a#name-value.active{
 #navigation-dots{
   position: absolute;
   display: flex;
-  bottom: 2.5rem;
-  right: 0;
+  left: 45%;
+  bottom: 6%;
+  width: auto;
+  height: 1rem;
+  background: transparent;
   align-items: center;
   padding-right: 2rem;
 }
 #navigation-dots > .dot{
+  background: transparent;
   margin-left: 1rem;
 }
 .dot img{
   position: absolute;
+  background: transparent;
   opacity: 0;
   transition: all 0.5s;
 }
 
 .dot img.active{
   opacity: 1;
+}
+
+@media only screen and (max-height: 780px) {
+  .know-more-details{
+    overflow-y: hidden;
+  }
+  .know-more-details-fields.active{
+    margin-top: 2rem;
+  }
+  .know-more-details-fields.active #name-value{
+    font-size: 1rem;
+  }
+}
+@media only screen and (max-height: 720px) {
+  .container.about-info {
+    height: 80vh;
+    overflow-y: hidden;
+  }
+   .view-more-btn p{
+      font-size: 0.6rem;
+  }
+   .view-more-btn i{
+    font-size: 1rem;
+  }
+  .know-more-details-fields.active{
+    margin-top: 2rem;
+  }
+  .know-more-details-fields.active #name-value{
+    font-size: 0.8rem;
+  }
+  .know-more-details-fields #name-value.long{
+    /* height: auto; */
+    display: flex;
+    min-height: 0rem;
+    max-height: 6.5rem;
+  }
+}
+@media only screen and (max-width: 1690px) {
+  .container.about-info li {
+    width: 90%;
+  } 
+}
+@media only screen and (max-width: 1169px) {
+  .container.about-info li {
+    width: 95%;
+  } 
+}
+@media only screen and (max-width: 1000px){
+  .container.about-info li {
+    font-size: 1rem;
+  } 
 }

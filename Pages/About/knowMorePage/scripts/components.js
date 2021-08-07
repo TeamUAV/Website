@@ -67,7 +67,7 @@ class KnowMoreCard{
         i.innerText = 'arrow_back';
         btn.appendChild(i);
 
-        details.appendChild(btn);
+        this.DOMCard.appendChild(btn);
 
         let pg1 = document.createElement('div');
         pg1.className = "know-more-details-fields";
@@ -96,15 +96,17 @@ class KnowMoreCard{
         navDiv.appendChild(dot2.dot);
         navDiv.id ="navigation-dots";
 
-        details.appendChild(navDiv);
+        // details.appendChild(navDiv);
 
         details.appendChild(pg1);
         details.appendChild(pg2);
 
         this.DOMCard.appendChild(details);
+        this.DOMCard.appendChild(navDiv);
         this.DOMCard.appendChild(img);
 
         btn.addEventListener('click', () => {
+            console.log('works');
             pg1.classList.toggle('active');
             pg2.classList.toggle('active');
             dot1.toggle();
