@@ -175,7 +175,7 @@
 #panel-content .display-image{
     display: block;
     object-fit: cover;
-    width: 35%;
+    width: 40%;
     height: 80%;
     background-color: blue;
     border-radius: 3rem;
