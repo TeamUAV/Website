@@ -145,7 +145,7 @@
     height: 25vh;
     background: rgba(255, 255, 255);
     position: absolute;
-    left: 2.2rem;
+    left: 2.215rem;
     bottom: 4.7rem;
 }
 
@@ -155,7 +155,7 @@
     height: 25vh;
     background: rgba(255, 255, 255);
     position: absolute;
-    left: 2.2rem;
+    left: 2.215rem;
     top: 4.7rem;
 }
 
@@ -164,6 +164,57 @@
     backdrop-filter: blur(25px);
     background: rgba(102, 102, 119, 0.2);
     height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 3rem;
+    justify-content: space-between;
     border-radius: 5rem;
     border: 0.2rem solid white;
+}
+
+#panel-content .display-image{
+    display: block;
+    object-fit: cover;
+    width: 35%;
+    height: 80%;
+    background-color: blue;
+    border-radius: 3rem;
+}
+#panel-content .contents{
+    width: 65%;
+    height: 70%;
+    display: flex;
+    padding-left: 2rem;
+    flex-direction: column;
+    background-color: transparent;
+}
+
+#panel-content .contents > .title{
+    font-size: 2rem;
+    background-color: transparent;
+    font-family: 'Gilroy-Light', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    border-bottom: 0.2rem solid white;
+}
+#panel-content .contents > .body{
+    margin-top: 1rem;
+    background-color: transparent;
+    font-size: 1.2rem;
+    height: 90%;
+    border-radius: 1rem;
+    overflow-y: scroll;
+}
+#panel-content .contents > .btn-view{
+    margin-top: 1rem;
+    margin-left: 1rem;
+    background: rgba(102, 102, 119, 0.2);
+    width: 8rem;
+    height: 4rem;
+    text-transform: uppercase;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
 }
