@@ -1,0 +1,208 @@
+@import url(//db.onlinewebfonts.com/c/1064f0ad1cb65fdab43bb592ddd8aa91?family=Gilroy-Bold);
+*{
+    margin: 0;
+    padding: 0;
+}
+*::-webkit-scrollbar{
+    display: none;
+}
+body{
+    background-color: #000022;
+}
+#about-title {
+    position: absolute;
+    width: 43vw;
+    height: 18vh;
+    left: 6vw;
+    top: 25vh;
+    font-family: Gilroy-Bold;
+    font-size: 9rem;
+    line-height: 9rem;
+    display: flex;
+    align-items: flex-end;
+    color: #F1F1F1;
+}
+#about-title-underline{
+    position: absolute;
+    height: 0rem;
+    width: 40vw;
+    left: 6.5vw;
+    top: 43vh;
+    border: 4px solid #FFFFFF;
+}
+
+#about-text {
+    position: absolute;
+    width: 90%;
+    height: 12vh;
+    left: 6.5vw;
+    top: 50vh;
+    font-family: Gilroy-Light;
+    font-size: 1.8rem;
+    line-height: 2rem;
+    text-align: justify;
+    color: #FFFFFF;
+}
+
+#dept_section{
+    position: relative;
+    width: 100%;
+    height: 40vh;
+    top: 80vh;
+}
+
+#dept_images{
+    /* position: absolute; */
+    margin: auto;
+    width: 95%;
+    height: 100%;
+    
+}
+#background_image_left {
+    position: absolute;
+    width: 50%;
+    height: 18.5vh;
+    left: 0;
+    top: 3vh;
+}
+
+#background_image_right{
+     
+    position: absolute;
+    width: 50%;
+    height: 17vh;
+    right: 0;
+    bottom: 1vh;
+}
+#dept{
+    position: absolute;
+    width: 37.5vw;
+    height: 51.8vh;
+    left: 31.250vw; 
+    top: 1vh;
+}
+#cs{
+    position: absolute;
+    width: 30vw;
+    height: 41vh;
+    top: -1.2vh;
+    left: 17.5vw;
+}
+
+#elec{
+    position: absolute;
+    width: 30vw;
+    height: 41vh;
+    top: -1.2vh;
+    right: 17.5vw;
+}
+#mech{
+    position: absolute;
+    width: 30vw;
+    height: 41vh;
+    top: 1vh;
+    right: 0vh;
+}
+
+#manage {
+    position: absolute;
+    width: 30vw;
+    height: 41vh;
+    top: 1vh;
+    left: 0vh;
+}
+.box{
+    display:flex;
+    position: relative;
+    width: 68rem;
+    height: 30rem;
+    background: linear-gradient(163.4deg, rgba(25, 25, 56, 0.7) -4.39%, rgba(25, 25, 56, 0) 114.94%);
+    border: 0.5px solid #FFFFFF;
+    border-radius: 4.5rem;
+    left: 24rem;
+}
+.image{
+    position: absolute;
+    left:3.2vw;
+    top: 3.5vh;
+}
+
+.box_title{
+    position : absolute;
+    left: 26vw;
+    top: 6vh;
+    text-align: center;
+    font-family: Gilroy-SemiBold;
+    font-size: 4.1rem;
+    line-height: 2.1rem;
+    color: #FFFFFF;
+}
+
+.box-content{
+    position: absolute;
+    left: 26vw;
+    top: 13vh;
+    right: 0.6rem;
+    font-family: Gilroy-Light;
+    font-size: 1.2rem;
+    line-height: 2rem;
+    color: #FFFFFF;
+}
+
+.card_title_underline{
+    position: absolute;
+    top: 7.5rem;
+    left: 31rem;
+    border: 1px solid #FFFFFF;
+}
+
+.button{
+    position: absolute;
+    width: 12vw;
+    height: 6vh;
+    left: 30vw;
+    top: 33vh;
+    background: #191938;
+    border-radius: 1.5rem;
+    border: none;
+    cursor: pointer;
+
+    font-family:  Gilroy-Light;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 2rem;
+    line-height: 4rem;
+    color: #FFFFFF;
+}
+
+.bullet{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 6rem;
+    height: 6rem;
+    left: -8vw;
+    background: rgba(102, 102, 119, 0.2);
+    border: 3px solid #FFFFFF;
+    border-radius: 3rem;
+    box-sizing: border-box;
+    font-family: Gilroy-Light;
+    font-size: 3rem;
+    line-height: 3rem;
+    align-items: center;
+    color: #FFFFFF;
+}
+.vertical_line{
+    position: absolute;
+    height: 40vh;
+    left: 14.6vw;
+    border: 1px solid #FFFFFF;
+}
+
+#vertical_line1{
+    top: 160vh;
+}
+
+#vertical_line2{
+    top: 209vh;
+}

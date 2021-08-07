@@ -1,0 +1,227 @@
+.container.about-info {
+  width: 95vw;
+  height: 90vh;
+  margin: 0 auto;
+  position: relative;
+  overflow-y: scroll;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+
+.container.about-info #title {
+  color: rgba(245, 25, 25, 1);
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 46px;
+  line-height: 69px;
+  margin-left: 7rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.24em;
+}
+
+.container.about-info .content {
+  display: flex;
+  flex-direction: row;
+  height: 92%;
+  width: 100%;
+}
+
+.container.about-info ul {
+  height: 85%;
+  width: 30%;
+  overflow: scroll;
+  display: flex;
+  text-transform: uppercase;
+  flex-direction: column;
+  list-style: none;
+  margin-top: 1.5rem;
+  padding-left: 5rem;
+}
+
+.container.about-info li {
+  position: relative;
+  padding-left: 2.5rem;
+  padding-bottom: 2.1rem;
+  width: 50%;
+  font-size: 1.4rem;
+  font-weight: 300;
+    -moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.9);
+  margin-top: 2rem;
+}
+.container.about-info li:before {
+  content: "";
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  position: absolute;
+  left: -1rem;
+  transform: translateY(23%);
+}
+
+.container.about-info li.active:before {
+    background: red;
+}
+
+.container.about-info li.active{
+    color: red;
+    font-weight: 500;
+}
+
+.container.about-info li:not(:last-child):after {
+  content: "";
+  width: 2px;
+  height: 100%;
+  transform: translateY(2%);
+  background: #d8d8d8;
+  position: absolute;
+  border-radius: 10px;
+  left: -0.335rem;
+  top: 2.05rem;
+}
+
+.know-more-card{
+  margin-right: 1rem;
+  margin-top: 2rem;
+  width: 60%;
+  border-radius: 40px 5px 5px 40px;
+  height: 85%;
+  display: flex;
+}
+
+.know-more-details{
+  position: relative;
+  width: 55%;
+  height: 100%;
+  background: linear-gradient(102.8deg, rgba(25, 26, 56, 0.5) 12.2%, rgba(245, 25, 25, 0.5) 97.42%);
+  border-radius: 40px 0 0 40px;
+}
+.know-more-details *{
+  background-color: transparent;
+}
+
+.know-more-details .view-more-btn{
+  -moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;
+  cursor: pointer;
+  display: flex;
+  /* width: 100%; */
+  margin-top: 1rem;
+  padding-right: 1rem;
+  align-items: center;
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
+  /* justify-content: flex-end; */
+  text-transform: uppercase;
+}
+.know-more-details .view-more-btn p{
+  font-size: 0.8rem;
+  text-align: justify;
+  transition: all 0.5s ease-in-out;
+}
+.know-more-details .view-more-btn p.pg2{
+  opacity: 0;
+}
+
+.know-more-details #view-more-arrow{
+  transform: rotate(180deg);
+  margin-left: 1rem;
+  transition: all 0.5s;
+}
+
+.know-more-details #view-more-arrow.pg2{
+  transform: rotate(0deg);
+}
+
+
+.know-more-image{
+  display: block;
+  width: 45%;
+  object-fit: cover;
+  height: 100%;
+  background-color: red;
+  outline: none;
+  border-radius: 0 5px 5px 0;
+}
+
+.know-more-details-fields{
+  transition: all 0.5s ease-in-out;
+  margin-left: 3rem;
+  margin-top: 5rem;
+  position: absolute;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+}
+
+.know-more-details-fields.active{
+  opacity: 1;
+}
+
+.know-more-details-fields .field{
+  padding-right: 1.2rem;
+  margin-bottom: 4rem;
+}
+
+.know-more-details-fields #name{
+  color: rgba(244, 25, 25, 1);
+  margin-bottom: 0.2rem;
+  text-transform: uppercase;
+}
+
+.bold{
+  font-weight: 500;
+}
+
+.know-more-details-fields #name-value{
+  font-size: 1.5rem;
+  font-weight: 300;
+  display: block;
+}
+
+.know-more-details-fields #name-value.long{
+  height: 5.5rem;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  overflow: scroll;
+}
+
+a{
+  cursor: pointer;
+  pointer-events: none;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+a#name-value.active{
+  pointer-events: visible;
+}
+
+
+#navigation-dots{
+  position: absolute;
+  display: flex;
+  bottom: 2.5rem;
+  right: 0;
+  align-items: center;
+  padding-right: 2rem;
+}
+#navigation-dots > .dot{
+  margin-left: 1rem;
+}
+.dot img{
+  position: absolute;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.dot img.active{
+  opacity: 1;
+}

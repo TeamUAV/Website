@@ -51,10 +51,10 @@ function init(domElement) {
 
   loader = new GLTFLoader();
   let textureLoader = new THREE.TextureLoader();
-  const groundTexture = textureLoader.load("Pages/Fleet/assets/grass.jpeg");
+  const groundTexture = textureLoader.load("Pages/Fleet/assets/hex.png");
   groundTexture.wrapS = groundTexture.wrapT = THREE.RepeatWrapping;
-  groundTexture.repeat.set(50, 50);
-  groundTexture.anisotropy = 16;
+  groundTexture.repeat.set(110, 110);
+  groundTexture.anisotropy = 20;
   groundTexture.encoding = THREE.sRGBEncoding;
 
   const groundMaterial = new THREE.MeshLambertMaterial({ map: groundTexture });
@@ -120,7 +120,7 @@ function init(domElement) {
 
 let modelLoader = (
   path,
-  custom_position = -20,
+  custom_position = 20,
   camera_x = 0,
   camera_y = 150,
   camera_z = 400
