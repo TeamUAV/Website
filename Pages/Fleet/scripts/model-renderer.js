@@ -172,6 +172,7 @@ function animate() {
 let modelToggler = (url, camera_position, x, y, z) => {
   let selected = scene.getObjectByName(obj.name);
   scene.remove(selected);
+  obj = null;
   // stop = true;
   setTimeout(() => {
     cancelAnimationFrame(id);
