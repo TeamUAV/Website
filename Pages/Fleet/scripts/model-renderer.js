@@ -138,6 +138,7 @@ let modelLoader = (
   camera_z = 400
 ) => {
   stop = false;
+  stopAnimation();
   camera.position.set(camera_x, camera_y, camera_z);
   loader.load(path, (gltf) => {
     obj = gltf.scene;
@@ -168,12 +169,14 @@ function animate() {
       }, 5)
     }
 }
+function stopAnimation(){
+  cancelAnimationFrame(id);
+}
 
 
 let modelToggler = (url, camera_position, x, y, z) => {
   let selected = scene.getObjectByName(obj.name);
   scene.remove(selected);
-  cancelAnimationFrame(id);
   stop = true;
   modelLoader(url, camera_position, x, y, z);
 };
