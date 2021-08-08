@@ -202,7 +202,7 @@ let knowMorePageData = [
                 name: 'Sai Santosh Thatikonda',
                 skillSet: 'Aerodynamics, Design, Finance, Solidworks, Autodesk Fusion 360, Ansys, Cura, Python'.split(', '),
                 about: "I consider myself to be an higly ambitious person with a desire to learn and grow both personally and professionally, My passion for classical physics motivated me to pursue Mechanical Engineering.",
-                positionsHeld: ['Mechanical Engineer'],
+                positionsHeld: ['Deputy Manager and Design Engineer'],
                 callSign: 'cosmaq',
                 imgSrc: 'Pages/About/knowMorePage/Assets/Senior Core/santosh.jpeg',
                 contact: [
@@ -274,6 +274,44 @@ let knowMorePageData = [
                 ]
             },
             {
+                listTitle: 'Shrivats Majeji',
+                name: 'Shrivats Majeji',
+                skillSet: 'Python, C/C++, MATLAB, Arduino IDE, Machine Learning'.split(', '),
+                positionsHeld: 'Avionics Engineer'.split(', '),
+                callSign: 'CopyNinja',
+                about: `I am a driven and self-motivated person. I have a tactical approach towards the issue and am always better prepared due to my overthinking skills which allows me to have multiple solutions towards the given problem.`,
+                imgSrc: 'Pages/About/knowMorePage/Assets/Senior Core/shrivats.jpeg',
+                contact: [
+                    {
+                        body: 'LinkedIn',
+                        ref: 'https://www.linkedin.com/in/shrivats-majeji-b85071194/'
+                    },
+                    {
+                        body: 'Github',
+                        ref: 'https://github.com/smajeji86'
+                    }
+                ]
+            },
+            {
+                listTitle: 'Anmol Khantaal',
+                name: 'Anmol Khantaal',
+                skillSet: 'Python, C Programming, MATLAB, Machine Learning, R, Arduino Programming'.split(', '),
+                positionsHeld: 'Avionics Engineer'.split(', '),
+                callSign: 'MercuriuM',
+                about: `I see myself a self motivated hardworking individual with a gentleman’s personality and a business oriented mindset. I have keen interests towards startups and good investments, I love being resourceful and can brainstorm on any productive idea also Cars, Conspiracy Theories, Underrated Travel Destinations and F1 are some ice breakers if we talk.`,
+                imgSrc: 'Pages/About/knowMorePage/Assets/Senior Core/anmol_2.jpeg',
+                contact: [
+                    {
+                        body: 'LinkedIn',
+                        ref: 'https://www.linkedin.com/in/anmol-khantaal-4942a7137/'
+                    },
+                    {
+                        body: 'Github',
+                        ref: 'https://github.com/AnmolKhantaal'
+                    },
+                ]
+            },
+            {
                 listTitle: 'Gokul Dinesh',
                 name: 'Gokul Dinesh',
                 skillSet: 'Java, Python, C/C++ Programming, MATLAB, SQL, PHP, JavaScript'.split(', '),
@@ -290,25 +328,6 @@ let knowMorePageData = [
                         body: 'Instagram',
                         ref: 'https://www.instagram.com/_gkdn_/'
                     }
-                ]
-            },
-            {
-                listTitle: 'Anmol Khantaal',
-                name: 'Anmol Khantaal',
-                skillSet: 'Python, C Programming, MATLAB, Machine Learning, R, Arduino Programming'.split(', '),
-                positionsHeld: 'Avionics Engineer'.split(', '),
-                callSign: 'MercuriuM',
-                about: `I see myself a self motivated hardworking individual with a gentleman’s personality and a business oriented mindset. I have keen interests towards startups and good investments, I love being resourceful and can brainstorm on any productive idea also Cars, Conspiracy Theories, Underrated Travel Destinations and F1 are some ice breakers if we talk.`,
-                imgSrc: 'Pages/About/knowMorePage/Assets/Senior Core/anmol.jpeg',
-                contact: [
-                    {
-                        body: 'LinkedIn',
-                        ref: 'https://www.linkedin.com/in/anmol-khantaal-4942a7137/'
-                    },
-                    {
-                        body: 'Github',
-                        ref: 'https://github.com/AnmolKhantaal'
-                    },
                 ]
             },
             {
