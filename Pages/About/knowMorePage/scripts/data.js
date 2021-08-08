@@ -202,7 +202,7 @@ let knowMorePageData = [
                 name: 'Sai Santosh Thatikonda',
                 skillSet: 'Aerodynamics, Design, Finance, Solidworks, Autodesk Fusion 360, Ansys, Cura, Python'.split(', '),
                 about: "I consider myself to be an higly ambitious person with a desire to learn and grow both personally and professionally, My passion for classical physics motivated me to pursue Mechanical Engineering.",
-                positionsHeld: ['Deputy Manager and Design Engineer'],
+                positionsHeld: ['Design Engineer and Deputy Manager'],
                 callSign: 'cosmaq',
                 imgSrc: 'Pages/About/knowMorePage/Assets/Senior Core/santosh.jpeg',
                 contact: [
@@ -239,7 +239,7 @@ let knowMorePageData = [
                 listTitle: 'Akshay Badagabettu',
                 name: 'Akshay Badagabettu',
                 skillSet: 'Aerodynamics, Design, Autodesk Inventor, Solidworks, Autodesk Fusion 360, Ansys, Cura, Python'.split(', '),
-                positionsHeld: ['Deputy Manager and Design Engineer'],
+                positionsHeld: ['Design Engineer and Deputy Manager'],
                 callSign: 'FlyDoc',
                 about: `I am very interested and passionate about the design and analysis of various aspects of UAVs. Aerodynamics has always fascinated me the most and I have good problem solving and critical thinking skills.`,
                 imgSrc: 'Pages/About/knowMorePage/Assets/Senior Core/akshay.jpeg',
