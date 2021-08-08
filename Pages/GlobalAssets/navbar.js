@@ -117,16 +117,19 @@ class Navbar {
             this.toggleHelper(this.navNodeList[0].id);
             document.querySelector('.container').classList.add('home');
             this.domObj.dom = new Home();
+            document.querySelector('title').innerText = "TeamUAV | Home";
             break;
         case '#about':
           this.toggleHelper(this.navNodeList[1].id);
             document.querySelector('.container').classList.add('about');
             this.domObj.dom = new AboutPage();
+            document.querySelector('title').innerText = "TeamUAV | About";
             break;
         case '#fleet':
           this.toggleHelper(this.navNodeList[2].id);
             document.querySelector('.container').classList.add('fleet');
             this.domObj.dom = new FleetPage();
+            document.querySelector('title').innerText = "TeamUAV | Fleet";
             break;
         case '#know-more-board':
           this.toggleHelper(this.navNodeList[1].id);
