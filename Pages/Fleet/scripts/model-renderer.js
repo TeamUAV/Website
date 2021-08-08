@@ -138,7 +138,6 @@ let modelLoader = (
   camera_z = 400
 ) => {
   stop = false;
-  stopAnimation();
   camera.position.set(camera_x, camera_y, camera_z);
   loader.load(path, (gltf) => {
     obj = gltf.scene;
@@ -160,25 +159,24 @@ function start() {
 
 function animate() {
     renderer.render(scene, camera);
+    id = requestAnimationFrame(animate);
     mixer.update(clock.getDelta());
     controls.update();
     if(!stop){
       setTimeout(() => {
         obj.rotation.y += 0.005;
-        id = requestAnimationFrame(animate);
-      }, 5)
+      }, 5);
     }
 }
-function stopAnimation(){
-  cancelAnimationFrame(id);
-}
-
 
 let modelToggler = (url, camera_position, x, y, z) => {
   let selected = scene.getObjectByName(obj.name);
   scene.remove(selected);
-  stop = true;
-  modelLoader(url, camera_position, x, y, z);
+  // stop = true;
+  setTimeout(() => {
+    cancelAnimationFrame(id);
+    modelLoader(url, camera_position, x, y, z);
+  }, 500);
 };
 
 let modelInitialize = (url) => {
