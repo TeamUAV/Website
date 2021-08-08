@@ -293,17 +293,21 @@ let knowMorePageData = [
                 ]
             },
             {
-                listTitle: 'Ujjwal Nasra',
-                name: 'Ujjwal Nasra',
-                skillSet: 'C Programming, Java, After Effects, Embedded Systems, Python'.split(', '),
+                listTitle: 'Anmol Khantaal',
+                name: 'Anmol Khantaal',
+                skillSet: 'Python, C Programming, MATLAB, Machine Learning, R, Arduino Programming'.split(', '),
                 positionsHeld: 'Avionics Engineer'.split(', '),
-                callSign: 'Firebolt',
-                about: `An average engineer who likes to read and solve puzzles.`,
-                imgSrc: 'Pages/About/knowMorePage/Assets/Senior Core/ujjwal.jpeg',
+                callSign: 'MercuriuM',
+                about: `I see myself a self motivated hardworking individual with a gentleman’s personality and a business oriented mindset. I have keen interests towards startups and good investments, I love being resourceful and can brainstorm on any productive idea also Cars, Conspiracy Theories, Underrated Travel Destinations and F1 are some ice breakers if we talk.`,
+                imgSrc: 'Pages/About/knowMorePage/Assets/Senior Core/anmol.jpeg',
                 contact: [
                     {
                         body: 'LinkedIn',
-                        ref: 'https://www.linkedin.com/in/ujjwal-nasra-1872601b2'
+                        ref: 'https://www.linkedin.com/in/anmol-khantaal-4942a7137/'
+                    },
+                    {
+                        body: 'Github',
+                        ref: 'https://github.com/AnmolKhantaal'
                     },
                 ]
             },
@@ -319,6 +323,40 @@ let knowMorePageData = [
                     {
                         body: 'LinkedIn',
                         ref: 'https://www.linkedin.com/in/ujjwal-nasra-1872601b2'
+                    },
+                ]
+            },
+            {
+                listTitle: 'Prajrumbh Sumukh',
+                name: 'Prajrumbh Sumukh',
+                skillSet: 'Aerodynamics, Design, Solidworks, Fusion 360, Ansys'.split(', '),
+                positionsHeld: [''],
+                callSign: 'Indica',
+                about: `I consider myself to be an optimist and a friendly person who loves to be a team worker. I give in my 100% in whichever task I’m interested in. I’m interested in making products which can make lives of people easier,safer and better`,
+                imgSrc: 'Pages/About/knowMorePage/Assets/Senior Core/prajrumbh.jpeg',
+                contact: [
+                    {
+                        body: 'LinkedIn',
+                        ref: 'https://www.linkedin.com/in/prajrumbh-sumukh-3589231b1'
+                    },
+                    {
+                        body: 'Instagram',
+                        ref: 'https://www.instagram.com/prajrumbh/'
+                    },
+                ]
+            },
+            {
+                listTitle: 'Gaurav G Pai',
+                name: 'Gaurav G Pai',
+                skillSet: 'Solidworks, XFLR5, Fusion 360, cura, C++'.split(', '),
+                positionsHeld: 'Composites and manufacturing department, Mechanical engineer'.split(', '),
+                callSign: 'Gleipmir',
+                about: `I am a curious and determined person, always wanting to learn new skills and interact with new people in various fields.`,
+                imgSrc: 'Pages/About/knowMorePage/Assets/Senior Core/gpai.jpeg',
+                contact: [
+                    {
+                        body: 'LinkedIn',
+                        ref: 'https://www.linkedin.com/in/gaurav-pai-7875181a0'
                     },
                 ]
             }
