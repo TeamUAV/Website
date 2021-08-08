@@ -29,7 +29,7 @@ function init(domElement) {
       console.log(itemsLoaded);
       console.log(itemsTotal);
 		};
-		manager.onLoad = function ( ) {
+		manager.onLoad = function () {
             obj.rotation.y = 43.5;
             loading = false;
             start();
@@ -173,6 +173,7 @@ function animate() {
       }, 5);
     }
 }
+
 let tempURLs = [];
 
 let modelToggler = (url, camera_position, x, y, z) => {

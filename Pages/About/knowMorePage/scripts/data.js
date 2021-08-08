@@ -41,6 +41,25 @@ let knowMorePageData = [
                 ]
             },
             {
+                listTitle: "Vice Captain - Operations",
+                name: "Kartik Gulati",
+                skillSet: "Solidworks , fusion 360 ,composites,Product Designing , XFLR 5 , Aerodynamic designing , Propulsion systems , Graphic Designing , c++ , Interactive Designing".split(" , "),
+                about: "I see myself as a highly motivated individual  fascinated by engines and thrived by creativity , i have always seen this world with a whole new perspecctive .",
+                positionsHeld: "Mechanical Engineer , Design and Propulsion engineer".split(" , "),
+                callSign: "KK",
+                imgSrc: "Pages/About/knowMorePage/Assets/Board Members/kartik.jpeg",
+                contact: [
+                    {
+                        body: "LinkedIn",
+                        ref: "https://www.linkedin.com/in/kartik-gulati-1a42651a6"
+                    },
+                    {
+                        body: "instagram",
+                        ref: "https://instagram.com/k_k.psd?utm_medium=copy_link"
+                    },
+                ]
+            },
+            {
                 listTitle: "Avionics Head",
                 name: "Kanav Bhasin",
                 skillSet: [''],
@@ -60,13 +79,28 @@ let knowMorePageData = [
                 name: "Aritra Sanyal ",
                 skillSet: "Mechanical design,systems design,solidworks,fusion 360,ANSYS,Aeronautical design,project management,MATLAB,product design".split(","),
                 about: `i always like to have a fully dedicated and give it all mentality in whatever task i am doing .I am always willing to learn from the people better than me and use that to improve myself. I love to play football and also watch sports like UFC and Formula 1. I always believe that wether you have the talent or not ,you can alwyas push your limits by consistent hardwork . To be the best you have to work harder than the rest .`,
-                positionsHeld: ['Design engineer'],
+                positionsHeld: ['Design Engineer'],
                 callSign: "",
                 imgSrc: "Pages/About/knowMorePage/Assets/Board Members/kanav.jpeg",
                 contact: [
                     {
                         body: "LinkedIn",
                         ref: "http://www.linkedin.com/in/sparshagarwal45/"
+                    }
+                ]
+            },
+            {
+                listTitle: "Finance Head",
+                name: "Darshan Kelawala",
+                skillSet: "HTML5, CSS3, JavaScript, Autodesk Fusion 360, Python, XFLR5, Matlab Simulink, Animoto, Marketing and Advertising, Social Media Expertise".split(", "),
+                about: `Efficient Mechanical Engineer leveraging strong technical background in bringing products from laboratory to mass-manufacturing. Eager to explore as many domains as possible. Dedication and hardwork is my strength and I believe that with these skills I can surely achieve success in any domain. My hobby is to read novels and get lost in my own imaginary world along with my books.`,
+                positionsHeld: ['Mechanical Engineer'],
+                callSign: "DK",
+                imgSrc: "Pages/About/knowMorePage/Assets/Board Members/darshan.jpg",
+                contact: [
+                    {
+                        body: "LinkedIn",
+                        ref: "http://linkedin.com/in/darshan-kelawala-159131198"
                     }
                 ]
             }
@@ -79,7 +113,7 @@ let knowMorePageData = [
                 listTitle: 'Gaurav Singh',
                 name: 'Gaurav Singh',
                 skillSet: 'C Programming, C++, Java, Python, HTML, CSS, JavaScript, NodeJS, ElectronJS, PHP, Rust, R, SQL, DSA, Machine Learning, Shell-Scripting, Embedded Systems, Dart, Flutter'.split(', '),
-                about: 'A simple Guy who loves to sit in front of a computer and code, code and coffee keep me going for hours. (Creator of this site)',
+                about: 'A simple Guy who loves to sit in front of a computer and code, code and coffee keep me going for hours. (creator of this site)',
                 positionsHeld: ['Avionics Engineer'],
                 callSign: 'Blurry Face',
                 imgSrc: 'Pages/About/knowMorePage/Assets/Senior Core/gaurav.jpeg',

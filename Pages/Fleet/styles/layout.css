@@ -94,7 +94,9 @@
     /* position: absolute; */
     width: 100%;
     font-weight: 400;
-    font-size: 3rem;
+    padding-right: 3rem;
+    background-color: transparent;
+    font-size: 2.6rem;
 }
 #main-state > #body{
     font-weight: 400;
