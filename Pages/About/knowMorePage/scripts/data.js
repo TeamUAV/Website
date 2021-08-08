@@ -180,7 +180,7 @@ let knowMorePageData = [
                 skillSet: 'C Programming, C++, Java, Python, HTML, CSS, JavaScript, NodeJS, ElectronJS, PHP, Rust, R, SQL, DSA, Machine Learning, Shell-Scripting, Embedded Systems, Dart, Flutter'.split(', '),
                 about: 'A simple Guy who loves to sit in front of a computer and code, code and coffee keep me going for hours. (creator of this site)',
                 positionsHeld: ['Avionics Engineer'],
-                callSign: 'Blurry Face',
+                callSign: 'The Doctor',
                 imgSrc: 'Pages/About/knowMorePage/Assets/Senior Core/gaurav.jpeg',
                 contact: [
                     {
@@ -220,7 +220,7 @@ let knowMorePageData = [
                 listTitle: 'Hardik Shukla',
                 name: 'Hardik Shukla',
                 skillSet: 'Aerodynamics, CAD, Graphic designing, Solidworks, Autodesk Fusion 360, Ansys, Cura, Python, PTC Creo'.split(', '),
-                positionsHeld: ['Mechanical Engineer'],
+                positionsHeld: ['Structural Engineer, Deputy Manager and Mechanical Engineer'],
                 callSign: 'Maverick',
                 about: `Accuracy-oriented individual with excellent multitasking and problem-solving skills who loves to dive deep and get to the depth of a process by mapping it and making a step-by-step assessment. I've a deep interest in Computer aided designing and propulsion systems.`,
                 imgSrc: 'Pages/About/knowMorePage/Assets/Senior Core/hardik.jpeg',
@@ -239,8 +239,8 @@ let knowMorePageData = [
                 listTitle: 'Akshay Badagabettu',
                 name: 'Akshay Badagabettu',
                 skillSet: 'Aerodynamics, Design, Autodesk Inventor, Solidworks, Autodesk Fusion 360, Ansys, Cura, Python'.split(', '),
-                positionsHeld: ['Mechanical Engineer'],
-                callSign: 'Viper',
+                positionsHeld: ['Deputy Manager and Design Engineer'],
+                callSign: 'FlyDoc',
                 about: `I am very interested and passionate about the design and analysis of various aspects of UAVs. Aerodynamics has always fascinated me the most and I have good problem solving and critical thinking skills.`,
                 imgSrc: 'Pages/About/knowMorePage/Assets/Senior Core/akshay.jpeg',
                 contact: [
