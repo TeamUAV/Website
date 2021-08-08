@@ -3,7 +3,7 @@ import * as THREE from "../dependencies/build/three.module.js";
 import { OrbitControls } from "../dependencies/examples/jsm/controls/OrbitControls.js";
 import { GLTFLoader } from "../dependencies/examples/jsm/loaders/GLTFLoader.js";
 
-let render_window, clock, renderer, obj, mixer, controls, scene, camera, loader, manager, stop;
+let render_window, clock, renderer, obj, mixer, controls, scene, camera, loader, stop;
 
 function init(domElement) {
   render_window = domElement;
@@ -27,13 +27,10 @@ function init(domElement) {
     let manager = new THREE.LoadingManager();
 		// manager.onStart = function ( url, itemsLoaded, itemsTotal ) {
 		// };
-
 		manager.onLoad = function ( ) {
-      animate();
-      setInterval(() => {
-        if(!stop)
-          obj.rotation.y += 0.003;
-      }, 20);
+            obj.rotation.y = 43.5;
+            start();
+            animate();
 		};
 
   renderer = new THREE.WebGLRenderer({ antialias: true, autoSize: true });
@@ -154,6 +151,11 @@ let modelLoader = (
     });
   });
 };
+let id = null;
+function start() {
+    if (id !== null) 
+        cancelAnimationFrame(id);
+}
 
 function animate() {
     renderer.render(scene, camera);
@@ -161,7 +163,8 @@ function animate() {
     controls.update();
     if(!stop){
       setTimeout(() => {
-        requestAnimationFrame(animate);
+        obj.rotation.y += 0.005;
+        id = requestAnimationFrame(animate);
       }, 5)
     }
 }
@@ -171,7 +174,7 @@ let modelToggler = (url, camera_position, x, y, z) => {
   let selected = scene.getObjectByName(obj.name);
   scene.remove(selected);
   stop = true;
-  cancelAnimationFrame(animate);
+  cancelAnimationFrame(id);
   modelLoader(url, camera_position, x, y, z);
 };
 
@@ -182,7 +185,7 @@ let modelInitialize = (url) => {
 let dispose = () => {
   console.log('hola');
   stop = true;
-  cancelAnimationFrame(animate);
+  cancelAnimationFrame(id);
   scene.remove(scene.getObjectByName(obj.name));
   scene.clear();
   renderer.dispose();
