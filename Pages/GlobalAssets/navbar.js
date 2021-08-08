@@ -132,12 +132,14 @@ class Navbar {
             document.querySelector('title').innerText = "TeamUAV | Fleet";
             break;
         case '#know-more-board':
+          document.querySelector('title').innerText = "TeamUAV | About";
           this.toggleHelper(this.navNodeList[1].id);
             document.querySelector('.container').classList.add('about');
             document.querySelector('.container').classList.add('know-more');
             this.domObj.dom = new AboutKnowMorePage(knowMorePageData[0].title, knowMorePageData[0].list.map((obj) => obj.listTitle), knowMorePageData[0].list);                    
             break;
         case '#know-more-core':
+          document.querySelector('title').innerText = "TeamUAV | About";
           this.toggleHelper(this.navNodeList[1].id);
             document.querySelector('.container').classList.add('about');
             document.querySelector('.container').classList.add('know-more');
