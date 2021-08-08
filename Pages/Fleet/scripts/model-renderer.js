@@ -176,7 +176,8 @@ let modelToggler = (url, camera_position, x, y, z) => {
   setTimeout(() => {
     cancelAnimationFrame(id);
     modelLoader(url, camera_position, x, y, z);
-  }, 500);
+    animate();
+  }, 100);
 };
 
 let modelInitialize = (url) => {
