@@ -1,5 +1,5 @@
 import {IconFrame, InfoPanel} from './components.js';
-import {init, modelInitialize, modelToggler} from './model-renderer.js';
+import {init, modelInitialize, modelToggler, dispose} from './model-renderer.js';
 
 // let activeIndex = 0;
 
@@ -35,7 +35,9 @@ class FleetPage{
         let elem = document.createElement("div");
         elem.className = "fleet-model";
         this.domElement.appendChild(elem);
-
+        this.destroy = () => {
+            dispose();
+        };
         init(elem);
         this.clickHandler();
         modelInitialize(fleet_data[this.activeIndex].model_url);

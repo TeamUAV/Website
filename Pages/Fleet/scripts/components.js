@@ -212,7 +212,6 @@ class InfoPanel {
     this.domPrev.addEventListener("click", () => {
       if (this.graphActiveIndex > 0) {
         this.graphActiveIndex--;
-        console.log(this.graphActiveIndex);
         this.domLegend.innerText = this.graph_stats[this.graphActiveIndex].key;
         this.graph.data.datasets[0].data = null;
         this.graph.data.datasets[0].data = graph_coordinates_generator(
@@ -226,7 +225,6 @@ class InfoPanel {
       if (this.graphActiveIndex < this.graph_stats.length - 1) {
         this.graph.data.datasets[0].data = null;
         this.graphActiveIndex++;
-        console.log(this.graphActiveIndex);
         this.domLegend.innerText = this.graph_stats[this.graphActiveIndex].key;
         this.graph.data.datasets[0].data = graph_coordinates_generator(
           this.graph_stats[this.graphActiveIndex].x,
@@ -238,7 +236,6 @@ class InfoPanel {
   }
 
   render(name, shortDescription, miniStats, longDescription, graph_stats) {
-    console.log(graph_stats);
     this.graph_stats = graph_stats;
     this.domDroneName.innerText = name;
     this.domPreviewText.innerText = shortDescription;

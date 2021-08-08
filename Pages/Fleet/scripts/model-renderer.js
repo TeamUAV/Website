@@ -3,10 +3,11 @@ import * as THREE from "../dependencies/build/three.module.js";
 import { OrbitControls } from "../dependencies/examples/jsm/controls/OrbitControls.js";
 import { GLTFLoader } from "../dependencies/examples/jsm/loaders/GLTFLoader.js";
 
-let clock, renderer, obj, mixer, controls, scene, camera, loader;
+let render_window, clock, renderer, obj, mixer, controls, scene, camera, loader, manager, stop;
 
 function init(domElement) {
-  let render_window = domElement;
+  render_window = domElement;
+  stop = false;
   clock = new THREE.Clock();
   scene = new THREE.Scene();
   scene.background = new THREE.Color(0xcce0ff);
@@ -22,6 +23,14 @@ function init(domElement) {
   );
 
   camera.position.set(0, 150, 500);
+
+    let manager = new THREE.LoadingManager();
+		// manager.onStart = function ( url, itemsLoaded, itemsTotal ) {
+		// };
+
+		manager.onLoad = function ( ) {
+      animate();
+		};
 
   renderer = new THREE.WebGLRenderer({ antialias: true, autoSize: true });
   renderer.setSize(
@@ -49,7 +58,7 @@ function init(domElement) {
   controls.maxDistance = 1000;
   controls.maxPolarAngle = Math.PI * 0.5;
 
-  loader = new GLTFLoader();
+  loader = new GLTFLoader(manager);
   let textureLoader = new THREE.TextureLoader();
   const groundTexture = textureLoader.load("Pages/Fleet/assets/hex.png");
   groundTexture.wrapS = groundTexture.wrapT = THREE.RepeatWrapping;
@@ -68,9 +77,11 @@ function init(domElement) {
   mesh.receiveShadow = true;
   scene.add(mesh);
 
+
   // scene.background = new THREE.Color(0x696969);
 
   let light = new THREE.DirectionalLight(0xffffff, 0.5, 0);
+  scene.receiveShadow = true;
   scene.add(light);
   light.position.set(0, 10, 0);
   light.castShadow = true;
@@ -131,7 +142,6 @@ let modelLoader = (
     obj.name = "object";
     obj.position.y = custom_position;
     obj.rotation.y = 99.3;
-    console.log(obj.animations);
     scene.add(obj);
     mixer = new THREE.AnimationMixer(gltf.scene);
     gltf.animations.forEach((clip) => {
@@ -141,24 +151,41 @@ let modelLoader = (
 };
 
 function animate() {
-  requestAnimationFrame(animate);
-  obj.rotation.y += 0.003;
-  renderer.render(scene, camera);
-  mixer.update(clock.getDelta());
-  controls.update();
+    obj.rotation.y += 0.003;
+    console.log(obj.rotation.y);
+    renderer.render(scene, camera);
+    mixer.update(clock.getDelta());
+    controls.update();
+    if(!stop){
+      setTimeout(() => {
+        requestAnimationFrame(animate);
+      }, 5)
+    }
 }
 
+
 let modelToggler = (url, camera_position, x, y, z) => {
-  console.log("process");
   let selected = scene.getObjectByName(obj.name);
   scene.remove(selected);
   modelLoader(url, camera_position, x, y, z);
 };
 
 let modelInitialize = (url) => {
-  console.log("hello");
   modelLoader(url, -30, 0, 100, 300);
-  animate();
 };
 
-export { init, modelInitialize, modelToggler };
+let dispose = () => {
+  console.log('hola');
+  stop = true;
+  cancelAnimationFrame(animate);
+  scene.remove(scene.getObjectByName(obj.name));
+  scene.clear();
+  renderer.dispose();
+  console.log(scene);
+  empty(render_window);
+}
+function empty(elem) {
+  while (elem.lastChild) elem.removeChild(elem.lastChild);
+}
+
+export { init, modelInitialize, modelToggler, dispose };

@@ -1,9 +1,10 @@
+import {AboutPage, AboutKnowMorePage} from '../About/MainPage/script/about.js';
+import {FleetPage} from '../Fleet/scripts/fleet.js';
+
 class Navbar {
   constructor() {
     this.navNodeList = [];
-    document.querySelector(
-      "head"
-    ).innerHTML += `<link rel="stylesheet" href="Pages/GlobalAssets/navbar.css"/>`;
+    this.domObj  = {dom : null};
   }
   render() {
     let navbar = document.createElement("nav");
@@ -31,9 +32,6 @@ class Navbar {
       let li = document.createElement("li");
       li.innerText = linkItems[i];
       li.id = `nav-link ${linkItems[i].toLowerCase()}`;
-      if (linkItems[i] === "Home") {
-        li.classList.add("active");
-      }
       links.appendChild(li);
       this.navNodeList.push(li);
     }
@@ -42,11 +40,20 @@ class Navbar {
     navbar.appendChild(links);
     document.body.appendChild(navbar);
     let container = document.createElement("div");
-    container.className = "container home";
+    container.className = "container";
     document.body.appendChild(container);
-    location.hash = "home";
     this.handleClick();
-    new Home();
+    if(!location.hash){
+      location.hash = 'home';
+  }
+    // new Home();
+    this.newPage = true;
+    // renders the page with the required content
+    this.renderPage(location.hash);
+
+    window.addEventListener("hashchange", () => {
+      this.renderPage(location.hash);
+    })
   }
 
   handleClick() {
@@ -56,31 +63,30 @@ class Navbar {
           node.addEventListener("click", () => {
             location.hash = '#home';
             this.toggleHelper(node.id);
+            // this.renderPage(location.hash);
           });
           break;
         case "nav-link about":
           node.addEventListener("click", (e) => {
-            console.log("nav-link about");
             location.hash = '#about';
             this.toggleHelper(node.id);
+            // this.renderPage(location.hash);
           });
           break;
         case "nav-link fleet":
           node.addEventListener("click", () => {
-            console.log("nav-link fleet");
             location.hash = '#fleet';
             this.toggleHelper(node.id);
+            // this.renderPage(location.hash);
           });
           break;
         case "nav-link sponsors":
           node.addEventListener("click", () => {
-            console.log("nav-link sponsors");
             this.toggleHelper(node.id);
           });
           break;
         case "nav-link gallery":
           node.addEventListener("click", () => {
-            console.log("nav-link gallery");
             this.toggleHelper(node.id);
           });
           break;
@@ -91,8 +97,53 @@ class Navbar {
     this.navNodeList.map((obj) => obj.classList.remove("active"));
     this.navNodeList.filter((obj) => obj.id === id)[0].classList.add("active");
   }
+
+  renderPage(hash) {
+    this.active = [...document.querySelector('.container').classList];
+    this.active.splice(this.active.indexOf('container') ,1);
+    if(!this.newPage){
+        this.active.includes('fleet') ? console.log(this.domObj.dom.destroy()) : "";
+        this.active.map((act) => document.querySelector('.container').classList.remove(act));
+    }
+    this.newPage = false;
+
+    const myNode = document.querySelector('.container');
+    while (myNode.firstChild) {
+      myNode.removeChild(myNode.lastChild);
+    }
+
+    switch (hash) {
+        case '#home':
+            this.toggleHelper(this.navNodeList[0].id);
+            document.querySelector('.container').classList.add('home');
+            this.domObj.dom = new Home();
+            break;
+        case '#about':
+          this.toggleHelper(this.navNodeList[1].id);
+            document.querySelector('.container').classList.add('about');
+            this.domObj.dom = new AboutPage();
+            break;
+        case '#fleet':
+          this.toggleHelper(this.navNodeList[2].id);
+            document.querySelector('.container').classList.add('fleet');
+            this.domObj.dom = new FleetPage();
+            break;
+        case '#know-more-board':
+          this.toggleHelper(this.navNodeList[1].id);
+            document.querySelector('.container').classList.add('about');
+            document.querySelector('.container').classList.add('know-more');
+            this.domObj.dom = new AboutKnowMorePage(knowMorePageData[0].title, knowMorePageData[0].list.map((obj) => obj.listTitle), knowMorePageData[0].list);                    
+            break;
+        case '#know-more-core':
+          this.toggleHelper(this.navNodeList[1].id);
+            document.querySelector('.container').classList.add('about');
+            document.querySelector('.container').classList.add('know-more');
+            this.domObj.dom = new AboutKnowMorePage(knowMorePageData[1].title, knowMorePageData[1].list.map((obj) => obj.listTitle), knowMorePageData[1].list);                    
+            break;
+    }
+  }
 }
 
-let navbar = new Navbar();
-navbar.render();
-// navbar.handleClick();
+
+
+export { Navbar };

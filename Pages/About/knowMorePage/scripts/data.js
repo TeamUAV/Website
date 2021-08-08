@@ -146,7 +146,7 @@ let knowMorePageData = [
                 skillSet: 'Aerodynamics, Design, Solidworks, Autodesk Fusion 360, Ansys, Cura, Python, Java'.split(', '),
                 positionsHeld: 'Composites Engineer ,Deputy Manager, Mechanical Engineer'.split(', '),
                 callSign: '',
-                about: ``,
+                about: `I am a smart worker and I never back down from a plan I intend to execute. Interested in designing new products, designing and brainstorming solutions to real world problems.`,
                 imgSrc: 'Pages/About/knowMorePage/Assets/Senior Core/sravan.jpeg',
                 contact: [
                     {

@@ -61,7 +61,12 @@ class AboutPage{
             // content.innerHTML = "";
             // content.classList.toggle('about');
             // content.classList.add('about know-more');
-
+            const myNode = document.querySelector('.container');
+            while (myNode.firstChild) {
+            myNode.removeChild(myNode.lastChild);
+            }
+            document.querySelector('.container').classList.add('about');
+                    document.querySelector('.container').classList.add('know-more');
             switch (data_type) {
                 case 'board':
                     location.hash = 'know-more-board';
