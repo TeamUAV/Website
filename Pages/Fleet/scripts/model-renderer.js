@@ -30,6 +30,10 @@ function init(domElement) {
 
 		manager.onLoad = function ( ) {
       animate();
+      setInterval(() => {
+        if(!stop)
+          obj.rotation.y += 0.003;
+      }, 20);
 		};
 
   renderer = new THREE.WebGLRenderer({ antialias: true, autoSize: true });
@@ -136,12 +140,13 @@ let modelLoader = (
   camera_y = 150,
   camera_z = 400
 ) => {
+  stop = false;
   camera.position.set(camera_x, camera_y, camera_z);
   loader.load(path, (gltf) => {
     obj = gltf.scene;
     obj.name = "object";
     obj.position.y = custom_position;
-    obj.rotation.y = 99.3;
+    obj.rotation.y = 0;
     scene.add(obj);
     mixer = new THREE.AnimationMixer(gltf.scene);
     gltf.animations.forEach((clip) => {
@@ -151,8 +156,6 @@ let modelLoader = (
 };
 
 function animate() {
-    obj.rotation.y += 0.003;
-    console.log(obj.rotation.y);
     renderer.render(scene, camera);
     mixer.update(clock.getDelta());
     controls.update();
@@ -167,6 +170,8 @@ function animate() {
 let modelToggler = (url, camera_position, x, y, z) => {
   let selected = scene.getObjectByName(obj.name);
   scene.remove(selected);
+  stop = true;
+  cancelAnimationFrame(animate);
   modelLoader(url, camera_position, x, y, z);
 };
 
