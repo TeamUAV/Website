@@ -190,6 +190,7 @@ class KnowMoreLinkField{
         for(let link of links){
             let a = document.createElement('a');
             a.id = "name-value";
+            a.target ="_blank";
             a.innerText = link.body;
             a.href = link.ref;
 

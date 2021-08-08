@@ -3,7 +3,7 @@ import * as THREE from "../dependencies/build/three.module.js";
 import { OrbitControls } from "../dependencies/examples/jsm/controls/OrbitControls.js";
 import { GLTFLoader } from "../dependencies/examples/jsm/loaders/GLTFLoader.js";
 
-let render_window, clock, renderer, obj, mixer, controls, scene, camera, loader, stop;
+let render_window, clock, renderer, obj, mixer, controls, scene, camera, loader, stop, loading;
 
 function init(domElement) {
   render_window = domElement;
@@ -25,10 +25,13 @@ function init(domElement) {
   camera.position.set(0, 150, 500);
 
     let manager = new THREE.LoadingManager();
-		// manager.onStart = function ( url, itemsLoaded, itemsTotal ) {
-		// };
+		manager.onStart = function (url, itemsLoaded, itemsTotal ) {
+      console.log(itemsLoaded);
+      console.log(itemsTotal);
+		};
 		manager.onLoad = function ( ) {
             obj.rotation.y = 43.5;
+            loading = false;
             start();
             animate();
 		};
@@ -135,7 +138,8 @@ let modelLoader = (
   custom_position = 20,
   camera_x = 0,
   camera_y = 150,
-  camera_z = 400
+  camera_z = 400,
+  abort= false
 ) => {
   stop = false;
   camera.position.set(camera_x, camera_y, camera_z);
@@ -149,7 +153,7 @@ let modelLoader = (
     gltf.animations.forEach((clip) => {
       mixer.clipAction(clip).play();
     });
-  });
+  }, () => abort? url.currentTarget.abort(): "");
 };
 let id = null;
 function start() {
@@ -164,21 +168,32 @@ function animate() {
     controls.update();
     if(!stop){
       setTimeout(() => {
-        obj.rotation.y += 0.005;
+        if(!loading)
+          obj.rotation.y += 0.005;
       }, 5);
     }
 }
+let tempURLs = [];
 
 let modelToggler = (url, camera_position, x, y, z) => {
-  let selected = scene.getObjectByName(obj.name);
-  scene.remove(selected);
+  tempURLs.push(url);
+  if(obj){
+    let selected = scene.getObjectByName(obj.name);
+    scene.remove(selected);
+  }
+  else{
+    return false;
+  }
   obj = null;
   // stop = true;
+  loading = true;
   setTimeout(() => {
     cancelAnimationFrame(id);
     modelLoader(url, camera_position, x, y, z);
+    tempURLs.slice(tempURLs.indexOf(url),1);
     animate();
   }, 100);
+  return true;
 };
 
 let modelInitialize = (url) => {

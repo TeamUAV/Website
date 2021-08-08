@@ -54,6 +54,21 @@ let knowMorePageData = [
                         ref: "http://www.linkedin.com/in/sparshagarwal45/"
                     }
                 ]
+            },
+            {
+                listTitle: "Mechanical Head",
+                name: "Aritra Sanyal ",
+                skillSet: "Mechanical design,systems design,solidworks,fusion 360,ANSYS,Aeronautical design,project management,MATLAB,product design".split(","),
+                about: `i always like to have a fully dedicated and give it all mentality in whatever task i am doing .I am always willing to learn from the people better than me and use that to improve myself. I love to play football and also watch sports like UFC and Formula 1. I always believe that wether you have the talent or not ,you can alwyas push your limits by consistent hardwork . To be the best you have to work harder than the rest .`,
+                positionsHeld: ['Design engineer'],
+                callSign: "",
+                imgSrc: "Pages/About/knowMorePage/Assets/Board Members/kanav.jpeg",
+                contact: [
+                    {
+                        body: "LinkedIn",
+                        ref: "http://www.linkedin.com/in/sparshagarwal45/"
+                    }
+                ]
             }
         ]
     },
@@ -176,6 +191,21 @@ let knowMorePageData = [
                         body: 'Instagram',
                         ref: 'https://www.instagram.com/_gkdn_/'
                     }
+                ]
+            },
+            {
+                listTitle: 'Ujjwal Nasra',
+                name: 'Ujjwal Nasra',
+                skillSet: 'C Programming, Java, After Effects, Embedded Systems, Python'.split(', '),
+                positionsHeld: 'Avionics Engineer'.split(', '),
+                callSign: 'Firebolt',
+                about: `An average engineer who likes to read and solve puzzles.`,
+                imgSrc: 'Pages/About/knowMorePage/Assets/Senior Core/ujjwal.jpeg',
+                contact: [
+                    {
+                        body: 'LinkedIn',
+                        ref: 'https://www.linkedin.com/in/ujjwal-nasra-1872601b2'
+                    },
                 ]
             }
         ]
