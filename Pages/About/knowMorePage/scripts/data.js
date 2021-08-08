@@ -23,7 +23,7 @@ let knowMorePageData = [
                 skillSet: "Python, R, Exploratory Data Analysis, Embedded Systems, Machine Learning, GCP Big Data Level 2, Cloud Computing".split(", "),
                 about: "Dedicated and willing to learn new skills every passing day. Passionate about embedded systems and its application.",
                 positionsHeld: ["Avionics Engineer"],
-                callSign: "Vyomanaut_ALFMOC",
+                callSign: "HUNTER",
                 imgSrc: "Pages/About/knowMorePage/Assets/Board Members/amartya.jpeg",
                 contact: [
                     {
@@ -62,15 +62,23 @@ let knowMorePageData = [
             {
                 listTitle: "Avionics Head",
                 name: "Kanav Bhasin",
-                skillSet: [''],
-                about: "",
+                skillSet: "Java, Python, Embedded Systems, Microcontrollers, MATLAB, PCB Designing, Simulink".split(", "),
+                about: "A dedicated engineer, pursuing Electrical and Electronics Engineering (EEE) from VIT Vellore",
                 positionsHeld: ['Avionics Engineer'],
                 callSign: "",
                 imgSrc: "Pages/About/knowMorePage/Assets/Board Members/kanav.jpeg",
                 contact: [
                     {
                         body: "LinkedIn",
-                        ref: "http://www.linkedin.com/in/sparshagarwal45/"
+                        ref: "https://www.linkedin.com/in/kanav-bhasin/"
+                    },
+                    {
+                        body: "PortFolio Site",
+                        ref: "https://www.kanavbhasin.com/"
+                    },
+                    {
+                        body: "Github",
+                        ref:"https://github.com/kanavbhasin22"
                     }
                 ]
             },
@@ -81,11 +89,11 @@ let knowMorePageData = [
                 about: `i always like to have a fully dedicated and give it all mentality in whatever task i am doing .I am always willing to learn from the people better than me and use that to improve myself. I love to play football and also watch sports like UFC and Formula 1. I always believe that wether you have the talent or not ,you can alwyas push your limits by consistent hardwork . To be the best you have to work harder than the rest .`,
                 positionsHeld: ['Design Engineer'],
                 callSign: "",
-                imgSrc: "Pages/About/knowMorePage/Assets/Board Members/kanav.jpeg",
+                imgSrc: "Pages/About/knowMorePage/Assets/Board Members/aritra.jpeg",
                 contact: [
                     {
                         body: "LinkedIn",
-                        ref: "http://www.linkedin.com/in/sparshagarwal45/"
+                        ref: "https://www.linkedin.com/in/aritra-sanyal-b896b9185"
                     }
                 ]
             },
@@ -102,6 +110,63 @@ let knowMorePageData = [
                         body: "LinkedIn",
                         ref: "http://linkedin.com/in/darshan-kelawala-159131198"
                     }
+                ]
+            },
+            {
+                listTitle: "Avionics CS Head",
+                name: "Rakshith Sachdev",
+                skillSet: "Python, Flutter, Java, C/C++, Machine Learning, Image Processing, HTML, CSS, JavaScript".split(", "),
+                about: `I'd say I'm a very confident, socialable and a motivated person. Always ready to learn something out of the box and always looking to have a good time for myself and for others.`,
+                positionsHeld: ['Avionics Engineer'],
+                callSign: "EdgeMaverick",
+                imgSrc: "Pages/About/knowMorePage/Assets/Board Members/rakshith.jpeg",
+                contact: [
+                    {
+                        body: "Instagram",
+                        ref: "https://www.instagram.com/rakshith_sachdev/"
+                    },
+                    {
+                        body: "LinkedIn",
+                        ref: "https://www.linkedin.com/in/rakshith-sachdev-087678137/"
+                    },
+                    {
+                        body: "Github",
+                        ref: "https://github.com/RakshithSachdev"
+                    }
+                ]
+            },
+            {
+                listTitle: "Avionics Software Lead",
+                name: "Hrithik Dhoka",
+                skillSet: "Python, Java, Machine Learning, Deep Learning, SQL, HTML, CSS, Javascript, Apex".split(", "),
+                about: `I believe I am an extremely motivated and dedicated individual, drawn towards technical innovations that make daily tasks way easier. Other than geeking out, I also enjoy playing football, chess and watching Formula1.`,
+                positionsHeld: ['Avionics Engineer'],
+                callSign: "Dhoka",
+                imgSrc: "Pages/About/knowMorePage/Assets/Board Members/hritik.jpeg",
+                contact: [
+                    {
+                        body: "LinkedIn",
+                        ref: "https://www.linkedin.com/in/hrithik-dhoka"
+                    },
+                    {
+                        body: "Github",
+                        ref: "https://www.github.com/hrithik2200"
+                    }
+                ]
+            },
+            {
+                listTitle: "Structures Head",
+                name: "Neel Agarwal",
+                skillSet: "Ansys, Fusion 360, Solid-works, Additive Manufacturing, Ultimate- Cura, Computational Dynamics".split(", "),
+                about: `I see technology as the expanding foundation for new-age machinery. Computer-Aided Engineering and Industry 4.0 (Rapid Manufacturing) are fast progressing with millions of creative minds thinking out of the box. I aspire to join these bright minds and make a difference with my work.`,
+                positionsHeld: ['Structures Department '],
+                callSign: "",
+                imgSrc: "Pages/About/knowMorePage/Assets/Board Members/neel.jfif",
+                contact: [
+                    {
+                        body: "LinkedIn",
+                        ref: "https://www.linkedin.com/in/neel-agarwal-176a4b186/"
+                    },
                 ]
             }
         ]
@@ -225,6 +290,21 @@ let knowMorePageData = [
                         body: 'Instagram',
                         ref: 'https://www.instagram.com/_gkdn_/'
                     }
+                ]
+            },
+            {
+                listTitle: 'Ujjwal Nasra',
+                name: 'Ujjwal Nasra',
+                skillSet: 'C Programming, Java, After Effects, Embedded Systems, Python'.split(', '),
+                positionsHeld: 'Avionics Engineer'.split(', '),
+                callSign: 'Firebolt',
+                about: `An average engineer who likes to read and solve puzzles.`,
+                imgSrc: 'Pages/About/knowMorePage/Assets/Senior Core/ujjwal.jpeg',
+                contact: [
+                    {
+                        body: 'LinkedIn',
+                        ref: 'https://www.linkedin.com/in/ujjwal-nasra-1872601b2'
+                    },
                 ]
             },
             {

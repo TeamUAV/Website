@@ -27,7 +27,7 @@ class AboutPage{
         let card_board = new AboutPageCard(
             "",
             "Board members",
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, ut! Impedit iusto eligendi, sunt quos omnis adipisci perferendis aliquid nihil accusamus soluta dolores, molestias, odit odio ad? Nisi, deleniti beatae?",
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, ut! Impedit iusto eligendi, sunt quos omnis adipisci perferendis aliquid nihil accusamus soluta dolores, molestias, odit odio ad? Nisi, deleniti beatae? Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, ut! Impedit iusto eligendi, sunt quos omnis adipisci perferendis aliquid nihil accusamus soluta dolores, molestias, odit odio ad? Nisi, deleniti beatae?",
             0
         );
         this.board_btn = card_board.btn;
