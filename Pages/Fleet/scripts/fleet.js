@@ -73,4 +73,5 @@ class FleetPage{
     }
 }
 
-let page = new FleetPage();
+// let page = new FleetPage();
+export {FleetPage};

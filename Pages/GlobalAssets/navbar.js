@@ -41,10 +41,12 @@ class Navbar {
     navbar.appendChild(description);
     navbar.appendChild(links);
     document.body.appendChild(navbar);
-    // let container = document.createElement("div");
-    // container.className = "container home";
-    // document.body.appendChild(container);
+    let container = document.createElement("div");
+    container.className = "container home";
+    document.body.appendChild(container);
+    location.hash = "home";
     this.handleClick();
+    new Home();
   }
 
   handleClick() {
@@ -52,19 +54,21 @@ class Navbar {
       switch (node.id) {
         case "nav-link home":
           node.addEventListener("click", () => {
-            new Home();
+            location.hash = '#home';
             this.toggleHelper(node.id);
           });
           break;
         case "nav-link about":
           node.addEventListener("click", (e) => {
             console.log("nav-link about");
+            location.hash = '#about';
             this.toggleHelper(node.id);
           });
           break;
         case "nav-link fleet":
           node.addEventListener("click", () => {
             console.log("nav-link fleet");
+            location.hash = '#fleet';
             this.toggleHelper(node.id);
           });
           break;

@@ -113,8 +113,9 @@ class KnowMoreCard{
             dot2.toggle();
             p.classList.toggle('pg2');
             i.classList.toggle('pg2');
-            let a = document.querySelector('a#name-value');
-            a.classList.toggle('active');
+            let a_list = document.querySelectorAll('a#name-value');
+            for (let a of a_list)
+                a.classList.toggle('active');
         });
     }
     updateCard(name, about, skills, positions, contactLinks, image, callSign){

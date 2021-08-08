@@ -247,7 +247,7 @@ a#name-value.active{
   opacity: 1;
 }
 
-@media only screen and (max-height: 780px) {
+@media only screen and (max-height: 815px) {
   .know-more-details{
     overflow-y: hidden;
   }

@@ -58,4 +58,4 @@ class AboutKnowMorePage{
     }
 }
 
-new AboutKnowMorePage(knowMorePageData[0].title, knowMorePageData[0].list.map((obj) => obj.listTitle), knowMorePageData[0].list);
+export {AboutKnowMorePage};
