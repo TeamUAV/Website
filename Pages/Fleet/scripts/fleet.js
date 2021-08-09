@@ -42,8 +42,12 @@ class FleetPage {
       dispose();
     };
     init(elem);
+    this.loadModels();
+  }
+  async loadModels() {
+    let value = await modelInitialize(fleet_data[this.activeIndex].model_url);
+    console.log(value);
     this.clickHandler();
-    modelInitialize(fleet_data[this.activeIndex].model_url);
   }
   clickHandler() {
     this.infoPanel.domBtn.addEventListener("click", () => {

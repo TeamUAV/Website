@@ -3,7 +3,7 @@ import * as THREE from "../dependencies/build/three.module.js";
 import { OrbitControls } from "../dependencies/examples/jsm/controls/OrbitControls.js";
 import { GLTFLoader } from "../dependencies/examples/jsm/loaders/GLTFLoader.js";
 
-let render_window, clock, renderer, obj, mixer, controls, scene, camera, loader, stop, loading;
+let render_window, manager, clock, renderer, obj, mixer, controls, scene, camera, loader, stop, loading;
 
 function init(domElement) {
   render_window = domElement;
@@ -24,7 +24,7 @@ function init(domElement) {
 
   camera.position.set(0, 150, 500);
 
-    let manager = new THREE.LoadingManager();
+    manager = new THREE.LoadingManager();
 		manager.onStart = function (url, itemsLoaded, itemsTotal ) {
       console.log(itemsLoaded);
       console.log(itemsTotal);
@@ -34,6 +34,7 @@ function init(domElement) {
             loading = false;
             start();
             animate();
+            return true;
 		};
 
   renderer = new THREE.WebGLRenderer({ antialias: true, autoSize: true });
@@ -174,8 +175,7 @@ function animate() {
     }
 }
 
-let tempURLs = [];
-
+let tempURLs = []
 let modelToggler = (url, camera_position, x, y, z) => {
   tempURLs.push(url);
   if(obj){
@@ -185,7 +185,7 @@ let modelToggler = (url, camera_position, x, y, z) => {
   else{
     return false;
   }
-  obj = null;
+  obj = null; 
   // stop = true;
   loading = true;
   setTimeout(() => {
@@ -197,8 +197,12 @@ let modelToggler = (url, camera_position, x, y, z) => {
   return true;
 };
 
-let modelInitialize = (url) => {
+let modelInitialize = async (url) => {
   modelLoader(url, -30, 0, 100, 300);
+  return new Promise(function(res, rej) {
+      if(!loading)
+        res(true);
+  })
 };
 
 let dispose = () => {
@@ -207,6 +211,7 @@ let dispose = () => {
   if(obj)
     scene.remove(scene.getObjectByName(obj.name));
   scene.clear();
+  // delete scene;
   renderer.dispose();
   console.log(scene);
   empty(render_window);
