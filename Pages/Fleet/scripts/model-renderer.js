@@ -202,10 +202,10 @@ let modelInitialize = (url) => {
 };
 
 let dispose = () => {
-  console.log('hola');
   stop = true;
   cancelAnimationFrame(id);
-  scene.remove(scene.getObjectByName(obj.name));
+  if(obj)
+    scene.remove(scene.getObjectByName(obj.name));
   scene.clear();
   renderer.dispose();
   console.log(scene);
