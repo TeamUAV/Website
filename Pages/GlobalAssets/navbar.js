@@ -27,7 +27,7 @@ class Navbar {
 
     let links = document.createElement("ul");
     links.className = "links";
-    let linkItems = ["Home", "About", "Fleet", "Sponsors", "Gallery"];
+    let linkItems = ["Home", "Fleet", "About", "Sponsors", "Gallery"];
     for (let i = 0; i < linkItems.length; i++) {
       let li = document.createElement("li");
       li.innerText = linkItems[i];
@@ -76,7 +76,6 @@ class Navbar {
         case "nav-link fleet":
           node.addEventListener("click", () => {
             location.hash = '#fleet';
-            this.toggleHelper(node.id);
             // this.renderPage(location.hash);
           });
           break;
@@ -114,33 +113,33 @@ class Navbar {
 
     switch (hash) {
         case '#home':
-            this.toggleHelper(this.navNodeList[0].id);
+            this.toggleHelper(this.navNodeList.filter((obj) => obj.id === "nav-link home")[0].id);
             document.querySelector('.container').classList.add('home');
             this.domObj.dom = new Home();
             document.querySelector('title').innerText = "TeamUAV | Home";
             break;
         case '#about':
-          this.toggleHelper(this.navNodeList[1].id);
+            this.toggleHelper(this.navNodeList.filter((obj) => obj.id === "nav-link about")[0].id);
             document.querySelector('.container').classList.add('about');
             this.domObj.dom = new AboutPage();
             document.querySelector('title').innerText = "TeamUAV | About";
             break;
         case '#fleet':
-          this.toggleHelper(this.navNodeList[2].id);
+            this.toggleHelper(this.navNodeList.filter((obj) => obj.id === "nav-link fleet")[0].id);
             document.querySelector('.container').classList.add('fleet');
             this.domObj.dom = new FleetPage();
             document.querySelector('title').innerText = "TeamUAV | Fleet";
             break;
         case '#know-more-board':
           document.querySelector('title').innerText = "TeamUAV | About";
-          this.toggleHelper(this.navNodeList[1].id);
-            document.querySelector('.container').classList.add('about');
+          this.toggleHelper(this.navNodeList.filter((obj) => obj.id === "nav-link about")[0].id);
+          document.querySelector('.container').classList.add('about');
             document.querySelector('.container').classList.add('know-more');
             this.domObj.dom = new AboutKnowMorePage(knowMorePageData[0].title, knowMorePageData[0].list.map((obj) => obj.listTitle), knowMorePageData[0].list);                    
             break;
         case '#know-more-core':
           document.querySelector('title').innerText = "TeamUAV | About";
-          this.toggleHelper(this.navNodeList[1].id);
+          this.toggleHelper(this.navNodeList.filter((obj) => obj.id === "nav-link about")[0].id);
             document.querySelector('.container').classList.add('about');
             document.querySelector('.container').classList.add('know-more');
             this.domObj.dom = new AboutKnowMorePage(knowMorePageData[1].title, knowMorePageData[1].list.map((obj) => obj.listTitle), knowMorePageData[1].list);                    

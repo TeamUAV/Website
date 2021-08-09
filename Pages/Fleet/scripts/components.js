@@ -236,6 +236,8 @@ class InfoPanel {
   }
 
   render(name, shortDescription, miniStats, longDescription, graph_stats) {
+    if(this.graph)
+      this.graph.destroy();
     this.graph_stats = graph_stats;
     this.domDroneName.innerText = name;
     this.domPreviewText.innerText = shortDescription;
