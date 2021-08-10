@@ -52,6 +52,7 @@ class FleetPage {
   clickHandler() {
     this.infoPanel.domBtn.addEventListener("click", () => {
       document.querySelector(".fleet-info").classList.toggle("expanded");
+      document.querySelector(".container.fleet").classList.toggle("blurred");
       this.infoPanel.blockIconClick = true;
     });
 
