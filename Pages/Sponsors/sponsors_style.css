@@ -1,0 +1,94 @@
+*::-webkit-scrollbar{
+    display: none;
+}
+  
+.sponsors_image{
+    width:20vw;
+    height:auto;
+    margin-left:30vw;
+    margin-top: 20vh;
+}
+.sponsors_image:hover {
+    opacity: 0.9;
+    transform: scale(1.1);
+}
+.popup_window{
+    display:none;
+    position: absolute;
+    width: 1162px;
+    height: 623.83px;
+
+    
+    flex-direction: row;
+
+    left:20vw;
+    top:10vh;    
+    background: linear-gradient(105.96deg, rgba(0, 0, 0, 0.8) 1.5%, rgba(196, 196, 196, 0) 100%);
+    border: 0.5px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius:42px; 
+}
+
+.back_button{
+    position: relative;
+    top:3%;
+    left: 3%;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.back_button:hover {
+    cursor:pointer;
+}
+
+
+.popup_image{
+    position: relative;
+    width: 544.76px;
+    height: 436.02px;
+    top:12%;
+    left:2%;  
+
+    animation-name:fadeIn;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+.description_container{
+    position: relative;
+    top:10%;
+    left:5%;
+    width:45%;
+    height:100%;
+
+}
+.image_description{
+    position: relative;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 36px;
+    text-align: center;
+
+    color: #FFFFFF;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    animation-name: fadeIn;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+  }
+
+@keyframes fadeIn {
+    from{opacity: scale(0)}
+    to {opacity:scale(1)}
+    
+}
+
