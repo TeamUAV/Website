@@ -13,6 +13,10 @@
     display: none;
 }
 
+*::selection{
+    background:rgba(245, 25, 25, 0.5);
+}
+
 .navbar{
     display: flex;
     justify-content: space-between;

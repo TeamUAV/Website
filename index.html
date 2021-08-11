@@ -1,75 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="Pages/About/knowMorePage/layout-components.css"
-    />
-    <link
-      rel="shortcut icon"
-      href="Pages/GlobalAssets/logo.png"
-      type="image/x-icon"
-    />
-    <link rel="stylesheet" href="Pages/GlobalAssets/navbar.css" />
-    <link rel="stylesheet" href="Pages/Fleet/styles/layout.css" />
-    <link rel="stylesheet" href="Pages/Fleet/styles/icons.css" />
-    <link rel="stylesheet" href="Pages/Home/style.css" />
-    <link rel="stylesheet" href="Pages/About/MainPage/styles/layout.css" />
-    <link rel="stylesheet" href="Pages/Credits/styles/layout.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
-    <script src="Pages/Fleet/scripts/data.js"></script>
-    <script src="Pages/About/knowMorePage/scripts/data.js"></script>
-    <script src="Pages/Fleet/dependencies/smoothscroll.js"></script>
-    <script
-      src="Pages/About/knowMorePage/scripts/about-know-more.js"
-      type="module"
-    ></script>
-    <script src="Pages/About/MainPage/script/about.js" type="module"></script>
-    <script src="Pages/Fleet/scripts/model-renderer.js" type="module"></script>
-    <script src="Pages/Fleet/scripts/fleet.js" type="module"></script>
-    <script src="Pages/GlobalAssets/navbar.js" type="module"></script>
-    <script src="Pages/Home/home.js"></script>
-    <title></title>
-  </head>
-  <style>
-    * {
-      cursor: url("Pages/GlobalAssets/Mouse.svg"), auto;
-    }
-    *:active {
-      cursor: url("Pages/GlobalAssets/MouseActive.svg"), auto;
-    }
-  </style>
-  <body>
-    <!-- <script src="app.js" type="module"></script> -->
-    <div class="container credits">
-      <div class="content">
-        <div class="title-div-extra">
-          <div class="title-div-credits">
-            <div id="text-content">
-              <p id="title">Credits</p>
-              <p class="subtitle">Gaurav Singh</p>
-              <p class="subtitle">Project Lead</p>
-              <p id="description">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo perferendis, voluptas illo quisquam, sit sunt eveniet quas quae ducimus commodi adipisci laudantium necessitatibus accusantium illum, quos voluptatibus similique repudiandae sapiente?
-                Ex reprehenderit aperiam culpa incidunt laboriosam quod quaerat tempora atque fugit voluptate facere, temporibus molestiae iste, quisquam vitae praesentium maiores repudiandae pariatur, ut illo dolore iure quidem exercitationem fuga! Accusamus!
-              </p>
-            </div>
-  
-            <div id="image-panel-div">
-              <div id="image-panel"></div>
-            </div>
-  
-        </div>
-          <div id="bottom-line"></div>
 
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet" href="Pages/About/knowMorePage/layout-components.css" />
+  <link rel="shortcut icon" href="Pages/GlobalAssets/logo.png" type="image/x-icon" />
+  <link rel="stylesheet" href="Pages/GlobalAssets/navbar.css" />
+  <link rel="stylesheet" href="Pages/Fleet/styles/layout.css" />
+  <link rel="stylesheet" href="Pages/Fleet/styles/icons.css" />
+  <link rel="stylesheet" href="Pages/Home/style.css" />
+  <link rel="stylesheet" href="Pages/About/MainPage/styles/layout.css" />
+  <link rel="stylesheet" href="Pages/Credits/styles/layout.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+  <script src="Pages/Fleet/scripts/data.js"></script>
+  <script src="Pages/About/knowMorePage/scripts/data.js"></script>
+  <script src="Pages/Fleet/dependencies/smoothscroll.js"></script>
+  <script src="Pages/About/knowMorePage/scripts/about-know-more.js" type="module"></script>
+  <script src="Pages/About/MainPage/script/about.js" type="module"></script>
+  <script src="Pages/Fleet/scripts/model-renderer.js" type="module"></script>
+  <script src="Pages/Fleet/scripts/fleet.js" type="module"></script>
+  <script src="Pages/GlobalAssets/navbar.js" type="module"></script>
+  <script src="Pages/Home/home.js"></script>
+  <title></title>
+</head>
+<style>
+  * {
+    cursor: url("Pages/GlobalAssets/Mouse.svg"), auto;
+  }
+
+  *:active {
+    cursor: url("Pages/GlobalAssets/MouseActive.svg"), auto;
+  }
+</style>
+
+<body>
+  <!-- <script src="app.js" type="module"></script> -->
+  <div class="container credits">
+    <div class="content">
+      <section class="title-div-extra">
+        <div class="title-div-credits">
+          <div id="text-content">
+            <p id="title">Credits</p>
+            <p class="subtitle">Gaurav Singh</p>
+            <p class="subtitle">Project Lead</p>
+            <p id="description">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo perferendis, voluptas illo quisquam, sit
+              sunt eveniet quas quae ducimus commodi adipisci laudantium necessitatibus accusantium illum, quos
+              voluptatibus similique repudiandae sapiente?
+              Ex reprehenderit aperiam culpa incidunt laboriosam quod quaerat tempora atque fugit voluptate facere,
+              temporibus molestiae iste, quisquam vitae praesentium maiores repudiandae pariatur, ut illo dolore iure
+              quidem exercitationem fuga! Accusamus!
+            </p>
+          </div>
+          <div id="image-panel-div">
+            <div id="image-panel">
+              <div class="overlay"></div>
+              <p>More</p>
+            </div>
+          </div>
         </div>
+        <div id="bottom-line"></div>
+      </section>
+
+      <section class="contributors" id="initial">
+        <p id="title">Developers</p>
+        <div class="scroll-container">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </section>
     </div>
-  </body>
+</body>
+
 </html>
