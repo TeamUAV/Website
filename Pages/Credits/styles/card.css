@@ -1,0 +1,47 @@
+.scroll-container .expanding-div{
+    width: 100%;
+    height: 110%;
+    margin-top: 100%;
+    position: relative;
+    z-index: 10;
+    border-radius: 2rem;
+    background: linear-gradient(rgba(0, 0, 34, 0.5),rgba(25, 25, 56, 0.9));
+    transition: all 0.5s ease-out;
+}
+
+.scroll-container div img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    object-fit: cover;
+    border-radius: 2rem;
+}
+
+.scroll-container .expanding-div p{
+    position: absolute;
+    background-color: transparent;
+}
+.scroll-container .expanding-div > p:first-child{
+    left: 1rem;
+    top: 2.5rem;
+    color: rgba(244, 25, 25, 1);
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+}
+.scroll-container .expanding-div > p:nth-child(2){
+    left: 1rem;
+    top: 4rem;
+    font-weight: 500;
+}
+.scroll-container .expanding-div > p:last-child{
+    right: 1.5rem;
+    text-transform: uppercase;
+    top: 4.2rem;
+    color: rgba(244, 25, 25, 1);
+    font-weight: 900;
+}
+
+.scroll-container .expanding-div:hover{
+    margin-top: 0;
+}

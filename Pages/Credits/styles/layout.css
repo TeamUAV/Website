@@ -151,15 +151,18 @@
     margin-top: 1rem;
     width: 100%;
     white-space: nowrap;
+    -moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;
     height: 100%;
-    overflow: scroll;
+    overflow-x: scroll;
+    overflow-y: hidden;
 }
 .scroll-container > div{
     display: inline-block;
     border-radius: 2rem;
     width: 20%;
     height: 90%;
+    position: relative;
+    overflow: hidden;
     margin: 1rem;
-    background-color: white;
-    /* margin-right: 5rem; */
+    background-color: black;
 }
