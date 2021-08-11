@@ -23,21 +23,21 @@
     background-color: transparent;
 }
 .scroll-container .expanding-div > p:first-child{
-    left: 1rem;
-    top: 2.5rem;
+    left: 10%;
+    top: 5.5%;
     color: rgba(244, 25, 25, 1);
     letter-spacing: 0.2rem;
     text-transform: uppercase;
 }
 .scroll-container .expanding-div > p:nth-child(2){
-    left: 1rem;
-    top: 4rem;
+    left: 10%;
+    top: 10%;
     font-weight: 500;
 }
 .scroll-container .expanding-div > p:last-child{
-    right: 1.5rem;
+    right: 5.5%;
     text-transform: uppercase;
-    top: 4.2rem;
+    top: 10%;
     color: rgba(244, 25, 25, 1);
     font-weight: 900;
 }
