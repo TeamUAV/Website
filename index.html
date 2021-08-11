@@ -12,40 +12,64 @@
       rel="stylesheet"
       href="Pages/About/knowMorePage/layout-components.css"
     />
-    <link rel="shortcut icon" href="Pages/GlobalAssets/logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="Pages/GlobalAssets/navbar.css"/>
+    <link
+      rel="shortcut icon"
+      href="Pages/GlobalAssets/logo.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="Pages/GlobalAssets/navbar.css" />
     <link rel="stylesheet" href="Pages/Fleet/styles/layout.css" />
     <link rel="stylesheet" href="Pages/Fleet/styles/icons.css" />
     <link rel="stylesheet" href="Pages/Home/style.css" />
     <link rel="stylesheet" href="Pages/About/MainPage/styles/layout.css" />
+    <link rel="stylesheet" href="Pages/Credits/styles/layout.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
     <script src="Pages/Fleet/scripts/data.js"></script>
     <script src="Pages/About/knowMorePage/scripts/data.js"></script>
     <script src="Pages/Fleet/dependencies/smoothscroll.js"></script>
-    <script src="Pages/About/knowMorePage/scripts/about-know-more.js" type="module"></script>
+    <script
+      src="Pages/About/knowMorePage/scripts/about-know-more.js"
+      type="module"
+    ></script>
     <script src="Pages/About/MainPage/script/about.js" type="module"></script>
     <script src="Pages/Fleet/scripts/model-renderer.js" type="module"></script>
     <script src="Pages/Fleet/scripts/fleet.js" type="module"></script>
-    <script src="Pages/Home/home.js"></script> 
+    <script src="Pages/GlobalAssets/navbar.js" type="module"></script>
+    <script src="Pages/Home/home.js"></script>
     <title></title>
   </head>
   <style>
-    *{
+    * {
       cursor: url("Pages/GlobalAssets/Mouse.svg"), auto;
     }
-    *:active{
+    *:active {
       cursor: url("Pages/GlobalAssets/MouseActive.svg"), auto;
     }
   </style>
   <body>
-    <script src="Pages/GlobalAssets/navbar.js" type="module"></script>
-    <script src="app.js" type="module"></script>
-    <!-- <div class="container credits">
-      <div class="title-div">
-        <p id="title">Credits</p>
-        <p id="subtitle">Project Lead</p>
-        <p id="name">Gaurav Singh</p>
-      </div> -->
+    <!-- <script src="app.js" type="module"></script> -->
+    <div class="container credits">
+      <div class="content">
+        <div class="title-div-extra">
+          <div class="title-div-credits">
+            <div id="text-content">
+              <p id="title">Credits</p>
+              <p class="subtitle">Gaurav Singh</p>
+              <p class="subtitle">Project Lead</p>
+              <p id="description">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo perferendis, voluptas illo quisquam, sit sunt eveniet quas quae ducimus commodi adipisci laudantium necessitatibus accusantium illum, quos voluptatibus similique repudiandae sapiente?
+                Ex reprehenderit aperiam culpa incidunt laboriosam quod quaerat tempora atque fugit voluptate facere, temporibus molestiae iste, quisquam vitae praesentium maiores repudiandae pariatur, ut illo dolore iure quidem exercitationem fuga! Accusamus!
+              </p>
+            </div>
+  
+            <div id="image-panel-div">
+              <div id="image-panel"></div>
+            </div>
+  
+        </div>
+          <div id="bottom-line"></div>
+
+        </div>
     </div>
   </body>
 </html>

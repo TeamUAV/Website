@@ -1,0 +1,67 @@
+.container.credits{
+    margin-top: 5rem;
+    padding: 0 3rem;
+}
+
+.container.credits > .content > .title-div-extra{
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title-div-credits{
+    height: 50vh;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.title-div-credits #text-content{
+    width: 40%;
+    height: 100%;
+}
+.title-div-credits #image-panel-div{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#image-panel-div #image-panel{
+    border: 1px solid white;
+    border-radius: 2rem;
+    width: 40%;
+    height: 100%;
+}
+
+.title-div-credits #title{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.13rem;
+    text-transform: uppercase;
+    font-size: 5rem;
+    margin-bottom: 0.1rem;
+}
+.title-div-credits .subtitle{
+    color:rgba(245, 25, 25, 1);
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+.title-div-credits #description{
+    color:white;
+    font-size: 1rem;
+    margin-top: 3rem;
+}
+
+.title-div-extra #bottom-line{
+    background-color: gray;
+    width: 40%;
+    height: 0.05rem;
+}
