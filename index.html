@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="Pages/About/MainPage/styles/layout.css" />
   <link rel="stylesheet" href="Pages/Credits/styles/layout.css" />
   <link rel="stylesheet" href="Pages/Credits/styles/card.css" />
+  <link rel="stylesheet" href="Pages/Credits/styles/more-card.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
   <script src="Pages/Fleet/scripts/data.js"></script>
   <script src="Pages/About/knowMorePage/scripts/data.js"></script>
@@ -40,6 +41,56 @@
 <body>
   <!-- <script src="app.js" type="module"></script> -->
   <div class="container credits">
+
+      <div class="credit-more-card">
+        <div class="more-card-text">
+  
+          <div class="fields-container">
+            <div class="text-container">
+              <p class="title">Name</p>
+              <p class="text-content">Gaurav Singh</p>
+            </div>
+    
+            <div class="text-container">
+              <p class="title">About</p>
+              <p class="text-content long">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit blanditiis recusandae explicabo consectetur aut unde, a sequi totam facere eveniet sed est atque hic, autem repudiandae, maiores ipsum officiis quasi!</p>
+            </div>
+    
+            <div class="text-container">
+              <p class="title">Skills</p>
+              <p class="text-content long">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit blanditiis recusandae explicabo consectetur aut unde, a sequi totam facere eveniet sed est atque hic, autem repudiandae, maiores ipsum officiis quasi!</p>
+            </div>
+          </div>
+  
+          <div class="fields-container active">
+            <div class="text-container">
+              <p class="title">Positions Held</p>
+              <p class="text-content">Gaurav Singh</p>
+            </div>
+    
+            <div class="text-container">
+              <p class="title">Contact</p>
+              <p class="text-content long">
+                <a href="a">a</a>
+                <br>
+                <a href="b">b</a>
+                <br>
+                <a href="c">c</a>
+                <br>
+              </p>
+            </div>
+    
+            <div class="text-container">
+              <p class="title">CallSign</p>
+              <p class="text-content">ABC</p>
+            </div>
+          </div>
+  
+        </div>
+        <img src="Pages/About/knowMorePage/Assets/Senior Core/gaurav.jpeg" class="more-card-img">
+      </div>
+
+
     <div class="content">
       <section class="title-div-extra">
         <div class="title-div-credits">
@@ -69,22 +120,29 @@
       <section class="contributors" id="initial">
         <p id="title">Developers</p>
         <div class="scroll-container">
-          <div>
-            <img src="Pages/About/knowMorePage/Assets/Senior Core/gaurav.jpeg">
+          <div class="credits-card">
+          <img src="Pages/About/knowMorePage/Assets/Senior Core/gaurav.jpeg">
             <div class="expanding-div">
               <p>Name</p>
               <p>Gaurav Singh</p>
               <p>More</p>
             </div>
           </div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
+          <div class="credits-card"></div>
+          <div class="credits-card"></div>
+          <div class="credits-card"></div>
+          <div class="credits-card"></div>
+          <div class="credits-card"></div>
         </div>
       </section>
     </div>
+
+    <script>
+      setInterval(() => {
+        document.querySelector('.credit-more-card').classList.toggle('visible');
+      document.querySelector('.container.credits').classList.toggle('know-more');
+      }, 2000);
+    </script>
 </body>
 
 </html>

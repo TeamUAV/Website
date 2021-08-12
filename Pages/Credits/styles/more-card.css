@@ -1,0 +1,119 @@
+.container.credits .credit-more-card{
+    width: 70%;
+    height: 80%;
+    background: linear-gradient(102.8deg, rgba(25, 26, 56, 0.79) 12.2%, rgba(245, 25, 25, 0.79) 97.42%);
+    z-index: 10;
+    border-radius: 3rem;
+    transition: all 0.5s ease-out;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    margin: auto;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+}
+.container.credits.know-more .credit-more-card.visible{
+    opacity: 1;
+}
+
+.credit-more-card > .more-card-text, .credit-more-card > .more-card-img {
+    height: 100%;
+    background-color: transparent;
+    border-radius: inherit;
+}
+
+.credit-more-card > .more-card-text{
+    width: 50%;
+    position: relative;
+    padding: 2rem;
+    padding-top: 3rem;
+}
+
+.credit-more-card > .more-card-img{
+    object-fit: cover;
+    width: 45%;
+    background-color: white;
+}
+
+.more-card-text *{
+    background-color: transparent;
+}
+
+
+.more-card-text > .fields-container{
+    width: 0;
+    height: 0;
+}
+
+.more-card-text > .fields-container, .more-card-text .text-container{
+    width: 0;
+    height: 0;
+    display: none;
+}
+
+.more-card-text > .fields-container.active, .fields-container.active .text-container{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.fields-container.active .text-container {
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+}
+
+.fields-container.active .text-container .title{
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-size: 1.1rem;
+    color: #F41919;
+}
+
+.fields-container.active .text-container .text-content{
+    margin-top: 1rem;
+    font-weight: 400;
+    font-size: 1.3rem;
+}
+
+.fields-container.active .text-container .text-content.long{
+    height: auto;
+    max-height: 7.9rem;
+    border-radius: 10px;
+    min-height: 1rem;
+    font-size: 1.5rem;
+    overflow-y: scroll;
+}
+
+.fields-container .text-container a{
+    cursor: pointer;
+    pointer-events: none;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+.fields-container.active .text-container a{
+    pointer-events: visible;
+  }
+
+
+@media only screen and (max-height: 815px) {
+    .credit-more-card > .more-card-text{
+        padding: 2rem;
+        padding-top: 1rem;
+    }
+
+    .fields-container.active .text-container .text-content{
+        margin-top: 1rem;
+        font-weight: 400;
+        font-size: 1.2rem;
+    }
+    
+    .fields-container.active .text-container .text-content.long{
+        height: auto;
+        max-height: 5rem;
+        border-radius: 10px;
+        min-height: 1rem;
+        font-size: 1.2rem;
+        overflow-y: scroll;
+    }
+}
