@@ -1,0 +1,105 @@
+*::-webkit-scrollbar{
+    display:none;
+}
+
+body {
+    background-color:  #000021;
+    height: 100vh;
+}
+#container{
+    height: 100%;
+    overflow: hidden;
+}
+#title-container{
+    position: relative;
+    width: 100;
+    height: 30%;
+    top: 3.5%;
+    left: 2.5%;
+}
+#title_border {
+    position: absolute;
+    left: 2.4%;
+    top: -30%;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 23rem;
+    line-height: 1rem;
+
+    text-align: center;
+
+    color: #000021;
+    text-shadow: -1px 1px 0 #ffff,
+                  1px 1px 0 #ffff,
+                  1px -1px 0 #ffff,
+                 -1px -1px 0 #ffff;
+}
+#title_filled {
+    position: absolute;
+    left: 3%;
+    top: -33.5%;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 23rem;
+    line-height: 1.5rem;
+    text-align: center;
+    color: #FFFFFF;;
+}
+
+
+/* :root {
+  --marquee-width: 100vw;
+  --marquee-height: 40vh;
+  --marquee-elements-displayed: 5;
+  --marquee-element-width: 496px;
+  --marquee-animation-duration: calc(var(--marquee-elements) * 2s);
+} */
+
+.sponsors_card_container{
+    position: relative;
+    top: 26vh;
+    left: 0;
+    width: 100vw;
+    height: 36vh;
+    color: black;
+    overflow: hidden;
+    /* background-color:orange; */
+    /* display: none; */
+  }
+  .card_content {
+    position: absolute;
+    list-style: none;
+    height: 100%;
+    display: flex;
+    animation: scrolling 20s linear infinite;
+  }
+  .card_content:hover {
+    animation-play-state: paused;
+    cursor: pointer;
+  }
+  @keyframes scrolling {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-315vw);}
+  }
+  .sponsors_logo_card {
+    display: flex;
+    justify-content: center;
+    align-items:center ;
+    position: relative;
+    width: 35vw;
+    height: 100%;
+    font-size:  5rem;
+    color: #111;
+    object-fit: contain;
+    /* border: 2px solid red; */
+    margin: 0 10px;
+    /* background-color:#fff; */
+  }
+  .sponsors_logo_card img{
+    position: absolute;
+    width: 496px;
+    height: 126px;
+  }
