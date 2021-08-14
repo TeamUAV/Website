@@ -40,7 +40,7 @@
 
 <body>
   <div class="container credits">
-    <div class="content"></div>
+    <!-- <div class="content"></div> -->
   </div>
   <script src="Pages/Credits/scripts/components.js"></script>
   <!-- <script src="app.js" type="module"></script> -->
@@ -48,7 +48,10 @@
 
       <div class="credit-more-card">
         <div class="more-card-text">
-  
+          <div id="view-more">
+            <p>View more</p>
+            <i class="material-icons" id="arrow">arrow_back</i>
+          </div>
           <div class="fields-container active">
             <div class="text-container">
               <p class="title">Name</p>
@@ -158,14 +161,14 @@
           <div class="credits-card"></div>
         </div>
       </section>
-    </div> -->
+    </div>
 
     <script>
-      // setTimeout(() => {
-      //   document.querySelector('.credit-more-card').classList.toggle('visible');
-      // document.querySelector('.container.credits').classList.toggle('know-more');
-      // }, 1000);
-    </script>
+      setTimeout(() => {
+        document.querySelector('.credit-more-card').classList.toggle('visible');
+      document.querySelector('.container.credits').classList.toggle('know-more');
+      }, 1000);
+    </script> -->
 </body>
 
 </html>

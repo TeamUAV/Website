@@ -39,6 +39,37 @@
     padding-top: 3rem;
 }
 
+.more-card-text > #view-more{
+    position: absolute;
+    display: flex;
+    right: 0;
+    top: 2rem;
+    width: 20%;
+    justify-content: space-between;
+}
+
+.more-card-text > #view-more p{
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 1rem;
+    opacity: 1;
+    transition: all 0.5s ease-out;
+}
+
+.more-card-text > #view-more i{
+    font-size: 1.5rem;
+    transform: rotate(180deg);
+    transition: all 0.5s ease-out;
+}
+
+.more-card-text > #view-more.pg2 p{
+    opacity: 0;
+}
+
+.more-card-text > #view-more.pg2 i{
+    transform: rotate(0deg);
+}
+
 .credit-more-card > .more-card-img{
     object-fit: cover;
     width: 45%;
