@@ -21,6 +21,7 @@
 
 .scroll-container .expanding-div p{
     position: absolute;
+    cursor: pointer;
     background-color: transparent;
 }
 .scroll-container .expanding-div > p:first-child{
