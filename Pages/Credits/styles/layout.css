@@ -139,7 +139,7 @@
 }
 
 .container.credits .contributors{
-    margin-top: 2rem;
+    margin-top: 5rem;
     height: 55vh;
     width: 100%;
     z-index: 10;
@@ -152,9 +152,6 @@
     z-index: inherit;
 }
 
-.contributors#initial{
-    margin-top: 5rem;
-}
 
 .contributors > #title{
     color: rgba(245, 25, 25, 1);

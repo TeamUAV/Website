@@ -2,7 +2,7 @@
     width: 70%;
     height: 80%;
     background: linear-gradient(102.8deg, rgba(25, 26, 56, 0.79) 12.2%, rgba(245, 25, 25, 0.79) 97.42%);
-    z-index: 10;
+    z-index: 1;
     border-radius: 3rem;
     transition: all 0.5s ease-out;
     left: 0;
@@ -14,7 +14,16 @@
     justify-content: space-between;
 }
 .container.credits.know-more .credit-more-card.visible{
+    z-index: 10;
     opacity: 1;
+}
+
+.container.credits.know-more .credit-more-card *{
+    z-index: 1;
+}
+
+.container.credits.know-more .credit-more-card.visible *{
+    z-index: 10;
 }
 
 .credit-more-card > .more-card-text, .credit-more-card > .more-card-img {

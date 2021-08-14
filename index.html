@@ -45,7 +45,7 @@
       <div class="credit-more-card">
         <div class="more-card-text">
   
-          <div class="fields-container">
+          <div class="fields-container active">
             <div class="text-container">
               <p class="title">Name</p>
               <p class="text-content">Gaurav Singh</p>
@@ -62,7 +62,7 @@
             </div>
           </div>
   
-          <div class="fields-container active">
+          <div class="fields-container">
             <div class="text-container">
               <p class="title">Positions Held</p>
               <p class="text-content">Gaurav Singh</p>
@@ -117,7 +117,26 @@
         <div id="bottom-line"></div>
       </section>
 
-      <section class="contributors" id="initial">
+      <section class="contributors">
+        <p id="title">Developers</p>
+        <div class="scroll-container">
+          <div class="credits-card">
+          <img src="Pages/About/knowMorePage/Assets/Senior Core/gaurav.jpeg">
+            <div class="expanding-div">
+              <p>Name</p>
+              <p>Gaurav Singh</p>
+              <p>More</p>
+            </div>
+          </div>
+          <div class="credits-card"></div>
+          <div class="credits-card"></div>
+          <div class="credits-card"></div>
+          <div class="credits-card"></div>
+          <div class="credits-card"></div>
+        </div>
+      </section>
+
+      <section class="contributors">
         <p id="title">Developers</p>
         <div class="scroll-container">
           <div class="credits-card">
@@ -138,10 +157,10 @@
     </div>
 
     <script>
-      setInterval(() => {
-        document.querySelector('.credit-more-card').classList.toggle('visible');
-      document.querySelector('.container.credits').classList.toggle('know-more');
-      }, 2000);
+      // setTimeout(() => {
+      //   document.querySelector('.credit-more-card').classList.toggle('visible');
+      // document.querySelector('.container.credits').classList.toggle('know-more');
+      // }, 1000);
     </script>
 </body>
 
