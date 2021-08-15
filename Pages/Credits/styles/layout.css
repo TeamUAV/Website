@@ -11,6 +11,16 @@
     filter: blur(10px);
 }
 
+.container.credits.container.credits.know-more > .content *{
+    pointer-events: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none;
+}
+
 .container.credits > .content > .title-div-extra{
     height: 65vh;
     width: 100%;
@@ -22,6 +32,7 @@
 }
 
 .title-div-credits{
+    width: 100%;
     height: 55vh;
     display: flex;
     justify-content: space-between;

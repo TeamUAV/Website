@@ -7,6 +7,7 @@
     transition: all 0.5s ease-out;
     left: 0;
     right: 0;
+    top: 7rem;
     opacity: 0;
     margin: auto;
     position: fixed;
@@ -71,9 +72,27 @@
 }
 
 .credit-more-card > .more-card-img{
-    object-fit: cover;
     width: 45%;
+    position: relative;
+    height: 100%;
     background-color: white;
+}
+.credit-more-card > .more-card-img > img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+    background-color: white;
+}
+
+.credit-more-card > .more-card-img > #dismiss{
+   position: absolute;
+   right: 2rem;
+   top: 2rem;
+   font-size: 2.5rem;
+   cursor: pointer;
+   background-color: transparent;
 }
 
 .more-card-text *{
@@ -118,10 +137,10 @@
 
 .fields-container.active .text-container .text-content.long{
     height: auto;
-    max-height: 7.9rem;
+    max-height: 8.1rem;
     border-radius: 10px;
     min-height: 1rem;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     overflow-y: scroll;
 }
 

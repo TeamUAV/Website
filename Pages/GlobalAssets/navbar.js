@@ -27,7 +27,7 @@ class Navbar {
 
     let links = document.createElement("ul");
     links.className = "links";
-    let linkItems = ["Home", "Fleet", "About", "Sponsors", "Gallery"];
+    let linkItems = ["Home", "Fleet", "About", "Sponsors", "Gallery", "Credits"];
     for (let i = 0; i < linkItems.length; i++) {
       let li = document.createElement("li");
       li.innerText = linkItems[i];
@@ -89,6 +89,12 @@ class Navbar {
             this.toggleHelper(node.id);
           });
           break;
+          case "nav-link credits":
+            node.addEventListener("click", () => {
+            location.hash = '#credits';
+              this.toggleHelper(node.id);
+            });
+            break;
       }
     }
   }
@@ -144,6 +150,12 @@ class Navbar {
             document.querySelector('.container').classList.add('know-more');
             this.domObj.dom = new AboutKnowMorePage(knowMorePageData[1].title, knowMorePageData[1].list.map((obj) => obj.listTitle), knowMorePageData[1].list);                    
             break;
+        case '#credits':
+          this.toggleHelper(this.navNodeList.filter((obj) => obj.id === "nav-link credits")[0].id);
+          document.querySelector('.container').classList.add('credits');
+          document.querySelector('title').innerText = "TeamUAV | Credits";
+          this.domObj.dom = new CreditsPage();
+          break;
     }
   }
 }
