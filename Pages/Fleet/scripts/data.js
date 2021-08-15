@@ -3,11 +3,11 @@ let fleet_data = [
     name: "Vaayu",
     active_icon_url: "Pages/Fleet/icons/icon-1-active.svg",
     inactive_icon_url: "Pages/Fleet/icons/icon-1.svg",
-    model_url: "Pages/Fleet/models/vaayu/vaayu.gltf",
+    model_url: "Pages/Fleet/models/Vaayu/Vaayu.gltf",
     model_coordinates: {
       x: 0,
-      y: 100,
-      z: 300,
+      y: 300,
+      z: 600,
       height: -30,
     },
     short_description:
@@ -76,11 +76,11 @@ let fleet_data = [
     name: "Forest Ranger",
     active_icon_url: "Pages/Fleet/icons/icon-4-active.svg",
     inactive_icon_url: "Pages/Fleet/icons/icon-4.svg",
-    model_url: "Pages/Fleet/models/Forest_Ranger/Forest_Ranger.gltf",
+    model_url: "Pages/Fleet/models/Forest Ranger/forest_ranger (1).gltf",
     model_coordinates: {
-      x: 0,
-      y: 200,
-      z: 550,
+      x: 50,
+      y: 300,
+      z: 650,
       height: 20,
     },
     short_description:
@@ -315,8 +315,8 @@ let fleet_data = [
     inactive_icon_url: "Pages/Fleet/icons/icon-10.svg",
     model_coordinates: {
       x: -10,
-      y: 500,
-      z: 800,
+      y: 300,
+      z: 700,
       height: 0,
     },
     short_description:
