@@ -3,7 +3,7 @@ let fleet_data = [
     name: "Vaayu",
     active_icon_url: "Pages/Fleet/icons/icon-1-active.svg",
     inactive_icon_url: "Pages/Fleet/icons/icon-1.svg",
-    model_url: "Pages/Fleet/models/vaayu/Vaayu.gltf",
+    model_url: "./models/vaayu/Vaayu.gltf",
     model_coordinates: {
       x: 0,
       y: 300,
@@ -76,7 +76,7 @@ let fleet_data = [
     name: "Forest Ranger",
     active_icon_url: "Pages/Fleet/icons/icon-4-active.svg",
     inactive_icon_url: "Pages/Fleet/icons/icon-4.svg",
-    model_url: "Pages/Fleet/models/Forest Ranger/forest_ranger (1).gltf",
+    model_url: "./models/Forest Ranger/forest_ranger (1).gltf",
     model_coordinates: {
       x: 50,
       y: 300,
@@ -157,7 +157,7 @@ let fleet_data = [
   },
   {
     name: "Stilt",
-    model_url: "Pages/Fleet/models/stilt/stilt.gltf",
+    model_url: "./models/stilt/stilt.gltf",
     model_coordinates: {
       x: 0,
       y: 300,
@@ -227,7 +227,7 @@ let fleet_data = [
   },
   {
     name: "Phoenix",
-    model_url: "Pages/Fleet/models/phoenix/Phoenix.gltf",
+    model_url: "./models/phoenix/Phoenix.gltf",
     active_icon_url: "Pages/Fleet/icons/icon-9-active.svg",
     inactive_icon_url: "Pages/Fleet/icons/icon-9.svg",
     model_coordinates: {
@@ -310,7 +310,7 @@ let fleet_data = [
   },
   {
     name: "Skua",
-    model_url: "Pages/Fleet/models/Skua/Skua.gltf",
+    model_url: "./models/Skua/Skua.gltf",
     active_icon_url: "Pages/Fleet/icons/icon-10-active.svg",
     inactive_icon_url: "Pages/Fleet/icons/icon-10.svg",
     model_coordinates: {
