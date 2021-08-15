@@ -3,7 +3,7 @@ let fleet_data = [
     name: "Vaayu",
     active_icon_url: "Pages/Fleet/icons/icon-1-active.svg",
     inactive_icon_url: "Pages/Fleet/icons/icon-1.svg",
-    model_url: "Pages/Fleet/models/Vaayu/Vaayu.gltf",
+    model_url: "Pages/Fleet/models/vaayu/Vaayu.gltf",
     model_coordinates: {
       x: 0,
       y: 300,
