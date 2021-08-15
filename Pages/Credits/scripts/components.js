@@ -199,17 +199,31 @@ class CreditsMoreCard{
         pg2.className = 'fields-container';
         this.pg2 = pg2;
 
+        let img_div = document.createElement('div');
+        img_div.className = 'more-card-img';
+
+        let dismiss = document.createElement('i');
+        dismiss.className = 'material-icons';
+        dismiss.id = 'dismiss';
+        dismiss.innerText = 'highlight_off';
+
+        dismiss.addEventListener('click', () => {
+            document.querySelector('.credit-more-card').classList.toggle('visible');
+            document.querySelector('.container.credits').classList.toggle('know-more');
+        });
+
         let img = document.createElement('img');
-        img.className = 'more-card-img';
         img.src = imgSrc;
 
+        img_div.appendChild(img);
+        img_div.appendChild(dismiss);
         this.img = img;
 
         text_area.appendChild(pg1);
         text_area.appendChild(pg2);
 
         card.appendChild(text_area);
-        card.appendChild(img);
+        card.appendChild(img_div);
 
         this.domElement = card;
         this.nextBtn.addEventListener('click',() => {
@@ -247,6 +261,17 @@ class CreditsMoreCard{
         this.contacts.update('Contact', false, true, contact);
         this.callsign.update('callsign', callSign);
         this.img.src = imgSrc;
+
+        this.pg1.innerHTML = "";
+        this.pg2.innerHTML = "";
+
+        this.pg1.appendChild(this.name.domElement);
+        this.pg1.appendChild(this.about.domElement);
+        this.pg1.appendChild(this.skills.domElement);
+
+        this.pg2.appendChild(this.positions.domElement);
+        this.pg2.appendChild(this.contacts.domElement);
+        this.pg2.appendChild(this.callsign.domElement);
     }
 }
 
@@ -278,21 +303,3 @@ let obj = {
     ],
     callSign: 'abc'
 }
-
-let card = new CreditsMoreCard('/Pages/About/knowMorePage/Assets/Senior Core/gaurav.jpeg');
-card.render(obj.name, obj.about, obj.skills, obj.positions_held, obj.links, obj.callSign);
-
-document.querySelector('.container.credits').appendChild(card.domElement);
-
-let cont= document.createElement('div');
-cont.className = 'content';
-document.querySelector('.container.credits').appendChild(cont);
-
-document.querySelector('.container.credits .content').appendChild(titleDiv.domElement);
-document.querySelector('.container.credits .content').appendChild(panel.domElement);
-
-
-setTimeout(() => {
-    document.querySelector('.credit-more-card').classList.toggle('visible');
-  document.querySelector('.container.credits').classList.toggle('know-more');
-  }, 1000);
