@@ -198,7 +198,7 @@ let modelToggler = (url, camera_position, x, y, z) => {
 };
 
 let modelInitialize = async (url) => {
-  modelLoader(url, -30, 0, 300, 600);
+  modelLoader(url, -30, 0, 100, 300);
   return new Promise(function(res, rej) {
       if(!loading)
         res(true);
