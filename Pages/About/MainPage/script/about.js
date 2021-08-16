@@ -44,15 +44,7 @@ class AboutPage{
 
         this.domElement.appendChild(card_core.domElement);
 
-        let card_alumni = new AboutPageCard(
-            "",
-            "Board members",
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, ut! Impedit iusto eligendi, sunt quos omnis adipisci perferendis aliquid nihil accusamus soluta dolores, molestias, odit odio ad? Nisi, deleniti beatae?",
-            2
-        );
-        this.alumni_btn = card_alumni.btn;
 
-        this.domElement.appendChild(card_alumni.domElement);
         this.handleClick();
     }
     handleClick(){

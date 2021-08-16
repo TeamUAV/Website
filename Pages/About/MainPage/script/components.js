@@ -46,7 +46,7 @@ class AboutPageCard{
             case 0:
                 numberCircle.classList.add('first');
                 break;
-            case 2:
+            case 1:
                 numberCircle.classList.add('last');
             default:
                 break;
