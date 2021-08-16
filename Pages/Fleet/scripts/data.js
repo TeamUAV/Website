@@ -157,7 +157,7 @@ let fleet_data = [
   },
   {
     name: "Stilt",
-    model_url: "./models/stilt/stilt.gltf",
+    model_url: "./models/Stilt/stilt.gltf",
     model_coordinates: {
       x: 0,
       y: 300,
