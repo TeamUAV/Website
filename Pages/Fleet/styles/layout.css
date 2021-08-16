@@ -101,6 +101,7 @@
 #main-state > #body{
     font-weight: 400;
     max-height: 45%;
+    text-align: left;
     overflow-y: scroll;
     margin-top: 1rem;
     font-size: 1.3rem;
@@ -176,6 +177,7 @@
 #text-details > #body{
     margin-top: 2rem;
     height: 75%;
+    text-align: left;
     font-size: 1.3rem;
     font-weight: 400;
     overflow-y: scroll;
