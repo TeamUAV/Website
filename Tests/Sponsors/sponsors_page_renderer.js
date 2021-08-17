@@ -79,10 +79,14 @@ class sponsors_renderer{
         this.data = data;
         let div = document.createElement("div");
         div.id = 'container';
+
+        let div2 = document.createElement("div");
+        div2.id = "toBeBlur";
         let title = new Sponsors_page_title();
         let card = new sponsors_card(sponsorsList,this.data);
-        div.appendChild(title);
-        div.appendChild(card);
+        div2.appendChild(title);
+        div2.appendChild(card);
+        div.appendChild(div2);
         let popup = new SponsorsDataContainer()
         div.appendChild(popup);
         return div;
@@ -101,20 +105,22 @@ function handleClick(sponsors_data) {
         {
             
             description.innerHTML = sponsors_data[index].description;
-            popup_container.style.opacity = 1;
+//             popup_container.style.opacity = 1;
             popup_image.src = sponsors_data[index].src;
             popup_container.classList.add("active");
             popup_container.classList.remove("inactive");
             document.querySelector(".card_content").classList.add("animateStop");
+            document.querySelector("#toBeBlur").classList.add("blur");
+
 
         });
         document.querySelector('#back_button').addEventListener("click", function()
         {  
-            popup_container.style.opacity = 0;
+//             popup_container.style.opacity = 0;
             popup_container.classList.remove("active");
             popup_container.classList.add("inactive");
             document.querySelector(".card_content").classList.remove("animateStop");
-
+            document.querySelector("#toBeBlur").classList.remove("blur");
             
         });
     });
