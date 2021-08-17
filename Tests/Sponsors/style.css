@@ -5,10 +5,16 @@
 body {
     background-color:  #000021;
     height: 100vh;
+    width: 100vw;
 }
 #container{
+    width:100%;    
     height: 100%;
     overflow: hidden;
+}
+#toBeBlur{
+    width:100%;    
+    height: 100%;
 }
 #title-container{
     position: relative;
@@ -94,13 +100,6 @@ body {
     position: absolute;
     width: 496px;
     height: 126px;
-  }
-
-  .active{
-    z-index: 10;
-  }
-  .inactive{
-    z-index: -10;
   }
   .animateStop{
     animation-play-state: paused;
