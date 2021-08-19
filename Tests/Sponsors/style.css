@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 *::-webkit-scrollbar{
     display:none;
 }
@@ -26,12 +27,12 @@ body {
 #title_border {
     position: absolute;
     left: 2.4%;
-    top: -30%;
+    top: -10%;
 
     font-family: Poppins;
     font-style: normal;
     font-weight: normal;
-    font-size: 23rem;
+    font-size: 19rem;
     line-height: 1rem;
 
     text-align: center;
@@ -45,11 +46,11 @@ body {
 #title_filled {
     position: absolute;
     left: 3%;
-    top: -33.5%;
+    top: -10.5%;
     font-family: Poppins;
     font-style: normal;
     font-weight: normal;
-    font-size: 23rem;
+    font-size: 19rem;
     line-height: 1.5rem;
     text-align: center;
     color: #FFFFFF;;
