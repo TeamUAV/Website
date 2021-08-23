@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 *::-webkit-scrollbar{
     display:none;
 }
@@ -5,10 +6,16 @@
 body {
     background-color:  #000021;
     height: 100vh;
+    width: 100vw;
 }
 #container{
+    width:100%;    
     height: 100%;
     overflow: hidden;
+}
+#toBeBlur{
+    width:100%;    
+    height: 100%;
 }
 #title-container{
     position: relative;
@@ -19,13 +26,13 @@ body {
 }
 #title_border {
     position: absolute;
-    left: 2.4%;
-    top: -30%;
+    left: 0.3%;
+    top: -10%;
 
     font-family: Poppins;
     font-style: normal;
     font-weight: normal;
-    font-size: 23rem;
+    font-size: 19rem;
     line-height: 1rem;
 
     text-align: center;
@@ -38,12 +45,12 @@ body {
 }
 #title_filled {
     position: absolute;
-    left: 3%;
-    top: -33.5%;
+    left: 1%;
+    top: -10.5%;
     font-family: Poppins;
     font-style: normal;
     font-weight: normal;
-    font-size: 23rem;
+    font-size: 19rem;
     line-height: 1.5rem;
     text-align: center;
     color: #FFFFFF;;
@@ -94,13 +101,6 @@ body {
     position: absolute;
     width: 496px;
     height: 126px;
-  }
-
-  .active{
-    z-index: 10;
-  }
-  .inactive{
-    z-index: -10;
   }
   .animateStop{
     animation-play-state: paused;
