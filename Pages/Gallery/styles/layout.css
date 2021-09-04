@@ -1,16 +1,17 @@
 .container.gallery{
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 95vh;
+    overflow: hidden;
 }
 .container.gallery .title{
     width: 100%;
     height: 10%;
     padding-left: 2rem;
-    margin-top: 8%;
+    margin-top: 5%;
     position: relative;
 }
 
-.title div{
+.container.gallery .title > div:nth-child(1){
     position: absolute;
 }
 .title #back-text{
@@ -37,4 +38,39 @@
 }
 #fore-text font:last-child{
     color: red;
+}
+.image-main-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 70vh;
+    margin-top: 3rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+.image-main-container #focused-image{
+    width: 60%;
+    height: 90%;
+    background-color: aqua;
+    border-radius: 2rem;
+}
+.image-main-container #all-images-container{
+    width: 35%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+#all-images-container .material-icons{
+    background-color: transparent;
+    color: red;
+    font-size: 3rem;
+}
+
+#all-images-container .main-container{
+    height: 90%;
+    width: 90%;
+    background-color: white;
 }
