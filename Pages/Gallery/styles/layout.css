@@ -52,12 +52,12 @@
 .image-main-container #focused-image{
     width: 60%;
     height: 90%;
-    background-color: aqua;
     position: relative;
     border-radius: 2rem;
 }
 .image-main-container #focused-image > img{
     object-fit: cover;
+    border: 2px solid white;
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
     user-select: none; /* Standard syntax */
@@ -75,6 +75,7 @@
     user-select: none; /* Standard syntax */
     border-radius: 2rem;
     background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9));
+    border: 2px solid white;
     opacity: 0;
     transition: all 0.5s ease-in-out;
     display: flex;
@@ -135,7 +136,7 @@
 .main-container .image-card > img{
     object-fit: cover;
     display: block;
-    border: 2px solid transparent;
+    border: 2px solid white;
     width: 10rem;
     height: 10rem;
     cursor: pointer;
