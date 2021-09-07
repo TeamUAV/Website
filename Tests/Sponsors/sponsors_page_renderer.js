@@ -68,7 +68,6 @@ document.body.appendChild(sponsors_page);
 
 function handleClick(sponsors_data) {
     sponsorsList.map((node, index) => {
-        console.log(node,index);
         let description  = document.getElementById("image_description");
         let popup_container=document.getElementById("popup_window");
         let sponsorsTitle = document.getElementById("sponsors_title")

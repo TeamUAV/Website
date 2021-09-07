@@ -43,7 +43,6 @@ class CreditsPage{
             nodes.nodeList.map((node, index) => {
                 node.addEventListener('click', () => {
                     let elem = creditsData.filter((data) => data.key === nodes.key)[0].data[index];
-                    console.log(elem);
                     this.handleClickHelper(elem);
                 });
             })

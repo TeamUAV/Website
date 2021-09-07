@@ -108,7 +108,7 @@ class Navbar {
     this.active = [...document.querySelector('.container').classList];
     this.active.splice(this.active.indexOf('container') ,1);
     if(!this.newPage){
-        this.active.includes('fleet') ? console.log(this.domObj.dom.destroy()) : "";
+        this.active.includes('fleet') ? this.domObj.dom.destroy() : "";
         this.active.map((act) => document.querySelector('.container').classList.remove(act));
     }
     this.newPage = false;

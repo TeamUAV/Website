@@ -106,7 +106,6 @@ class KnowMoreCard{
         this.DOMCard.appendChild(img);
 
         btn.addEventListener('click', () => {
-            console.log('works');
             pg1.classList.toggle('active');
             pg2.classList.toggle('active');
             dot1.toggle();

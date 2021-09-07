@@ -25,10 +25,6 @@ function init(domElement) {
   camera.position.set(0, 150, 500);
 
     manager = new THREE.LoadingManager();
-		manager.onStart = function (url, itemsLoaded, itemsTotal ) {
-      console.log(itemsLoaded);
-      console.log(itemsTotal);
-		};
 		manager.onLoad = function () {
             obj.rotation.y = 43.5;
             loading = false;
@@ -65,7 +61,7 @@ function init(domElement) {
 
   loader = new GLTFLoader(manager);
   let textureLoader = new THREE.TextureLoader();
-  const groundTexture = textureLoader.load("Pages/Fleet/assets/hex.png");
+  const groundTexture = textureLoader.load("Pages/Fleet/assets/grass.jpeg");
   groundTexture.wrapS = groundTexture.wrapT = THREE.RepeatWrapping;
   groundTexture.repeat.set(110, 110);
   groundTexture.anisotropy = 20;
@@ -85,7 +81,7 @@ function init(domElement) {
 
   // scene.background = new THREE.Color(0x696969);
 
-  let light = new THREE.DirectionalLight(0xffffff, 0.5, 0);
+  let light = new THREE.DirectionalLight(0xffffff, 1.5, 0);
   scene.receiveShadow = true;
   scene.add(light);
   light.position.set(0, 10, 0);
@@ -213,7 +209,6 @@ let dispose = () => {
   scene.clear();
   // delete scene;
   renderer.dispose();
-  console.log(scene);
   empty(render_window);
 }
 function empty(elem) {

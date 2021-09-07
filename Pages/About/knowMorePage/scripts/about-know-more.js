@@ -35,7 +35,6 @@ class AboutKnowMorePage{
     }
     handleClick(){
         this.memberList.nodeList.map((node, index) => {
-            console.log(node.component);
             node.component.addEventListener('click', () => {
                 if(this.activeIndex != index){
                     this.memberList.nodeList[this.activeIndex].toggleActive();

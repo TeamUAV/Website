@@ -9,9 +9,3 @@ class App{
 }
 
 const app = new App();
-
-window.addEventListener("popstate", (event) => {
-    // let navbar = app.navbar;
-    // navbar.renderPage(location.hash);
-    console.log('hello');
-})

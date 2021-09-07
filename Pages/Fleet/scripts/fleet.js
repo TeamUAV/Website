@@ -46,7 +46,6 @@ class FleetPage {
   }
   async loadModels() {
     let value = await modelInitialize(fleet_data[this.activeIndex].model_url);
-    console.log(value);
     this.clickHandler();
   }
   clickHandler() {
@@ -63,7 +62,6 @@ class FleetPage {
 
     this.iconsFrame.iconDOMs.map((element, index) => {
       element.domElement.addEventListener("click", () => {
-        console.log("works");
         if (!this.infoPanel.blockIconClick && this.activeIndex != index) {
           if (
             modelToggler(
