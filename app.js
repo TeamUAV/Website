@@ -7,5 +7,11 @@ class App{
         this.navbar.render();
     }
 }
+let isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+if (isMobile) {
+  /* your code here */
+}
+else{
+    new App();
 
-const app = new App();
+}
