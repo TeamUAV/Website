@@ -51,6 +51,7 @@
     padding-right: 3rem;
 }
 .image-main-container i{
+    -moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;
     cursor: pointer;
 }
 .image-main-container #focused-image{
