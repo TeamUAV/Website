@@ -146,6 +146,7 @@
 .gradient-content > .text-content > #title{
     color: #F51919;
     letter-spacing: 0.4rem;
+    cursor: pointer;
     font-size: 2rem;
     font-weight: 300;
     text-transform: uppercase;

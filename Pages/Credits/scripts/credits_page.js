@@ -34,6 +34,7 @@ class CreditsPage{
             content.appendChild(panel.domElement);
         }
         this.domElement = container;
+        this.domElement.scrollBy(0, 0);
         this.handleClick();
         container.appendChild(content);
     }

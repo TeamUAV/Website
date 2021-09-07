@@ -4,7 +4,7 @@ import {AboutKnowMorePage} from "../../knowMorePage/scripts/about-know-more.js";
 class AboutPage{
     constructor(){
         this.domElement = document.querySelector('.container.about');
-
+        this.domElement.scrollBy(0, 0);
         let heading = document.createElement('div');
         let head = ["About", "Team UAV"];
         for (let i of head){

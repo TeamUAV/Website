@@ -27,7 +27,7 @@ class Navbar {
 
     let links = document.createElement("ul");
     links.className = "links";
-    let linkItems = ["Home", "Fleet", "About", "Sponsors", "Gallery", "Credits"];
+    let linkItems = ["Home", "About", "Fleet", "Sponsors", "Gallery", "Credits"];
     for (let i = 0; i < linkItems.length; i++) {
       let li = document.createElement("li");
       li.innerText = linkItems[i];
@@ -117,7 +117,6 @@ class Navbar {
     while (myNode.firstChild) {
       myNode.removeChild(myNode.lastChild);
     }
-    console.log(hash);
     switch (hash) {
         case '#home':
             this.toggleHelper(this.navNodeList.filter((obj) => obj.id === "nav-link home")[0].id);

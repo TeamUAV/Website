@@ -145,9 +145,7 @@
     width: 10rem;
     height: 10rem;
     cursor: pointer;
-    -webkit-user-select: none; /* Safari */
-    -ms-user-select: none; /* IE 10 and IE 11 */
-    user-select: none; /* Standard syntax */
+    -moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;
     z-index: 5;
     transition: all 0.5s ease-in-out;
     -webkit-filter: grayscale(100%);
