@@ -19,6 +19,8 @@
   <link rel="stylesheet" href="Pages/Gallery/styles/layout.css" />
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+  <script src="Pages/Gallery/scripts/components.js"></script>
+  <script src="Pages/Gallery/scripts/gallery.js"></script>
   <script src="Pages/Fleet/scripts/data.js"></script>
   <script src="Pages/Credits/scripts/components.js"></script>
   <script src="Pages/Credits/scripts/data.js"></script>
@@ -31,6 +33,7 @@
   <script src="Pages/Fleet/scripts/fleet.js" type="module"></script>
   <script src="Pages/GlobalAssets/navbar.js" type="module"></script>
   <script src="Pages/Home/home.js"></script>
+  
   <title></title>
 </head>
 <style>
@@ -44,68 +47,7 @@
 </style>
 
 <body>
-  <!-- <script src="app.js" type="module"></script> -->
-  <div class="container gallery">
-    <div class="title">
-      <div id="back-text">
-        Explore Team UAV
-      </div>
-      <div id="fore-text">
-         <font>Explore</font>
-         <font>Team UAV</font>
-      </div>
-    </div>
-
-    <div class="image-main-container">
-      <div id="focused-image">
-        <img src="https://res.cloudinary.com/demo/image/upload/c_crop,h_200,w_300/sample.jpg">
-
-        <div class="mini-info">
-          <p class="heading">Heading Placeholder</p>
-          <p class="description">Description Placeholder</p>
-        </div>
-      </div>
-      <div id="all-images-container">
-        <i class="material-icons" id="toggle-up">expand_less</i>
-          <div class="main-container">
-              <div class="image-card active">
-                <img src="https://res.cloudinary.com/demo/image/upload/c_crop,h_200,w_300/sample.jpg">
-              </div>
-              <div class="image-card">
-                <img src="https://res.cloudinary.com/demo/image/upload/c_crop,h_200,w_300/sample.jpg">
-              </div>
-              <div class="image-card">
-                <img src="">
-              </div>
-              <div class="image-card">
-                <img src="">
-              </div>
-              <div class="image-card">
-                <img src="">
-              </div>
-              <div class="image-card">
-                <img src="">
-              </div>
-          </div>
-        <i class="material-icons" id="toggle-down">expand_more</i>
-      </div>
-    </div>
-  </div>
-  
-  <script>
-    let img= document.querySelector(".image-card:first-child");
-
-    let img2 = document.querySelector('.image-card:nth-child(2)');
-
-    setTimeout(() => {
-      img.classList.toggle('active');
-      img2.classList.toggle('active');
-    }, 1000);
-
-    let img_nodes = document.querySelectorAll('.image-card');
-    for (let i of img_nodes)
-      i.addEventListener('click', () => console.log('clicked'));
-  </script>
+  <script src="app.js" type="module"></script>
 </body>
 
 </html>

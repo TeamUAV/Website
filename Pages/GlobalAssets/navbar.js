@@ -86,6 +86,7 @@ class Navbar {
           break;
         case "nav-link gallery":
           node.addEventListener("click", () => {
+            location.hash = '#gallery';
             this.toggleHelper(node.id);
           });
           break;
@@ -116,7 +117,7 @@ class Navbar {
     while (myNode.firstChild) {
       myNode.removeChild(myNode.lastChild);
     }
-
+    console.log(hash);
     switch (hash) {
         case '#home':
             this.toggleHelper(this.navNodeList.filter((obj) => obj.id === "nav-link home")[0].id);
@@ -150,6 +151,12 @@ class Navbar {
             document.querySelector('.container').classList.add('know-more');
             this.domObj.dom = new AboutKnowMorePage(knowMorePageData[1].title, knowMorePageData[1].list.map((obj) => obj.listTitle), knowMorePageData[1].list);                    
             break;
+            case '#gallery':
+              this.toggleHelper(this.navNodeList.filter((obj) => obj.id === "nav-link gallery")[0].id);
+              document.querySelector('.container').classList.add('gallery');
+              document.querySelector('title').innerText = "TeamUAV | Gallery";
+              this.domObj.dom = new Gallery();
+              break;
         case '#credits':
           this.toggleHelper(this.navNodeList.filter((obj) => obj.id === "nav-link credits")[0].id);
           document.querySelector('.container').classList.add('credits');

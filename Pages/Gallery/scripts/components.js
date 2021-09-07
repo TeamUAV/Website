@@ -46,7 +46,7 @@ class ImageCard{
 class ImageFrame{
     constructor(imgSrcList){
         let container = document.createElement('div');
-        container.className = 'all-images-container';
+        container.id = 'all-images-container';
 
         let up_arrow = document.createElement('i');
         up_arrow.className = 'material-icons';
@@ -80,3 +80,42 @@ class ImageFrame{
     }
 }
 
+class FocusedImage{
+    constructor(imgSrc, heading, description){
+        let domElement = document.createElement('div');
+        domElement.id = 'focused-image';
+
+        let img = document.createElement('img');
+        img.src = imgSrc;
+
+        domElement.appendChild(img);
+
+        let miniInfo = document.createElement('div');
+
+        miniInfo.className = 'mini-info';
+
+        let p1 = document.createElement('p'); 
+        let p2 = document.createElement('p'); 
+
+        p1.className = 'heading';
+        p2.className = 'description';
+
+        p1.innerText = heading;
+        p2.innerText = description;
+
+        miniInfo.appendChild(p1);
+        miniInfo.appendChild(p2);
+
+        domElement.appendChild(miniInfo);
+
+        this.domElement = domElement;
+        this.img = img;
+        this.heading = p1;
+        this.description = p2;
+    }
+    changeImage(imgSrc, heading, description){
+        this.img.src = imgSrc;
+        this.heading.innerText = heading;
+        this.description.innerText = description;
+    }
+}

@@ -1,13 +1,12 @@
 .container.gallery{
     width: 100%;
-    height: 95vh;
-    overflow: hidden;
+    height: 89vh;
+    overflow-y: hidden;
 }
 .container.gallery .title{
     width: 100%;
     height: 10%;
     padding-left: 2rem;
-    margin-top: 5%;
     position: relative;
 }
 
@@ -45,9 +44,13 @@
     align-items: center;
     width: 100%;
     height: 70vh;
+    overflow-y: hidden;
     margin-top: 3rem;
     padding-left: 3rem;
     padding-right: 3rem;
+}
+.image-main-container i{
+    cursor: pointer;
 }
 .image-main-container #focused-image{
     width: 60%;
