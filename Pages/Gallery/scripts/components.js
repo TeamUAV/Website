@@ -74,6 +74,7 @@ class ImageFrame{
         container.appendChild(down_arrow);
 
         this.containerDOM = container;
+        this.imageScrollableFrame = img_frame;
         this.img_card_list = img_card_list;
         this.up_arrow = up_arrow;
         this.down_arrow = down_arrow;

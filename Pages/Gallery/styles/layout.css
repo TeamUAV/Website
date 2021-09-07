@@ -34,6 +34,7 @@
 
 #fore-text font:first-child{
     color: white;
+    margin-right: 0.6rem;
 }
 #fore-text font:last-child{
     color: red;
