@@ -97,7 +97,7 @@
 .active{
     opacity: 0.8;
     z-index: 10;
-    animation : open 1s forwards;
+/*     animation : open 1s forwards; */
 }
 .inactive{
     opacity : 0;
