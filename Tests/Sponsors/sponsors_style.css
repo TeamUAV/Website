@@ -103,14 +103,14 @@
     opacity : 0;
     z-index: -10;
 }
-@keyframes open {
+/* @keyframes open {
     0% {
         transform:scale(0);
     }
     100%{
         transform: scale(1);
     }
-}
+} */
 #toBeBlur.blur{
     filter: blur(25px);
     user-select: none;
