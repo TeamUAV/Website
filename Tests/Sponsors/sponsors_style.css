@@ -27,7 +27,7 @@
     flex-direction: row;
     left:15%;
     top:10%;    
-    background: linear-gradient(105.96deg, rgba(0, 0, 0, 0.8) 1.5%, rgba(196, 196, 196, 0) 100%);
+    background: linear-gradient(105deg, rgba(0,0,33,1) 0%, rgba(2,0,36,0.7934524151457458) 100%, rgba(0,212,255,1) 100%);
     /* background: #000021; */
     border: 0.5px solid #FFFFFF;
     box-sizing: border-box;
@@ -97,22 +97,22 @@
 .active{
     opacity: 0.8;
     z-index: 10;
-    animation : open 1s forwards;
+/*     animation : open 1s forwards; */
 }
 .inactive{
     opacity : 0;
     z-index: -10;
 }
-@keyframes open {
+/* @keyframes open {
     0% {
         transform:scale(0);
     }
     100%{
         transform: scale(1);
     }
-}
+} */
 #toBeBlur.blur{
-    filter: blur(10px);
+    filter: blur(25px);
     user-select: none;
     pointer-events: none;
 }
