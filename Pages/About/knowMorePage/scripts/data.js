@@ -107,25 +107,6 @@ let knowMorePageData = [
         ],
       },
       {
-        listTitle: "Guest Manufacturing Engineer",
-        name: "Rhea Mathew",
-        skillSet:
-          "Aerodynamic Design, ANSYS Fluent and Structural, Computational Fluid Dynamics, AVL, Manufacturing Processes".split(
-            ", "
-          ),
-        about:
-          "Budding mechanical engineer with an affinity for things that fly. I have loved planes for as long as I can remember, and recently found my true calling- designing them! I hope to one day be an aerospace engineer, and work on creating and building these machines that have had me fascinated throughout my entire life.",
-        positionsHeld: "Technical Advisor".split(" , "),
-        callSign: "Jai Bhaiya's GirlFriend",
-        imgSrc: "Pages/About/knowMorePage/Assets/Board Members/rhea.jpeg",
-        contact: [
-          {
-            body: "LinkedIn",
-            ref: "https://www.linkedin.com/in/rheamathew12",
-          },
-        ],
-      },
-      {
         listTitle: "Avionics Head",
         name: "Kanav Bhasin",
         skillSet:
@@ -251,6 +232,25 @@ let knowMorePageData = [
           {
             body: "LinkedIn",
             ref: "https://www.linkedin.com/in/neel-agarwal-176a4b186/",
+          },
+        ],
+      },
+      {
+        listTitle: "Guest Manufacturing Engineer",
+        name: "Rhea Mathew",
+        skillSet:
+          "Aerodynamic Design, ANSYS Fluent and Structural, Computational Fluid Dynamics, AVL, Manufacturing Processes".split(
+            ", "
+          ),
+        about:
+          "Budding mechanical engineer with an affinity for things that fly. I have loved planes for as long as I can remember, and recently found my true calling- designing them! I hope to one day be an aerospace engineer, and work on creating and building these machines that have had me fascinated throughout my entire life.",
+        positionsHeld: "Technical Advisor".split(" , "),
+        callSign: "Jai Bhaiya's GirlFriend",
+        imgSrc: "Pages/About/knowMorePage/Assets/Board Members/rhea.jpeg",
+        contact: [
+          {
+            body: "LinkedIn",
+            ref: "https://www.linkedin.com/in/rheamathew12",
           },
         ],
       },
