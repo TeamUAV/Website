@@ -34,6 +34,28 @@ let knowMorePageData = [
         ],
       },
       {
+        listTitle: "Lab Manager at Creation Labs",
+        name: "Jai Gulati",
+        skillSet:
+          "Composite Manufacturing, Aerodynamics, ANSYS ACP and Fluent, Computational Fluid Dynamics, Static and Fatigue Failure Analysis, CAD modeling (solidworks), CAD modeling (fusion 360), MATLAB, Python, C, C++".split(
+            ", "
+          ),
+        about:
+          "Aerospace Design Engineer in the making, looking to hone my skills fulfill my desire to know how the gears of the mechanised world turn. Some of my hobbies include Scuba Diving, playing poker and building lego models. ",
+        positionsHeld:
+          "Mechanical Engineer , Head of Manufacturing and Composites".split(
+            " , "
+          ),
+        callSign: "Snooker snoopy",
+        imgSrc: "Pages/About/knowMorePage/Assets/Board Members/jai.jpeg",
+        contact: [
+          {
+            body: "LinkedIn",
+            ref: "https://www.linkedIn.com/in/gulati-jai",
+          },
+        ],
+      },
+      {
         listTitle: "Vice Captain-Technical",
         name: "Amartya Vatsa",
         skillSet:
@@ -85,29 +107,7 @@ let knowMorePageData = [
         ],
       },
       {
-        listTitle: "Team Manager",
-        name: "Jai Gulati",
-        skillSet:
-          "Composite Manufacturing, Aerodynamics, ANSYS ACP and Fluent, Computational Fluid Dynamics, Static and Fatigue Failure Analysis, CAD modeling (solidworks), CAD modeling (fusion 360), MATLAB, Python, C, C++".split(
-            ", "
-          ),
-        about:
-          "Aerospace Design Engineer in the making, looking to hone my skills fulfill my desire to know how the gears of the mechanised world turn. Some of my hobbies include Scuba Diving, playing poker and building lego models. ",
-        positionsHeld:
-          "Mechanical Engineer , Head of Manufacturing and Composites".split(
-            " , "
-          ),
-        callSign: "Snooker snoopy",
-        imgSrc: "Pages/About/knowMorePage/Assets/Board Members/jai.jpeg",
-        contact: [
-          {
-            body: "LinkedIn",
-            ref: "https://www.linkedIn.com/in/gulati-jai",
-          },
-        ],
-      },
-      {
-        listTitle: "Technical Advisor",
+        listTitle: "Guest Manufacturing Engineer",
         name: "Rhea Mathew",
         skillSet:
           "Aerodynamic Design, ANSYS Fluent and Structural, Computational Fluid Dynamics, AVL, Manufacturing Processes".split(
